@@ -1,13 +1,13 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <% if(currentUser) { %>
-          <a class="navbar-brand" href="/<%= currentUser.profil.trim() %>/home">MagEvents</a>
+          <a class="navbar-brand ms-3 fs-1" href="/<%= currentUser.profil.trim() %>/home">MagEvents</a>
         <!-- <a href="/<%= currentUser.profil.trim() %>/home"><img src="/images/logo-no-background.png" alt="" style="width: 10%;"></a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-0 mb-2 mb-lg-0 justify-content-end" style="width: 100%;">
               <% if (currentUser.profil.trim() === "participant") { %>
                 <li class="nav-item d-flex align-items-center mx-3">
                   <a class="nav-link" href="/<%= currentUser.profil.trim() %>/notifications/<%= currentUser._id %>">Notifications</a>
