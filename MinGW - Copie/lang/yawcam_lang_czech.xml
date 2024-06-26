@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!--  
+*	Language file for yawcam
+*	More language files can be found at: www.yawcam.com	
+*
+*	Translation instructions:	
+*	1)	Letters behind a '@'
+*		( for example @x ) are variables and will be replaced with 
+*		something else in the real program.
+*
+*	2)	The option 'Language' in the help menu must also 
+*		contain the English word "language" in the translation.
+*		So if the translation of "language" is "foo", then
+*		the label in the menu should be: "Foo/Language..."
+*
+*	3)	In the <lang_version> section: 
+*		"LV1" is the version number of yawcam that this 
+*			language file is written for. (Should be something 
+*			like 0.1)
+*		"LV2" is the version letter of the language file. Every new
+*			translation for a new version of yawcam should have the 
+*			version letter 'a'. When updates to the language file are 
+*			made change to the following letter. (a to b, b to c, and so on)
+*
+*	4)	In the <translator> section, please fill in your name and e-mail.
+*       If you are updating a translation, keep the old name and add your name behind a ;
+*       It will look somehting like this: "trans1 (trans1@email.com);trans2 (trans2@email.com)"
+*
+*	5)	An <item id="  " ... > tag must always be on one row! Never insert 
+*		a line break, even if the text is really long.
+*
+*	6)	Translations can be mailed to translations@yawcam.com
+*			
+*	7)	Have fun! And Thanks for contributing! //Magnus Lundvall
+*
+--> 
+
+<yawcam_lang>
+	<misc>
+		<language>
+			<!-- Change to the current language -->
+			<item id="|.L1|" type="string" value="Čeština/Czech" />
+		</language>
+		<translator>
+			<!-- Also include e-mail -->
+			<item id="|.T1|" type="string" value="Remote-LAB GymKT (Remote-LAB@matfyz.cz)" /> <!-- Replace with your own name and e-mail -->
+		</translator>
+		<lang_version>
+			<!-- The version number should follow the standard described above! -->
+			<item id="|.LV1|" type="string" value="0.7.0" /> <!-- Yawcam version -->	
+			<item id="|.LV2|" type="string" value="a" /> <!-- Language file version -->
+		</lang_version>
+	</misc>
+	<GUI>
+		<Menu>
+			<File>
+				<item id="|.MF0|" type="string" value="Soubor" />
+				<item id="|.MF1|" type="string" value="Zapnout výstup do souboru" />
+				<item id="|.MF2|" type="string" value="Zapnout FTP výstup" />
+				<item id="|.MF3|" type="string" value="Zapnout HTTP výstup" />
+				<item id="|.MF4|" type="string" value="Zapnout stream" />
+				<item id="|.MF5|" type="string" value="Ukončit" />
+				<item id="|.MF6|" type="string" value="Obrázky na video..." />
+				<item id="|.MF7|" type="string" value="Zapnout detekci pohybu" />
+			</File>
+			<View>
+				<item id="|.MV0|" type="string" value="Zobrazit" />
+				<item id="|.MV1|" type="string" value="Záložka ovládání" />
+				<item id="|.MV2|" type="string" value="Záložka konzole" />
+				<item id="|.MV3|" type="string" value="Skrýt při spuštění" />
+				<item id="|.MV4|" type="string" value="Skrýt nyní" />
+				<item id="|.MV5|" type="string" value="Vždy navrchu" />
+				<item id="|.MV6|" type="string" value="Utajený režim" />
+				<item id="|.MV7|" type="string" value="Utajený režim při spuštění" />
+				<item id="|.MV8|" type="string" value="Utajit nyní" />
+			</View>
+			<Settings>
+				<item id="|.MS0|" type="string" value="Nastavení" />
+				<item id="|.MS1|" type="string" value="Detekovat (web)kameru..." />
+				<item id="|.MS2|" type="string" value="Upravit nastavení..." />
+				<item id="|.MS3|" type="string" value="Zařízení" />
+				<item id="|.MS4|" type="string" value="žádné" />
+				<item id="|.MS5|" type="string" value="Přepnout na zařízení..." />
+				<item id="|.MS6|" type="string" value="Přepnout na" />
+				<item id="|.MS7|" type="string" value="Nastavení formátu video zařízení..." />
+				<item id="|.MS8|" type="string" value="VFW-zdroj..." />
+				<item id="|.MS9|" type="string" value="VFW-formát..." />
+				<item id="|.MS10|" type="string" value="Vlastnosti zařízení..." />
+				<item id="|.MS11|" type="string" value="Nastavní formátu..." />
+				<item id="|.MS12|" type="string" value="Nastavení Crossbar..." />
+				<item id="|.MS13|" type="string" value="TV tuner..." />
+				<item id="|.MS14|" type="string" value="Nastavení IP kamery..." />
+				<item id="|.MS15|" type="string" value="Překlopit vodorovně" />
+				<item id="|.MS16|" type="string" value="Překlopit svisle" />
+				<item id="|.MS17|" type="string" value="Otočit o 90°" />
+				<item id="|.MS18|" type="string" value="Otočit o 270°" />
+			</Settings>
+			<Window>
+				<item id="|.MW0|" type="string" value="Okno" />
+				<item id="|.MW1|" type="string" value="Náhled" />
+				<item id="|.MW2|" type="string" value="Zachytit" />
+				<item id="|.MW3|" type="string" value="Konzole" />
+				<item id="|.MW4|" type="string" value="Statistiky" />
+				<item id="|.MW5|" type="string" value="Diváci" />
+				<item id="|.MW6|" type="string" value="Detekce pohybu" />
+			</Window>
+			<Help>
+				<item id="|.MH0|" type="string" value="Nápověda" />
+				<item id="|.MH1|" type="string" value="Obsah..." />
+				<item id="|.MH2|" type="string" value="Jazyk/Language..." /> <!-- Also add the enlish word language, se instructions above! -->				
+				<item id="|.MH3|" type="string" value="Navštívit domovskou stránku" />
+				<item id="|.MH4|" type="string" value="O aplikaci..." />
+				<item id="|.MH5|" type="string" value="Přispějte $$$" />
+				<item id="|.MH6|" type="string" value="Jsem online?" />
+				<item id="|.MH7|" type="string" value="Jaké je mé URL?" />
+				<item id="|.MH8|" type="string" value="Nastavit router?" />
+			</Help>
+		</Menu>
+		<Main_Window>
+			<item id="|.MAINW0|" type="string" value="Ovládací panel" /> <!-- name on the control panel tab -->
+			<item id="|.MAINW1|" type="string" value="Konzole" /> <!-- name on the console tab -->
+			<item id="|.MAINW2|" type="string" value="do souboru" /> <!-- File-output label -->
+			<item id="|.MAINW3|" type="string" value="FTP" /> <!-- Ftp-output label -->
+			<item id="|.MAINW4|" type="string" value="HTTP" /> <!-- Http-output label -->
+			<item id="|.MAINW5|" type="string" value="Stream" /> <!-- Stream-output label -->
+			<item id="|.MAINW6|" type="string" value="zapnout" /> <!-- button text -->
+			<item id="|.MAINW7|" type="string" value="vypnout" /> <!-- button text -->
+			<item id="|.MAINW8|" type="string" value="Pohyb" /> <!-- Motion detection label -->
+		</Main_Window>
+		<Detect_Dialog>
+			<item id="|.DETD0|" type="string" value="Čekejte..." /> <!-- heading for dialog -->
+			<item id="|.DETD1|" type="string" value="Počkejte, dokud okno @x není zavřeno. Pak stiskněte @y." /> <!-- message -->
+			<item id="|.DETD2|" type="string" value="OK" /> <!-- button label -->
+			<item id="|.DETD3|" type="string" value="Rozpoznání webkamery může trvat několik minut!" />
+			<item id="|.DETD4|" type="string" value="Opravdu jej chcete nyní spustit?" />
+			<!-- New dialog -->
+			<item id="|.DETD5|" type="string" value="Skenování dokončeno..." /><!-- heading for dialog -->
+			<item id="|.DETD6|" type="string" value="Následující zařízení byly detekovány." />
+			<item id="|.DETD7|" type="string" value="Vyberte ze seznamu a klikněte na OK." />
+		</Detect_Dialog>
+		<Preview_Window>
+			<item id="|.PREVW0|" type="string" value="Náhled" /> <!-- heading for window -->
+			<item id="|.PREVW1|" type="string" value="Zobrazit ohraničení" />
+			<item id="|.PREVW2|" type="string" value="Zachovat poměr stran" />
+			<item id="|.PREVW3|" type="string" value="Celá obrazovka" />
+			<item id="|.PREVW4|" type="string" value="Zobrazit překrytí" />
+			<item id="|.PREVW5|" type="string" value="Zobrazit rychlost" />
+		</Preview_Window>
+		<Capture_Window>
+			<item id="|.CAPTW0|" type="string" value="Zachytávání obrázku" /> <!-- heading for window -->
+			<item id="|.CAPTW1|" type="string" value="Zachytit!" /> <!-- button label -->
+			<item id="|.CAPTW10|" type="string" value="Nastavení..." /> <!-- button label -->
+			<item id="|.CAPTW11|" type="string" value="Nastavení zachycování" />
+			<item id="|.CAPTW12|" type="string" value="Přehrát zvuk" />
+			<item id="|.CAPTW13|" type="string" value="Přidat překrytí" />
+			<item id="|.CAPTW14|" type="string" value="Otevřít zachycený obrázek" />
+			<item id="|.CAPTW15|" type="string" value="Uložit na nastavenou cestu:" />
+			<item id="|.CAPTW16|" type="string" value="Kvalitu obrázku" />
+			<Image_Win>
+				<item id="|.IMGW0|" type="string" value="Obraz" /> <!-- heading for window -->
+				<item id="|.IMGW1|" type="string" value="Uložit..." /> <!-- label: save-button -->
+				<item id="|.IMGW2|" type="string" value="Zavřít" /> <!-- label: close-button -->
+				<item id="|.IMGW3|" type="string" value="Uložit soubor..." /> <!-- heading for save-file-dialog -->
+			</Image_Win>
+		</Capture_Window>
+		<Settings>
+			<item id="|.SHEAD0|" type="string" value="Nastavení" /> <!-- heading for settings window -->
+			<item id="|.SBTN0|" type="string" value="OK" /> <!-- ok button-label -->
+			<item id="|.SBTN1|" type="string" value="Zrušit" /> <!-- cancel button-label -->
+			<item id="|.SBTN2|" type="string" value="Přidat" /> <!-- add button-label -->
+			<item id="|.SBTN3|" type="string" value="Smazat" /> <!-- delete button-label -->
+			<item id="|.SBTN4|" type="string" value="Odstranit vše" /> <!-- clear button-label -->
+			<item id="|.SCAT0|" type="string" value="Kategorie:" /> <!-- category-label -->
+			<TimeUnit>
+				<item id="|.STU0|" type="string" value="milisekundy" />
+				<item id="|.STU1|" type="string" value="ms" />
+				<item id="|.STU2|" type="string" value="sekundy" />
+				<item id="|.STU3|" type="string" value="s" />
+				<item id="|.STU4|" type="string" value="minuty" />
+				<item id="|.STU5|" type="string" value="min" />
+				<item id="|.STU6|" type="string" value="hodiny" />
+				<item id="|.STU7|" type="string" value="h" />
+				<item id="|.STU8|" type="string" value="dny" />
+				<item id="|.STU9|" type="string" value="d" />
+			</TimeUnit>
+			<Language>
+				<item id="|.SLANG0|" type="string" value="Jazyk" /> <!-- name in menu and heading for panel -->
+				<item id="|.SLANG1|" type="string" value="Současný jazyk:" /> 
+				<item id="|.SLANG2|" type="string" value="Změnit..." /> <!-- button label -->
+				<item id="|.SLANG3|" type="string" value="Jazyk zůstane nezměněn, dokud nekliknete na tlačítko @x" /> <!-- info text -->
+				<item id="|.SLANG4|" type="string" value="Zvolit jazykový soubor..." /> <!-- choose file dialog heading -->
+			</Language>
+			<Camera>
+				<item id="|.SCAM0|" type="string" value="Kamera" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCAM1|" type="string" value="Vybrat kameru:" /> 
+				<item id="|.SCAM2|" type="string" value="Zvolit formát videa:" /> 
+				<item id="|.SCAM3|" type="string" value="Upozornění: Note: Vybraný formát ovlivní velikost obrázku pro všechny typy výstupů." /> 
+			</Camera>
+			<Connection>
+				<item id="|.SCON0|" type="string" value="Připojení" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCON1|" type="string" value="Veřejná IP:" />
+				<item id="|.SCON2|" type="string" value="Získat" />
+				<item id="|.SCON3|" type="string" value="Detekovat při spuštění." />
+				<item id="|.SCON4|" type="string" value="Detekovat každých" />
+				<item id="|.SCON5|" type="string" value="minut." />
+				<item id="|.SCON6|" type="string" value="Používat k otevírání portů na routeru UPNP." />				
+			</Connection>
+			<Output>
+				<!-- common text -->
+				<item id="|.SOUT0|" type="string" value="Výstup" /> <!-- name in menu -->
+				<item id="|.SOUT1|" type="string" value="Typ:" />
+				<item id="|.SOUT2|" type="string" value="Kvalita obrázku:" />
+				<item id="|.SOUT3|" type="string" value="Interval:" />
+				<item id="|.SOUT4|" type="string" value="sekund(y)" />
+				<item id="|.SOUT5|" type="string" value="Port:" />
+				<item id="|.SOUT6|" type="string" value="Rozšířené nastavení..." />
+				<!-- unique text -->
+				<File>
+					<item id="|.SOFILE0|" type="string" value="Soubor" /> <!-- name in menu and heading -->
+					<item id="|.SOFILE1|" type="string" value="Cesta:" />
+					<item id="|.SOFILE2|" type="string" value="Procházet..." /> <!-- button -->
+					<item id="|.SOFILE3|" type="string" value="Uložit jako..." />
+					<item id="|.SOFILE4|" type="string" value="Průvodce tvorbou sekvencí obrázků" />
+					<item id="|.SOFILE5|" type="string" value="Otevřít..." />
+					<item id="|.SOFILE6|" type="string" value="Při chybě se pokusit zopakovat bez upozornění." />
+					<item id="|.SOFILE7|" type="string" value="Sekvence obrázků..." />
+					<!-- wizard-->
+					<item id="|.SOFILEWIZ0|" type="string" value="Tento průvodce vám pomůže vyplnit správný název souboru a cestu, abyste získali sekvenci obrázků." />
+					<item id="|.SOFILEWIZ1|" type="string" value="Zvolte jednu možnost:" />
+					<item id="|.SOFILEWIZ2|" type="string" value="Chci uložit posledních X obrázků. (tj. obr0.jpg až obrX.jpg, kde poslední obrázek má nejnižší číslo)" />
+					<item id="|.SOFILEWIZ3|" type="string" value="Chci uložit neomezený počet obrázků s rostoucím číslem v názvu souboru. (Poslední obrázek bude mít nejvyšší číslo.)" />
+					<item id="|.SOFILEWIZ4|" type="string" value="Zvolte složku, kam se obrázky uloží." />
+					<item id="|.SOFILEWIZ5|" type="string" value="Zvolená složka:" />
+					<item id="|.SOFILEWIZ6|" type="string" value="Zvolte název souboru, který budou obsahovat všechny uložené soubory:" />
+					<item id="|.SOFILEWIZ7|" type="string" value="Například: když napíšete 'vystup', soubory budou pojmenovány vystup0.jpg, vystup1.jpg, vystup2.jpg atd." />
+					<item id="|.SOFILEWIZ8|" type="string" value="Zvolte požadovaný formát obrázků:" />
+					<item id="|.SOFILEWIZ9|" type="string" value="Zvolte počet obrázků, které chcete zachovat:" />
+					<item id="|.SOFILEWIZ10|" type="string" value="Dokončeno! Zadané jméno souboru bude automaticky vloženo do pole cesty v okně nastavení výstupu do souboru." />
+					<item id="|.SOFILEWIZ11|" type="string" value="Nezapomeňte vybrat požadovaný interval." />
+					<item id="|.SOFILEWIZ12|" type="string" value="Chci do názvu souboru zahrnout datum a čas." />
+				</File>
+				<Ftp>
+					<item id="|.SOFTP0|" type="string" value="FTP" /> <!-- name in menu and heading -->
+					<item id="|.SOFTP1|" type="string" value="FTP server:" />
+					<item id="|.SOFTP2|" type="string" value="Uživatel. jméno:" />
+					<item id="|.SOFTP3|" type="string" value="Heslo:" />
+					<item id="|.SOFTP4|" type="string" value="Složka:" />
+					<item id="|.SOFTP5|" type="string" value="Jméno souboru:" />
+					<item id="|.SOFTP6|" type="string" value="Interval nahrávání:" />
+					<item id="|.SOFTP7|" type="string" value="Upozornění: NENÍ zde doporučeno ukládat heslo. Místo toho ponechte pole pro heslo prázdné a budete vyzváni, až to yawcam bude potřebovat." />
+					<item id="|.SOFTP8|" type="string" value="Při chybě spojení se pokusit bez upozornění o nové připojení." />
+					<item id="|.SOFTP9|" type="string" value="Sekvence obrázků..." />
+					<item id="|.SOFTP10|" type="string" value="Při chybě ověření se pokusit bez upozornění o nový pokus." />
+					<item id="|.SOFTP11|" type="string" value="Zůstat připojený." />
+					<item id="|.SOFTP12|" type="string" value="Neodpojovat po nahrání souboru." />
+					<item id="|.SOFTP13|" type="string" value="chmod souboru:" />
+					<item id="|.SOFTP14|" type="string" value="Použít aktivní režim FTP (místo pasovního)." />
+					<item id="|.SOFTP15|" type="string" value="Použít šifrované spojení." />
+					<item id="|.SOFTP16|" type="string" value="FTPS (FTP přes implicitní TLS/SSL)" />
+					<item id="|.SOFTP17|" type="string" value="FTPES (FTP přes explicitní TLS/SSL)" />
+					<item id="|.SOFTP18|" type="string" value="Pokročilé FTP nastavení..." />
+					<item id="|.SOFTP19|" type="string" value="Zabezpečení" />
+					<item id="|.SOFTP20|" type="string" value="Nahrát soubor pod dočasným jménem a přejmenovat." />
+					<item id="|.SOFTP21|" type="string" value="FTP nastavení" />
+					<item id="|.SOFTP22|" type="string" value="Pokud je nastavený interval delší než 60 sekund, nedoporučuje se používat režim 'Zůstat připojený'." />
+					<item id="|.SOFTP23|" type="string" value="Chcete tuto možnost zakázat?" />
+					<item id="|.SOFTP24|" type="string" value="Pokročilá nastavení FTP" />
+				</Ftp>
+				<Http>
+					<item id="|.SOHTTP0|" type="string" value="HTTP" /> <!-- name in menu and heading -->
+					<item id="|.SOHTTP1|" type="string" value="URL bude:" />
+					<item id="|.SOHTTP2|" type="string" value="nebo" />
+					<item id="|.SOHTTP3|" type="string" value="Změnit vzhled HTML stránek můžete úpravou html souborů ve složce @x." />
+				</Http>
+				<Stream>
+					<item id="|.SOSTR0|" type="string" value="Stream" /> <!-- name in menu and heading -->
+					<item id="|.SOSTR1|" type="string" value="Port připojení port:" />
+					<item id="|.SOSTR2|" type="string" value="Datový port:" />
+					<item id="|.SOSTR3|" type="string" value="Hlavička:" />
+					<item id="|.SOSTR4|" type="string" value="Rozšířené" />
+					<item id="|.SOSTR5|" type="string" value="Vynutit veřejnou IP adresu:" />
+					<item id="|.SOSTR6|" type="string" value="URL (adresa) bude:" />
+					<item id="|.SOSTR7|" type="string" value="Upozornění: Toto nastavení nebude fungovat přes internet! Viz FAQ (často kladené dotazy)." />
+					<item id="|.SOSTR8|" type="string" value="Velikost appletu:" />
+					<item id="|.SOSTR9|" type="string" value="Skutečná velikost obrázku" />
+					<item id="|.SOSTR10|" type="string" value="Získat!" />
+					<item id="|.SOSTR11|" type="string" value="Maximální počet připojení:" />
+					<item id="|.SOSTR12|" type="string" value="Max. datový tok:" />
+					<item id="|.SOSTR13|" type="string" value="Časové omezení:" />
+					<item id="|.SOSTR14|" type="string" value="Rychlost snímkování:" />
+					<item id="|.SOSTR15|" type="string" value="(Vyšší hodnota snímkování více zatíží procesor počítače)" />
+					<item id="|.SOSTR16|" type="string" value="Připojení diváka oznámit zvukovým znamením." />
+					<item id="|.SOSTR17|" type="string" value="Připojení diváka oznámit informační bublinou." />
+					<item id="|.SOSTR18|" type="string" value="Typ streamu:" />
+					<item id="|.SOSTR19|" type="string" value="Velikost:" />
+					<item id="|.SOSTR20|" type="string" value="fps" /> <!-- fps, frames per second -->
+					<Page_Designer>
+						<item id="|.SOSTRPD0|" type="string" value="Vzhled stránky" />
+						<item id="|.SOSTRPD1|" type="string" value="Název:" />
+						<item id="|.SOSTRPD2|" type="string" value="Nadpis:" />
+						<item id="|.SOSTRPD3|" type="string" value="Barva rámečku:" />
+						<item id="|.SOSTRPD4|" type="string" value="Barva pozadí:" />
+						<item id="|.SOSTRPD5|" type="string" value="Obrázek na pozadí:" />
+						<item id="|.SOSTRPD6|" type="string" value="Barva textu:" />
+						<item id="|.SOSTRPD7|" type="string" value="Velikost textu:" />
+						<item id="|.SOSTRPD8|" type="string" value="Text stránky:" />
+						<item id="|.SOSTRPD9|" type="string" value="Barva odkazu:" />
+						<item id="|.SOSTRPD10|" type="string" value="Navštívený odkaz:" />
+						<item id="|.SOSTRPD11|" type="string" value="Aktivní odkaz:" />
+						<!-- Dialogs -->
+						<item id="|.SOSTRPDDIA0|" type="string" value="Tento soubor není umístěn na cestě webového serveru." />
+						<item id="|.SOSTRPDDIA1|" type="string" value="Chcete zkopírovat soubor do správného umístění?" />
+						<item id="|.SOSTRPDDIA2|" type="string" value="Zkopírovat soubor?" />
+						<item id="|.SOSTRPDDIA3|" type="string" value="Cílový soubor již existuje." />
+						<item id="|.SOSTRPDDIA4|" type="string" value="Chcete jej přepsat?" />
+						<item id="|.SOSTRPDDIA5|" type="string" value="Přepsat?" />
+						<item id="|.SOSTRPDDIA6|" type="string" value="Soubor nelze zkopírovat!" />
+						<item id="|.SOSTRPDDIA7|" type="string" value="Před spuštěním náhledu musí být spuštěn výstup do streamu." />
+						<item id="|.SOSTRPDDIA8|" type="string" value="Chcete ho nyní zapnout?" />
+						<item id="|.SOSTRPDDIA9|" type="string" value="Zapnout stream?" />
+					</Page_Designer>	
+				</Stream>
+			</Output>
+			<Text_Overlay>
+				<item id="|.SOVER0|" type="string" value="Vodotisk" /> <!-- name in menu (not used since v.0.2.7) -->
+				<item id="|.SOVER0a|" type="string" value="Vodotisk" /> <!-- name of folder in menu -->
+				<item id="|.SOVER0b|" type="string" value="Text" /> <!-- name in menu -->
+				<item id="|.SOVER0c|" type="string" value="Text vodotisku" /> <!-- name in settings panel -->
+				<item id="|.SOVER1|" type="string" value="Umístění:" />
+				<item id="|.SOVER2|" type="string" value="Barva:" />
+				<item id="|.SOVER3|" type="string" value="Písmo:" />
+				<item id="|.SOVER4|" type="string" value="Typ:" />
+				<item id="|.SOVER5|" type="string" value="Velikost:" />
+				<item id="|.SOVER6|" type="string" value="Text" /> <!-- displayed on the tabs -->
+				<item id="|.SOVER7|" type="string" value="rok (4 číslice)" />
+				<item id="|.SOVER8|" type="string" value="rok (2 číslice)" />
+				<item id="|.SOVER9|" type="string" value="měsíc" />
+				<item id="|.SOVER10|" type="string" value="den" />
+				<item id="|.SOVER11|" type="string" value="hodiny" />
+				<item id="|.SOVER12|" type="string" value="minuty" />
+				<item id="|.SOVER13|" type="string" value="sekundy" />
+				<item id="|.SOVER13b|" type="string" value="počet diváků" />
+				<!-- position, vertical -->
+				<item id="|.SOVER14|" type="string" value="Nahoře" />
+				<item id="|.SOVER15|" type="string" value="Na střed" />
+				<item id="|.SOVER16|" type="string" value="Dole" />
+				<!-- position, horizontal -->
+				<item id="|.SOVER17|" type="string" value="Vlevo" />
+				<item id="|.SOVER18|" type="string" value="Na střed" />
+				<item id="|.SOVER19|" type="string" value="Vpravo" />
+				<!-- colors -->
+				<item id="|.SOVER20|" type="string" value="Červená" />
+				<item id="|.SOVER21|" type="string" value="Zelená" />
+				<item id="|.SOVER22|" type="string" value="Modrá" />
+				<item id="|.SOVER23|" type="string" value="Žlutá" />
+				<item id="|.SOVER24|" type="string" value="Bílá" />
+				<item id="|.SOVER25|" type="string" value="Černá" />
+				<item id="|.SOVER26|" type="string" value="Šedá" />
+				<item id="|.SOVER27|" type="string" value="Tyrkysová" />
+				<!-- font type -->
+				<item id="|.SOVER28|" type="string" value="Obyčejné" />
+				<item id="|.SOVER29|" type="string" value="Kurzíva" />
+				<item id="|.SOVER30|" type="string" value="Tučné" />
+				<item id="|.SOVER31|" type="string" value="P:" /> <!-- First letter of the translation of "transparent" -->
+				<item id="|.SOVER32|" type="string" value="Použít pozadí:" />
+				<!-- buttons -->
+				<item id="|.SOVER33|" type="string" value="Náhled" />
+				<item id="|.SOVER34|" type="string" value="Informace..." />
+				<!-- more stuff -->
+				<item id="|.SOVER40|" type="string" value="hodin (12h formát)" />
+				<item id="|.SOVER41|" type="string" value="název měsíce (anglicky)" />
+				<item id="|.SOVER42|" type="string" value="den v týdnu (anglicky)" />
+				<item id="|.SOVER43|" type="string" value="V textu je možné použít proměnné, které budou nahrazeny dynamickými hodnotami." />
+				<item id="|.SOVER44|" type="string" value="K dispozici jsou následující proměnné:" />
+				<item id="|.SOVER45|" type="string" value="měsíc napsaný jazykem (@x)" />
+				<item id="|.SOVER46|" type="string" value="den v týdnu napsaný jazykem (@x)" />
+				<!-- local calendar names -->				
+				<item id="|.SOVERDAY1|" type="string" value="Pondělí" />
+				<item id="|.SOVERDAY2|" type="string" value="Úterý" />
+				<item id="|.SOVERDAY3|" type="string" value="Středa" />
+				<item id="|.SOVERDAY4|" type="string" value="Čtvrtek" />
+				<item id="|.SOVERDAY5|" type="string" value="Pátek" />
+				<item id="|.SOVERDAY6|" type="string" value="Sobota" />
+				<item id="|.SOVERDAY7|" type="string" value="Neděle" />
+				<item id="|.SOVERMON1|" type="string" value="Leden" />
+				<item id="|.SOVERMON2|" type="string" value="Únor" />
+				<item id="|.SOVERMON3|" type="string" value="Březen" />
+				<item id="|.SOVERMON4|" type="string" value="Duben" />
+				<item id="|.SOVERMON5|" type="string" value="Květen" />
+				<item id="|.SOVERMON6|" type="string" value="Červen" />
+				<item id="|.SOVERMON7|" type="string" value="Červenec" />
+				<item id="|.SOVERMON8|" type="string" value="Srpen" />
+				<item id="|.SOVERMON9|" type="string" value="Září" />
+				<item id="|.SOVERMON10|" type="string" value="Říjen" />
+				<item id="|.SOVERMON11|" type="string" value="Listopad" />
+				<item id="|.SOVERMON12|" type="string" value="Prosinec" />
+			</Text_Overlay>
+			<Image_Overlay>
+				<item id="|.SIOVER0a|" type="string" value="Obrázek" /> <!-- name in menu -->
+				<item id="|.SIOVER0b|" type="string" value="Obrázek vodotisku" /> <!-- name in settings panel -->
+				<item id="|.SIOVER1|" type="string" value="Obrázek" /> <!-- text on tabs -->
+				<item id="|.SIOVER2|" type="string" value="Změnit..." />
+				<item id="|.SIOVER3|" type="string" value="Odstranit" />
+				<item id="|.SIOVER4|" type="string" value="Průhlednost:" />	
+			</Image_Overlay>
+			<Startup>
+				<item id="|.SSTRT0|" type="string" value="Po spuštění" /> <!-- name in menu and heading -->
+				<item id="|.SSTRT1|" type="string" value="Zde můžete nastavit, co se má provést po spuštění Yawcam." />
+				<item id="|.SSTRT1b|" type="string" value="Bude provedeno při spuštění aplikace Yawcam." />
+				<item id="|.SSTRT2|" type="string" value="Spustit výstup do souboru" />
+				<item id="|.SSTRT3|" type="string" value="Spustit FTP výstup" />
+				<item id="|.SSTRT4|" type="string" value="Spustit HTTP výstup" />
+				<item id="|.SSTRT5|" type="string" value="Zobrazit náhled" />
+				<item id="|.SSTRT6|" type="string" value="Zobrazit konzoli" />
+				<item id="|.SSTRT7|" type="string" value="Zobrazit statistiky" />
+				<item id="|.SSTRT8|" type="string" value="Po spuštění skrýt do oznamovací oblasti" />
+				<item id="|.SSTRT9|" type="string" value="Zobrazovat úvodní obrazovku" />
+				<item id="|.SSTRT10|" type="string" value="Spustit video výstup (stream)" />
+				<item id="|.SSTRT11|" type="string" value="Zobrazit okno diváků" />
+				<item id="|.SSTRT12|" type="string" value="Zkontrolovat existenci nové verze" />
+				<item id="|.SSTRT13|" type="string" value="Uložit log soubor" />
+				<item id="|.SSTRT14|" type="string" value="Start Motion detection" />
+				<item id="|.SSTRT15|" type="string" value="Povolit monitorování chyb zařízení" />
+				<item id="|.SSTRT16|" type="string" value="Zobrazit zachycování" />
+				<item id="|.SSTRT17|" type="string" value="Potvrdit vícenásobné spuštění" />
+			</Startup>
+			<Offline_Image>
+				<item id="|.SOFFIMG0|" type="string" value="Offline obrázek" />
+				<item id="|.SOFFIMG1|" type="string" value="Uložit offline obrázek, když přejdu do režimu offline:" />
+				<item id="|.SOFFIMG2|" type="string" value="Zvolený obrázek:" />
+				<item id="|.SOFFIMG3|" type="string" value="Také uložit při vypnutí aplikace. (Pozdrží ukončení)" />
+				<item id="|.SOFFIMG4|" type="string" value="Zvolte obrázek" />
+			</Offline_Image>
+			<Password>
+				<item id="|.SPASS0|" type="string" value="Heslo" />
+				<item id="|.SPASS1|" type="string" value="Použijte heslo pro stream." />
+				<item id="|.SPASS2|" type="string" value="Potvrdit..." />
+				<item id="|.SPASS3|" type="string" value="Varování! Všechna hesla budou smazána!" />
+				<item id="|.SPASS4|" type="string" value="Jste si jist, že chcete pokračovat?" />
+				<item id="|.SPASS5|" type="string" value="Heslo pro @x bude smazáno!" />
+				<item id="|.SPASS6|" type="string" value="Nebyl vybrán žádný uživatel!" />
+				<item id="|.SPASS7|" type="string" value="Vyberte uživatele a klikněte na @x znovu." />
+				<item id="|.SPASS8|" type="string" value="Nelze to provést..." />
+				<item id="|.SPASS9|" type="string" value="Nesprávný pokus o přihlášení:" />
+				<item id="|.SPASS10|" type="string" value="Přidat uživatele/heslo..." />
+				<item id="|.SPASS11|" type="string" value="Uživatelské jméno" />
+				<item id="|.SPASS12|" type="string" value="Heslo" />
+				<item id="|.SPASS13|" type="string" value="Potvrdit heslo" />
+				<item id="|.SPASS14|" type="string" value="Nyní jste povolili heslo jak pro applet, tak i pro streamování!" />
+				<item id="|.SPASS15|" type="string" value="To pravděpodobně není to, co chcete ;-)" />
+				<item id="|.SPASS16|" type="string" value="Chcete přesto pokračovat?" />
+				<item id="|.SPASS17|" type="string" value="Jste si jistý?" />
+			</Password>
+			<Announcements>
+				<item id="|.SANN0|" type="string" value="Oznámení" /> <!-- name in menu and heading -->
+				<item id="|.SANN1|" type="string" value="Tento panel vám umožní nastavit oznámení, které lze odeslat při připojení či odpojení Vaší webkamery." />
+				<item id="|.SANN2|" type="string" value="Online oznámení:" />
+				<item id="|.SANN3|" type="string" value="Offline oznámení:" />
+				<item id="|.SANN4|" type="string" value="Poslat oznámení, když zapnu/vypnu výstup:" />
+				<item id="|.SANN5|" type="string" value="Náhled" />
+				<item id="|.SANN6|" type="string" value="Informace" />
+				<item id="|.SANN7|" type="string" value="Oznámení:" />
+				<item id="|.SANN8|" type="string" value="Online:" />
+				<item id="|.SANN9|" type="string" value="Offline:" />
+				<item id="|.SANN10|" type="string" value="Oznámení se obvykle sestávají z http-žádostí." />
+				<item id="|.SANN11|" type="string" value="Vaše webkamerová komunita vám poskytne informace o tom, jak by měl vypadat váš oznamovací řetězec." />
+				<item id="|.SANN12|" type="string" value="Při vytváření řetězce oznámení můžete použít některé proměnné:" />
+				<item id="|.SANN13|" type="string" value="URL vestavěného webového server Yawcam (http)" />
+				<item id="|.SANN14|" type="string" value="URL vestavěného streamovací appletu Yawcam's (stream)" />
+				<item id="|.SANN15|" type="string" value="Varování!" />
+				<item id="|.SANN16|" type="string" value="Nelze zaslat oznámení o připojení!" />
+				<item id="|.SANN17|" type="string" value="Nelze zaslat oznámení o odpojení!" />
+				<item id="|.SANN18|" type="string" value="Prosím zkontrolujte nastavení..." />
+			</Announcements>
+			<Scheduler>
+				<item id="|.SSCHED0|" type="string" value="Plánovač" /> <!-- name in menu and heading -->
+				<item id="|.SSCHED1|" type="string" value="Zapnout plánovač" />
+				<item id="|.SSCHED2|" type="string" value="zapnuto" />
+				<item id="|.SSCHED3|" type="string" value="vypnuto" />
+			</Scheduler>
+			<User_Interface>
+				<item id="|.SUI0|" type="string" value="Uživatelské rozhraní" /> <!-- name in menu and heading -->
+				<item id="|.SUI1|" type="string" value="Téma:" />
+				<item id="|.SUI2|" type="string" value="Velikost písma:" />
+				<item id="|.SUI3|" type="string" value="* Vyžaduje restart aplikace Yawcam." />
+				<item id="|.SUI4a|" type="string" value="Restart?" />
+				<item id="|.SUI4b|" type="string" value="Yawcam potřebuje restart pro uplatnění nových nastavení." />
+				<item id="|.SUI4c|" type="string" value="Chcete nyní restartovat Yawcam?" />
+			</User_Interface>
+			<Capture_Device_Config>
+				<item id="|.CDC0|" type="string" value="Konfigurace zařízení pro zachycení" />
+				<item id="|.CDC1|" type="string" value="Video" />
+				<item id="|.CDC2|" type="string" value="Výstupní pin" />
+				<item id="|.CDC3|" type="string" value="Formát" />
+			</Capture_Device_Config>
+			<IP_Camera>
+				<item id="|.IPC0|" type="string" value="Nastavení IP kamery" />
+				<item id="|.IPC1|" type="string" value="URL (adresa) IP kamery:" />
+				<item id="|.IPC2|" type="string" value="(Adresa URL by obvykle měla směřovat přímo na proud MJPEG. Například: @x )" />
+				<item id="|.IPC3|" type="string" value="Bezpečnost" />
+				<item id="|.IPC4|" type="string" value="Při připojování k IP kameře použijte heslo." />
+				<item id="|.IPC5|" type="string" value="Uživatelské jméno:" />
+				<item id="|.IPC6|" type="string" value="Heslo:" />
+			</IP_Camera>
+		</Settings>
+		<Motion_Detection>
+		
+		</Motion_Detection>
+		<About>
+			<item id="|.ABW0|" type="string" value="O aplikaci Yawcam" /> <!-- heading for window -->
+			<item id="|.ABW1|" type="string" value="Překlad:" />
+			<item id="|.ABW2|" type="string" value="Poděkování:" />
+			<item id="|.ABW3|" type="string" value="OK" /> <!-- button -->
+		</About>
+		<Pass_Prompt>
+			<item id="|.PSSP0|" type="string" value="Login..." /> <!-- heading for window -->
+			<item id="|.PSSP1|" type="string" value="Yawcam bohužel nebyl schopen se přihlásit na FTP server s daným uživatelským jménem a heslem. Prosím vložte správné údaje:" />
+			<item id="|.PSSP2|" type="string" value="Uživatelské jméno:" />
+			<item id="|.PSSP3|" type="string" value="Heslo:" />
+			<item id="|.PSSP4|" type="string" value="Uložit heslo pro příště. (Není příliš bezpečné!)" />
+		</Pass_Prompt>
+		<TrayIcon_popmenu>
+			<item id="|.TIM0|" type="string" value="Skrýt/Zobrazit" />
+			<item id="|.TIM1|" type="string" value="Vždy navrchu" />
+			<item id="|.TIM2|" type="string" value="Zapnout" />
+			<item id="|.TIM3|" type="string" value="Do souboru" />
+			<item id="|.TIM4|" type="string" value="FTP" />
+			<item id="|.TIM5|" type="string" value="HTTP" />
+			<item id="|.TIM6|" type="string" value="Stream" />
+			<item id="|.TIM7|" type="string" value="Nastavení..." />
+			<item id="|.TIM8|" type="string" value="Nápověda..." />
+			<item id="|.TIM9|" type="string" value="Ukončit" />
+			<item id="|.TIM10|" type="string" value="Detekce pohybu" />
+			<item id="|.TIM11|" type="string" value="Plánovač" />
+		</TrayIcon_popmenu>
+		<Viewers>
+			<item id="|.VIEWF0|" type="string" value="Přehled diváků:" /> <!-- label for number of viewers -->
+			<item id="|.VIEWF1|" type="string" value="IP" />
+			<item id="|.VIEWF2|" type="string" value="Hostitel" />
+			<item id="|.VIEWF3|" type="string" value="čas" />
+			<item id="|.VIEWF4|" type="string" value="Odesláno (kB)" />
+			<item id="|.VIEWF5|" type="string" value="Diváci streamu" /> <!-- window title -->
+			<item id="|.VIEWF6|" type="string" value="Vykopnout!" />
+			<item id="|.VIEWF7|" type="string" value="Seznam zakázaných..." />
+			<item id="|.VIEWF8|" type="string" value="Zakázat!" />
+			<item id="|.VIEWF9a|" type="string" value="Zakázat sledování?" />
+			<item id="|.VIEWF9b|" type="string" value="Opravdu chcete tomuto diváku zakázat sledování?" />
+			<item id="|.VIEWF10|" type="string" value="Povolit" />
+			<item id="|.VIEWF11a|" type="string" value="Přidat IP" />
+			<item id="|.VIEWF11b|" type="string" value="Zadejte IP, které chcete zakázat:" />
+			<item id="|.VIEWF12|" type="string" value="Zakázané IP adresy:" />
+		</Viewers>
+		<ImgToMov>
+			<item id="|.IMGTM0|" type="string" value="Video z obrázků" /> <!-- title -->
+			<item id="|.IMGTM1|" type="string" value="Tento dialog Vám pomůže spojit obrázky do videosouboru." />
+			<item id="|.IMGTM2|" type="string" value="Do videa budou vloženy obrázky z tohoto seznamu:" />
+			<item id="|.IMGTM3|" type="string" value="Obrácené pořadí" />
+			<item id="|.IMGTM4|" type="string" value="Přidat obrázky..." />
+			<item id="|.IMGTM5|" type="string" value="Rychlost snímkování:" />
+			<item id="|.IMGTM6|" type="string" value="fps" /> <!-- fps (frames per second) -->
+			<item id="|.IMGTM7|" type="string" value="Výstupní soubor:" />
+			<item id="|.IMGTM8|" type="string" value="Vytvořit video" />
+			<item id="|.IMGTM9|" type="string" value="Musíte vybrat položku v seznamu." />
+			<item id="|.IMGTM10|" type="string" value="Musíte přidat obrázky do seznamu!" />
+			<item id="|.IMGTM11a|" type="string" value="Rychlost snímkování musí být celé číslo." />
+			<item id="|.IMGTM11b|" type="string" value="Platné hodnoty jsou 1 až 90." />
+			<item id="|.IMGTM12|" type="string" value="Musíte zadat název výstupního video souboru." />
+			<item id="|.IMGTM13|" type="string" value="Vytváření videa..." />
+			<item id="|.IMGTM14|" type="string" value="Přidávání obrázků..." />
+			<item id="|.IMGTM15|" type="string" value="Video naleznete zde:" />
+			<item id="|.IMGTM16|" type="string" value="Dokončeno..." />
+			<item id="|.IMGTM17|" type="string" value="Zapis videa..." />			
+			<item id="|.IMGTM18|" type="string" value="Ověřování obrázků..." />
+		</ImgToMov>
+		<Popup_Errors>
+			<item id="|.POPER0|" type="string" value="Chyba..." /> <!-- heading for all error popups -->
+			<item id="|.POPER1a|" type="string" value="Neznámý hostitel!" />
+			<item id="|.POPER1b|" type="string" value="Zkontrolujte prosím nastavení adresy FTP v nastavení." />
+			<item id="|.POPER2a|" type="string" value="Připojení odmítnuto!" />
+			<item id="|.POPER2b|" type="string" value="Prosím zkontrolujte nastavení FTP." />
+			<item id="|.POPER3a|" type="string" value="Přístup zamítnut!" />
+			<item id="|.POPER3b|" type="string" value="Prosím, zkontrolujte, zda máte práva pro ukládání souborů na tento FTP server." />
+			<item id="|.POPER4|" type="string" value="Neplatný XML soubor!" />
+			<item id="|.POPER5|" type="string" value="Nelze nalézt soubor:" />
+			<!-- input errors -->
+			<item id="|.POPER6|" type="string" value="Prosím změňte..." />
+			<item id="|.POPER7a|" type="string" value="Není platná hodnota pro interval!" />
+			<item id="|.POPER7b|" type="string" value="Pole může obsahovat pouze čísla. (např. 10 nebo 300)" />
+			<item id="|.POPER8a|" type="string" value="Neplatné číslo portu!" />
+			<item id="|.POPER8b|" type="string" value="Pole může obsahovat pouze čísla. (např. 21)" />
+			<item id="|.POPER9|" type="string" value="Pole může obsahovat pouze čísla. (např. 8888)" />
+			<item id="|.POPER10|" type="string" value="Port @x je již používán." />
+			<item id="|.POPER11|" type="string" value="Prosím vyberte jiný port." />
+			<item id="|.POPER12a|" type="string" value="Složka neexistuje!" />
+			<item id="|.POPER12b|" type="string" value="Zkontrolujte prosím, zda složka uložená v nastavení FTP výstupu skutečně existuje" />
+			<!-- misc -->
+			<item id="|.POPERLANG0|" type="string" value="Promiňte..." />
+			<item id="|.POPERLANG1|" type="string" value="Tato verze aplikace Yawcam neobsahuje nápovědu." />
+			<item id="|.POPERLANG2|" type="string" value="Zkontrolujte prosím aktualizace na www.yawcam.com." />
+			<!-- camera errors -->
+			<item id="|.POPERCAM0|" type="string" value="Aplikace Yawcam se nemůže připojit k webové kameře." />
+			<item id="|.POPERCAM1|" type="string" value="Zkontrolujte, zda ji nepoužívá nějaká jiná aplikace, nebo vyberte jinou." />
+			<item id="|.POPERCAM2|" type="string" value="Pokud je seznam webkamer prázdný, klikněte na @x, pak @y z menu @z." />
+			<item id="|.POPERCAM3|" type="string" value="Nelze aktivovat zařízení s tímto nastavením!" />
+			<item id="|.POPERCAM4|" type="string" value="Nelze se připojit k zařízení!" />
+			<item id="|.POPERCAM5|" type="string" value="Dialog se nepodařilo zobrazit!" />
+			<!-- File-output errors -->
+			<item id="|.POPERFILE0|" type="string" value="Nelze uložit soubor: @x" />
+			<item id="|.POPERFILE1|" type="string" value="Zkontrolujte prosím, zda daná složka existuje! (Pokud ne, upravte prosím nastavení...)" />
+			<!-- More Ftp-output errors -->
+			<item id="|.POPERFTP0|" type="string" value="Nelze uložit dočasný soubor!" />
+			<item id="|.POPERFTP1|" type="string" value="Zkontrolujte prosím, zda složka @x existuje. (Pokud ne, vytvořte ji)" />
+			<!-- add password error -->
+			<item id="|.POPERPASADD0|" type="string" value="Musíte zadat uživatelské jméno!" />
+			<item id="|.POPERPASADD1|" type="string" value="Hesla se neshodují." />
+			<item id="|.POPERPASADD2|" type="string" value="Zkuste prosím znovu!" />
+			<item id="|.POPERPASADD3|" type="string" value="Heslo nemůže být prázdné!" />
+			<!-- stream -->
+			<item id="|.POPERSTRM0|" type="string" value="Nepodařilo se automaticky detekovat veřejné IP!" />
+			<item id="|.POPERSTRM1|" type="string" value="Pole mohou obsahovat pouze celá čísla." />
+		</Popup_Errors>
+	</GUI>
+	<Console>
+		<item id="|.CNSPR0|" type="string" value="Yawcam spuštěn" />
+		<item id="|.CNSPR1|" type="string" value="Nastavení načteno" />
+		<item id="|.CNSPR2|" type="string" value="Nastavení uloženo" />
+		<item id="|.CNSPR3|" type="string" value="Výstup do souboru spuštěn" />
+		<item id="|.CNSPR4|" type="string" value="Výstup do souboru zastaven" />
+		<item id="|.CNSPR5|" type="string" value="FTP výstup spuštěn" />
+		<item id="|.CNSPR6|" type="string" value="FTP výstup zastaven" />
+		<item id="|.CNSPR7|" type="string" value="HTTP výstup spuštěn" />
+		<item id="|.CNSPR8|" type="string" value="HTTP výstup zastaven" />
+		<item id="|.CNSPR9|" type="string" value="Formát obrázku: @x" />
+		<item id="|.CNSPR10|" type="string" value="Použité zařízení: @x" />
+		<item id="|.CNSPR11|" type="string" value="Jazyk: @x" />
+		<item id="|.CNSPR12|" type="string" value="Yawcam skryt" />
+		<item id="|.CNSPR13|" type="string" value="Yawcam zobrazen" />
+		<item id="|.CNSPR14|" type="string" value="Vyhledávání webkamery..." />
+		<item id="|.CNSPR15|" type="string" value="Díky!" />
+		<item id="|.CNSPR16|" type="string" value="Soubor uložen" />
+		<item id="|.CNSPR17|" type="string" value="Video výstup spuštěn" />
+		<item id="|.CNSPR18|" type="string" value="Video výstup zastaven" />
+		<item id="|.CNSPR19|" type="string" value="Soubor s nápovědou je umístěn na www serveru." />
+		<item id="|.CNSPR20|" type="string" value="Port @x je už používán!" />
+		<item id="|.CNSPR21|" type="string" value="Nelze se připojit k FTP serveru!" />
+		<item id="|.CNSPR22|" type="string" value="FTP: Vaše připojení vypršelo z důvodu nečinnosti. Doporučujeme nepoužívat možnost 'Zůstat připojený'." />
+		<item id="|.CNSPR23|" type="string" value="Obrázek bude přesto nyní nahrán." />		 
+	</Console>
+</yawcam_lang>

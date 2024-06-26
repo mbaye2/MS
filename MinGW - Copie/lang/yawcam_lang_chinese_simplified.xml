@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!--  
+*	Language file for yawcam
+*	More language files can be found at: www.yawcam.com	
+*
+*	Translation instructions:	
+*	1)	Letters behind a '@'
+*		( for example @x ) are variables and will be replaced with 
+*		something else in the real program.
+*
+*	2)	The option 'Language' in the help menu must also 
+*		contain the English word "language" in the translation.
+*		So if the translation of "language" is "foo", then
+*		the label in the menu should be: "Foo/Language..."
+*
+*	3)	In the <lang_version> section: 
+*		"LV1" is the version number of yawcam that this 
+*			language file is written for. (Should be something 
+*			like 0.1)
+*		"LV2" is the version letter of the language file. Every new
+*			translation for a new version of yawcam should have the 
+*			version letter 'a'. When updates to the language file are 
+*			made change to the following letter. (a to b, b to c, and so on)
+*
+*	4)	In the <translator> section, please fill in your name and e-mail.
+*       If you are updating a translation, keep the old name and add your name behind a ;
+*       It will look somehting like this: "trans1 (trans1@email.com);trans2 (trans2@email.com)"
+*
+*	5)	An <item id="  " ... > tag must always be on one row! Never insert 
+*		a line break, even if the text is really long.
+*
+*	6)	Translations can be mailed to translations@yawcam.com
+*			
+*	7)	Have fun! And Thanks for contributing! //Magnus Lundvall
+*
+--> 
+
+<yawcam_lang>
+	<misc>
+		<language>
+			<!-- Change to the current language -->
+			<item id="|.L1|" type="string" value="简体中文" />
+		</language>
+		<translator>
+			<!-- Also include e-mail -->
+			<item id="|.T1|" type="string" value="Galvin Li (chuanka17@gmail.com)" /> <!-- Replace with your own name and e-mail -->
+		</translator>
+		<lang_version>
+			<!-- The version number should follow the standard described above! -->
+			<item id="|.LV1|" type="string" value="0.3.0" /> <!-- Yawcam version -->	
+			<item id="|.LV2|" type="string" value="a" /> <!-- Language file version -->
+		</lang_version>
+	</misc>
+	<GUI>
+		<Menu>
+			<File>
+				<item id="|.MF0|" type="string" value="文件" />
+				<item id="|.MF1|" type="string" value="开启 文件-输出" />
+				<item id="|.MF2|" type="string" value="开启 Ftp-输出" />
+				<item id="|.MF3|" type="string" value="开启 Http-输出" />
+				<item id="|.MF4|" type="string" value="开启 数据流-输出" />
+				<item id="|.MF5|" type="string" value="退出" />
+				<item id="|.MF6|" type="string" value="图片做成影片..." />
+				<item id="|.MF7|" type="string" value="开启移动探测" />
+			</File>
+			<View>
+				<item id="|.MV0|" type="string" value="查看" />
+				<item id="|.MV1|" type="string" value="控制面板" />
+				<item id="|.MV2|" type="string" value="主控台" />
+				<item id="|.MV3|" type="string" value="启动时自动隐藏" />
+				<item id="|.MV4|" type="string" value="马上隐藏" />
+				<item id="|.MV5|" type="string" value="一直在最前" />
+				<item id="|.MV6|" type="string" value="静默模式" />
+				<item id="|.MV7|" type="string" value="启动时静默" />
+				<item id="|.MV8|" type="string" value="马上静默" />
+			</View>
+			<Settings>
+				<item id="|.MS0|" type="string" value="设置" />
+				<item id="|.MS1|" type="string" value="探测摄像头..." />
+				<item id="|.MS2|" type="string" value="编辑设置..." />
+				<item id="|.MS3|" type="string" value="设备" />
+				<item id="|.MS4|" type="string" value="无" />
+			</Settings>
+			<Window>
+				<item id="|.MW0|" type="string" value="窗口" />
+				<item id="|.MW1|" type="string" value="预览" />
+				<item id="|.MW2|" type="string" value="截图" />
+				<item id="|.MW3|" type="string" value="主控台" />
+				<item id="|.MW4|" type="string" value="状态" />
+				<item id="|.MW5|" type="string" value="观众" />
+				<item id="|.MW6|" type="string" value="移动探测" />
+			</Window>
+			<Help>
+				<item id="|.MH0|" type="string" value="帮助" />
+				<item id="|.MH1|" type="string" value="帮助主题" />
+				<item id="|.MH2|" type="string" value="语言设置/Language..." /> <!-- Also add the enlish word language, se instructions above! -->				
+				<item id="|.MH3|" type="string" value="访问产品主页" />
+				<item id="|.MH4|" type="string" value="关于" />
+				<item id="|.MH5|" type="string" value="赞助：）" />
+				<item id="|.MH6|" type="string" value="我在线吗?" />
+				<item id="|.MH7|" type="string" value="我的URL是?" />
+				<item id="|.MH8|" type="string" value="配置流程?" />
+			</Help>
+		</Menu>
+		<Main_Window>
+			<item id="|.MAINW0|" type="string" value="控制面板" /> <!-- name on the control panel tab -->
+			<item id="|.MAINW1|" type="string" value="主控台" /> <!-- name on the console tab -->
+			<item id="|.MAINW2|" type="string" value="文件" /> <!-- File-output label -->
+			<item id="|.MAINW3|" type="string" value="Ftp" /> <!-- Ftp-output label -->
+			<item id="|.MAINW4|" type="string" value="Http" /> <!-- Http-output label -->
+			<item id="|.MAINW5|" type="string" value="数据流" /> <!-- Stream-output label -->
+			<item id="|.MAINW6|" type="string" value="开启" /> <!-- button text -->
+			<item id="|.MAINW7|" type="string" value="关闭" /> <!-- button text -->
+			<item id="|.MAINW8|" type="string" value="动态探测" /> <!-- Motion detection label -->
+		</Main_Window>
+		<Detect_Dialog>
+			<item id="|.DETD0|" type="string" value="请稍后..." /> <!-- heading for dialog -->
+			<item id="|.DETD1|" type="string" value="等待 @x 窗口关闭,然后按 @y." /> <!-- message -->
+			<item id="|.DETD2|" type="string" value="OK" /> <!-- button label -->
+			<item id="|.DETD3|" type="string" value="搜索摄像头可能需要几分钟!" />
+			<item id="|.DETD4|" type="string" value="确定要现在运行吗?" />
+		</Detect_Dialog>
+		<Preview_Window>
+			<item id="|.PREVW0|" type="string" value="预览" /> <!-- heading for window -->
+		</Preview_Window>
+		<Capture_Window>
+			<item id="|.CAPTW0|" type="string" value="截图" /> <!-- heading for window -->
+			<item id="|.CAPTW1|" type="string" value="截图!" /> <!-- button label -->
+			<Image_Win>
+				<item id="|.IMGW0|" type="string" value="图片" /> <!-- heading for window -->
+				<item id="|.IMGW1|" type="string" value="保存" /> <!-- label: save-button -->
+				<item id="|.IMGW2|" type="string" value="关闭" /> <!-- label: close-button -->
+				<item id="|.IMGW3|" type="string" value="另存为..." /> <!-- heading for save-file-dialog -->
+			</Image_Win>
+		</Capture_Window>
+		<Settings>
+			<item id="|.SHEAD0|" type="string" value="设置" /> <!-- heading for settings window -->
+			<item id="|.SBTN0|" type="string" value="OK" /> <!-- ok button-label -->
+			<item id="|.SBTN1|" type="string" value="放弃" /> <!-- cancel button-label -->
+			<item id="|.SBTN2|" type="string" value="添加" /> <!-- add button-label -->
+			<item id="|.SBTN3|" type="string" value="删除" /> <!-- delete button-label -->
+			<item id="|.SBTN4|" type="string" value="清除" /> <!-- clear button-label -->
+			<item id="|.SCAT0|" type="string" value="类型:" /> <!-- category-label -->
+			<Language>
+				<item id="|.SLANG0|" type="string" value="语言设置" /> <!-- name in menu and heading for panel -->
+				<item id="|.SLANG1|" type="string" value="当前语言设置为:" /> 
+				<item id="|.SLANG2|" type="string" value="改为..." /> <!-- button label -->
+				<item id="|.SLANG3|" type="string" value="请注意语言设置在你按下 @x键之前不会改变" /> <!-- info text -->
+				<item id="|.SLANG4|" type="string" value="选择语言设置文件..." /> <!-- choose file dialog heading -->
+			</Language>
+			<Camera>
+				<item id="|.SCAM0|" type="string" value="摄像头" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCAM1|" type="string" value="选择摄像头:" /> 
+				<item id="|.SCAM2|" type="string" value="选择视频文件格式:" /> 
+				<item id="|.SCAM3|" type="string" value="Note: The format selected here will affect the image size for all different output-types." /> 
+			</Camera>
+			<Connection>
+				<item id="|.SCON0|" type="string" value="连接" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCON1|" type="string" value="公共 IP:" />
+				<item id="|.SCON2|" type="string" value="得到" />
+				<item id="|.SCON3|" type="string" value="启动时探测." />
+				<item id="|.SCON4|" type="string" value="每个都探测" />
+				<item id="|.SCON5|" type="string" value="分钟." />
+				<item id="|.SCON6|" type="string" value="用 UPNP 打开路由器端口." />				
+			</Connection>
+			<Output>
+				<!-- common text -->
+				<item id="|.SOUT0|" type="string" value="输出" /> <!-- name in menu -->
+				<item id="|.SOUT1|" type="string" value="类型:" />
+				<item id="|.SOUT2|" type="string" value="图片质量:" />
+				<item id="|.SOUT3|" type="string" value="Interval:" />
+				<item id="|.SOUT4|" type="string" value="秒" />
+				<item id="|.SOUT5|" type="string" value="端口:" />
+				<item id="|.SOUT6|" type="string" value="附加设置..." />
+				<!-- unique text -->
+				<File>
+					<item id="|.SOFILE0|" type="string" value="文件" /> <!-- name in menu and heading -->
+					<item id="|.SOFILE1|" type="string" value="路径:" />
+					<item id="|.SOFILE2|" type="string" value="浏览器..." /> <!-- button -->
+					<item id="|.SOFILE3|" type="string" value="另存为..." />
+					<item id="|.SOFILE4|" type="string" value="图片阵列向导" />
+					<item id="|.SOFILE5|" type="string" value="打开..." />
+					<!-- wizard-->
+					<item id="|.SOFILEWIZ0|" type="string" value="此向导将帮助您填写正确的路径文件名，您将获得图像阵列." />
+					<item id="|.SOFILEWIZ1|" type="string" value="请选择一个选项:" />
+					<item id="|.SOFILEWIZ2|" type="string" value="我想把第 X 个文件保存成这样： (从pic0.jpg到picX.jpg, 最后的图片配合最大的数字.)" />
+					<item id="|.SOFILEWIZ3|" type="string" value="我想用一个不断增长的数字给无限制的文件命名. (最后的文件用最高的数字.)" />
+					<item id="|.SOFILEWIZ4|" type="string" value="选择你想把图片保存的文件夹." />
+					<item id="|.SOFILEWIZ5|" type="string" value="选择文件夹:" />
+					<item id="|.SOFILEWIZ6|" type="string" value="输入你想要每个文件都有的字符:" />
+					<item id="|.SOFILEWIZ7|" type="string" value="示例: 如果你输入 'out', 文件将被命名为 out0.jpg, out1.jpg, out2.jpg 等等." />
+					<item id="|.SOFILEWIZ8|" type="string" value="选择你想用的文件格式:" />
+					<item id="|.SOFILEWIZ9|" type="string" value="选择你想保持的文件数目:" />
+					<item id="|.SOFILEWIZ10|" type="string" value="好了! 你想昂要的文件名将在文件设置窗口被自动输入确定的路径." />
+					<item id="|.SOFILEWIZ11|" type="string" value="别忘了设置想要的间距." />
+				</File>
+				<Ftp>
+					<item id="|.SOFTP0|" type="string" value="Ftp" /> <!-- name in menu and heading -->
+					<item id="|.SOFTP1|" type="string" value="Ftp 服务器:" />
+					<item id="|.SOFTP2|" type="string" value="用户名:" />
+					<item id="|.SOFTP3|" type="string" value="密码:" />
+					<item id="|.SOFTP4|" type="string" value="文件夹:" />
+					<item id="|.SOFTP5|" type="string" value="文件名称:" />
+					<item id="|.SOFTP6|" type="string" value="上载间距:" />
+					<item id="|.SOFTP7|" type="string" value="注意：不建议保存您的密码。而是将密码字段留空, Yawcam将会在需要的时候问你." />
+					<item id="|.SOFTP8|" type="string" value="连接错误时后台静默重试." />
+					<item id="|.SOFTP9|" type="string" value="图像阵列..." />
+				</Ftp>
+				<Http>
+					<item id="|.SOHTTP0|" type="string" value="Http" /> <!-- name in menu and heading -->
+					<item id="|.SOHTTP1|" type="string" value=" URL 可能是:" />
+					<item id="|.SOHTTP2|" type="string" value="或" />
+					<item id="|.SOHTTP3|" type="string" value="它能通过编辑html文件的方式来改变页面的外观." />
+				</Http>
+				<Stream>
+					<item id="|.SOSTR0|" type="string" value="流媒体" /> <!-- name in menu and heading -->
+					<item id="|.SOSTR1|" type="string" value="连接端口:" />
+					<item id="|.SOSTR2|" type="string" value="数据端口:" />
+					<item id="|.SOSTR3|" type="string" value="标题:" />
+					<item id="|.SOSTR4|" type="string" value="高级" />
+					<item id="|.SOSTR5|" type="string" value="强制使用公共ip:" />
+					<item id="|.SOSTR6|" type="string" value="URL可能是:" />
+					<item id="|.SOSTR7|" type="string" value="注意：这些设置将不会在Internet上工作! 详见FAQ." />
+					<item id="|.SOSTR8|" type="string" value="小JAVA程序大小:" />
+					<item id="|.SOSTR9|" type="string" value="真实图片大小" />
+					<item id="|.SOSTR10|" type="string" value="获得!" />
+					<item id="|.SOSTR11|" type="string" value="最大连接:" />
+					<item id="|.SOSTR12|" type="string" value="数据限制:" />
+					<item id="|.SOSTR13|" type="string" value="时间限制:" />
+					<item id="|.SOSTR14|" type="string" value="ImageProducer率:" />
+					<item id="|.SOSTR15|" type="string" value="(高级帧将消耗更多的CPU)" />
+					<item id="|.SOSTR16|" type="string" value="当预览连接时，播放声音提示." />
+					<item id="|.SOSTR17|" type="string" value="当预览连接时，显示气球提示." />
+					<item id="|.SOSTR18|" type="string" value="流媒体类型:" />
+					<item id="|.SOSTR19|" type="string" value="压缩到:" />
+					<Page_Designer>
+						<item id="|.SOSTRPD0|" type="string" value="页面设计器" />
+						<item id="|.SOSTRPD1|" type="string" value="标头:" />
+						<item id="|.SOSTRPD2|" type="string" value="标题:" />
+						<item id="|.SOSTRPD3|" type="string" value="边框颜色:" />
+						<item id="|.SOSTRPD4|" type="string" value="背景颜色:" />
+						<item id="|.SOSTRPD5|" type="string" value="背景图片:" />
+						<item id="|.SOSTRPD6|" type="string" value="文字颜色:" />
+						<item id="|.SOSTRPD7|" type="string" value="文字大小:" />
+						<item id="|.SOSTRPD8|" type="string" value="网页文字:" />
+						<item id="|.SOSTRPD9|" type="string" value="链接颜色:" />
+						<item id="|.SOSTRPD10|" type="string" value="访问过的链接:" />
+						<item id="|.SOSTRPD11|" type="string" value="链接激活:" />
+						<!-- Dialogs -->
+						<item id="|.SOSTRPDDIA0|" type="string" value="此文件不是本地文件，位于Web浏览器上." />
+						<item id="|.SOSTRPDDIA1|" type="string" value="你想把它复制到本地吗?" />
+						<item id="|.SOSTRPDDIA2|" type="string" value="复制文件?" />
+						<item id="|.SOSTRPDDIA3|" type="string" value="目标文件已经存在." />
+						<item id="|.SOSTRPDDIA4|" type="string" value="你要覆盖吗?" />
+						<item id="|.SOSTRPDDIA5|" type="string" value="覆盖?" />
+						<item id="|.SOSTRPDDIA6|" type="string" value="无法复制!" />
+						<item id="|.SOSTRPDDIA7|" type="string" value="在预览能够继续前需要先开启流媒体输出." />
+						<item id="|.SOSTRPDDIA8|" type="string" value="你确认开启吗?" />
+						<item id="|.SOSTRPDDIA9|" type="string" value="开启流媒体?" />
+					</Page_Designer>	
+				</Stream>
+			</Output>
+			<Text_Overlay>
+				<item id="|.SOVER0|" type="string" value="叠加" /> <!-- name in menu (not used since v.0.2.7) -->
+				<item id="|.SOVER0a|" type="string" value="叠加" /> <!-- name of folder in menu -->
+				<item id="|.SOVER0b|" type="string" value="文字" /> <!-- name in menu -->
+				<item id="|.SOVER0c|" type="string" value="文字叠加" /> <!-- name in settings panel -->
+				<item id="|.SOVER1|" type="string" value="位置:" />
+				<item id="|.SOVER2|" type="string" value="颜色:" />
+				<item id="|.SOVER3|" type="string" value="字体:" />
+				<item id="|.SOVER4|" type="string" value="类型:" />
+				<item id="|.SOVER5|" type="string" value="大小:" />
+				<item id="|.SOVER6|" type="string" value="文字" /> <!-- displayed on the tabs -->
+				<item id="|.SOVER7|" type="string" value="年 (4 位)" />
+				<item id="|.SOVER8|" type="string" value="年 (2 位)" />
+				<item id="|.SOVER9|" type="string" value="月" />
+				<item id="|.SOVER10|" type="string" value="日" />
+				<item id="|.SOVER11|" type="string" value="时" />
+				<item id="|.SOVER12|" type="string" value="分" />
+				<item id="|.SOVER13|" type="string" value="秒" />
+				<item id="|.SOVER13b|" type="string" value="no. stream viewers" />
+				<!-- position, vertical -->
+				<item id="|.SOVER14|" type="string" value="顶部" />
+				<item id="|.SOVER15|" type="string" value="中间" />
+				<item id="|.SOVER16|" type="string" value="底部" />
+				<!-- position, horizontal -->
+				<item id="|.SOVER17|" type="string" value="左" />
+				<item id="|.SOVER18|" type="string" value="中" />
+				<item id="|.SOVER19|" type="string" value="右" />
+				<!-- colors -->
+				<item id="|.SOVER20|" type="string" value="Red" />
+				<item id="|.SOVER21|" type="string" value="Green" />
+				<item id="|.SOVER22|" type="string" value="Blue" />
+				<item id="|.SOVER23|" type="string" value="Yellow" />
+				<item id="|.SOVER24|" type="string" value="White" />
+				<item id="|.SOVER25|" type="string" value="Black" />
+				<item id="|.SOVER26|" type="string" value="Gray" />
+				<item id="|.SOVER27|" type="string" value="Cyan" />
+				<!-- font type -->
+				<item id="|.SOVER28|" type="string" value="常规" />
+				<item id="|.SOVER29|" type="string" value="斜体" />
+				<item id="|.SOVER30|" type="string" value="加粗" />
+				<item id="|.SOVER31|" type="string" value="T:" /> <!-- First letter of the translation of "transparent" -->
+				<item id="|.SOVER32|" type="string" value="用作背景:" />
+				<!-- buttons -->
+				<item id="|.SOVER33|" type="string" value="预览" />
+				<item id="|.SOVER34|" type="string" value="I信息..." />
+				<!-- more stuff -->
+				<item id="|.SOVER40|" type="string" value="时 (12小时制h clock)" />
+				<item id="|.SOVER41|" type="string" value="英文格式表示月份" />
+				<item id="|.SOVER42|" type="string" value="英文格式表示日期" />
+				<item id="|.SOVER43|" type="string" value="文本中可以使用变量来替代动态值." />
+				<item id="|.SOVER44|" type="string" value="The following variables are available:" />
+				<item id="|.SOVER45|" type="string" value="month written with dynamic language (@x)" />
+				<item id="|.SOVER46|" type="string" value="day written with dynamic language (@x)" />
+				<!-- local calendar names -->				
+				<item id="|.SOVERDAY1|" type="string" value="Monday" />
+				<item id="|.SOVERDAY2|" type="string" value="Tuesday" />
+				<item id="|.SOVERDAY3|" type="string" value="Wednesday" />
+				<item id="|.SOVERDAY4|" type="string" value="Thursday" />
+				<item id="|.SOVERDAY5|" type="string" value="Friday" />
+				<item id="|.SOVERDAY6|" type="string" value="Saturday" />
+				<item id="|.SOVERDAY7|" type="string" value="Sunday" />
+				<item id="|.SOVERMON1|" type="string" value="January" />
+				<item id="|.SOVERMON2|" type="string" value="February" />
+				<item id="|.SOVERMON3|" type="string" value="March" />
+				<item id="|.SOVERMON4|" type="string" value="April" />
+				<item id="|.SOVERMON5|" type="string" value="May" />
+				<item id="|.SOVERMON6|" type="string" value="June" />
+				<item id="|.SOVERMON7|" type="string" value="July" />
+				<item id="|.SOVERMON8|" type="string" value="August" />
+				<item id="|.SOVERMON9|" type="string" value="September" />
+				<item id="|.SOVERMON10|" type="string" value="October" />
+				<item id="|.SOVERMON11|" type="string" value="November" />
+				<item id="|.SOVERMON12|" type="string" value="December" />
+			</Text_Overlay>
+			<Image_Overlay>
+				<item id="|.SIOVER0a|" type="string" value="图片" /> <!-- name in menu -->
+				<item id="|.SIOVER0b|" type="string" value="图像叠加" /> <!-- name in settings panel -->
+				<item id="|.SIOVER1|" type="string" value="图片" /> <!-- text on tabs -->
+				<item id="|.SIOVER2|" type="string" value="改变..." />
+				<item id="|.SIOVER3|" type="string" value="移除" />
+				<item id="|.SIOVER4|" type="string" value="透明度:" />	
+			</Image_Overlay>
+			<Startup>
+				<item id="|.SSTRT0|" type="string" value="启动" /> <!-- name in menu and heading -->
+				<item id="|.SSTRT1|" type="string" value="当Yawcam启动时,这些是你可以改变的." />
+				<item id="|.SSTRT2|" type="string" value="开始文件输出" />
+				<item id="|.SSTRT3|" type="string" value="开始Ftp输出" />
+				<item id="|.SSTRT4|" type="string" value="开始http输出" />
+				<item id="|.SSTRT5|" type="string" value="显示预览" />
+				<item id="|.SSTRT6|" type="string" value="显示主控台" />
+				<item id="|.SSTRT7|" type="string" value="显示状态栏" />
+				<item id="|.SSTRT8|" type="string" value="启动是隐藏到托盘栏" />
+				<item id="|.SSTRT9|" type="string" value="显示启动画面" />
+				<item id="|.SSTRT10|" type="string" value="开始流媒体输出" />
+				<item id="|.SSTRT11|" type="string" value="显示观众" />
+				<item id="|.SSTRT12|" type="string" value="检查新版本" />
+				<item id="|.SSTRT13|" type="string" value="保存登录文件" />
+				<item id="|.SSTRT14|" type="string" value="开始动作检测" />
+			</Startup>
+			<Offline_Image>
+				<item id="|.SOFFIMG0|" type="string" value="离线图片" />
+				<item id="|.SOFFIMG1|" type="string" value="当我离线时保存离线图片:" />
+				<item id="|.SOFFIMG2|" type="string" value="选择图片:" />
+				<item id="|.SOFFIMG3|" type="string" value="同时保存Yawcam退出. (延迟退出)" />
+				<item id="|.SOFFIMG4|" type="string" value="选择图片" />
+			</Offline_Image>
+			<Password>
+				<item id="|.SPASS0|" type="string" value="密码" />
+				<item id="|.SPASS1|" type="string" value="流媒体输出使用密码." />
+				<item id="|.SPASS2|" type="string" value="确认..." />
+				<item id="|.SPASS3|" type="string" value="警告! 所有密码将被删除!" />
+				<item id="|.SPASS4|" type="string" value="您确定要继续吗?" />
+				<item id="|.SPASS5|" type="string" value=" @x 的密码将被删除will be deleted!" />
+				<item id="|.SPASS6|" type="string" value="没有选择用户!" />
+				<item id="|.SPASS7|" type="string" value="选择一个用户，再一次按下 @x ." />
+				<item id="|.SPASS8|" type="string" value="不能这样做..." />
+				<item id="|.SPASS9|" type="string" value="错误的登录尝试:" />
+				<item id="|.SPASS10|" type="string" value="添加用户名/密码..." />
+				<item id="|.SPASS11|" type="string" value="用户名" />
+				<item id="|.SPASS12|" type="string" value="密码" />
+				<item id="|.SPASS13|" type="string" value="确认密码" />
+				<item id="|.SPASS14|" type="string" value="你已经开启了流媒体小程序和流媒体通告的密码!" />
+				<item id="|.SPASS15|" type="string" value="这可能不是您想要的 ;-)" />
+				<item id="|.SPASS16|" type="string" value="你仍然要继续吗?" />
+				<item id="|.SPASS17|" type="string" value="你确定吗?" />
+			</Password>
+			<Announcements>
+				<item id="|.SANN0|" type="string" value="通告" /> <!-- name in menu and heading -->
+				<item id="|.SANN1|" type="string" value="当你上线时，此面板可以设置一个能够发到视频交流社区的通告." />
+				<item id="|.SANN2|" type="string" value="上线通告:" />
+				<item id="|.SANN3|" type="string" value="下线通告:" />
+				<item id="|.SANN4|" type="string" value="当我上线/下显示发布一个通告:" />
+				<item id="|.SANN5|" type="string" value="预览" />
+				<item id="|.SANN6|" type="string" value="信息" />
+				<item id="|.SANN7|" type="string" value="通告:" />
+				<item id="|.SANN8|" type="string" value="上线:" />
+				<item id="|.SANN9|" type="string" value="离线:" />
+				<item id="|.SANN10|" type="string" value="通常包括HTTP请求的公告." />
+				<item id="|.SANN11|" type="string" value="你的视频交流社区将提供你中意的通告字符串." />
+				<item id="|.SANN12|" type="string" value="当您创建通告字符串时，你可以使用一些变量:" />
+				<item id="|.SANN13|" type="string" value="Yawcam网址基于网络服务器 (http)" />
+				<item id="|.SANN14|" type="string" value="Yawcam网址的流小程序（流）" />
+				<item id="|.SANN15|" type="string" value="警告!" />
+				<item id="|.SANN16|" type="string" value="无法发送上线通告!" />
+				<item id="|.SANN17|" type="string" value="无法发送离线通告!" />
+				<item id="|.SANN18|" type="string" value="请检查有关设置..." />
+			</Announcements>
+			<Scheduler>
+				<item id="|.SSCHED0|" type="string" value="计划任务" /> <!-- name in menu and heading -->
+				<item id="|.SSCHED1|" type="string" value="启动计划任务" />
+				<item id="|.SSCHED2|" type="string" value="启动" />
+				<item id="|.SSCHED3|" type="string" value="停止" />
+			</Scheduler>
+		</Settings>
+		<Motion_Detection>
+		
+		</Motion_Detection>
+		<About>
+			<item id="|.ABW0|" type="string" value="关于 Yawcam" /> <!-- heading for window -->
+			<item id="|.ABW1|" type="string" value="翻译:" />
+			<item id="|.ABW2|" type="string" value="感谢以下人员:" />
+			<item id="|.ABW3|" type="string" value="OK" /> <!-- button -->
+		</About>
+		<Pass_Prompt>
+			<item id="|.PSSP0|" type="string" value="登录..." /> <!-- heading for window -->
+			<item id="|.PSSP1|" type="string" value="Yawcam无法用你给的用户名和密码登录Ftp，请给出正确的:" />
+			<item id="|.PSSP2|" type="string" value="用户名:" />
+			<item id="|.PSSP3|" type="string" value="密码:" />
+			<item id="|.PSSP4|" type="string" value="为下次登录保存密码. (不安全!)" />
+		</Pass_Prompt>
+		<TrayIcon_popmenu>
+			<item id="|.TIM0|" type="string" value="隐藏/显示" />
+			<item id="|.TIM1|" type="string" value="一直在前" />
+			<item id="|.TIM2|" type="string" value="启动" />
+			<item id="|.TIM3|" type="string" value="文件" />
+			<item id="|.TIM4|" type="string" value="Ftp" />
+			<item id="|.TIM5|" type="string" value="Http" />
+			<item id="|.TIM6|" type="string" value="流媒体" />
+			<item id="|.TIM7|" type="string" value="设置..." />
+			<item id="|.TIM8|" type="string" value="帮助..." />
+			<item id="|.TIM9|" type="string" value="退出" />
+			<item id="|.TIM10|" type="string" value="移动监测" />
+			<item id="|.TIM11|" type="string" value="计划任务" />
+		</TrayIcon_popmenu>
+		<Viewers>
+			<item id="|.VIEWF0|" type="string" value="观众:" /> <!-- label for number of viewers -->
+			<item id="|.VIEWF1|" type="string" value="IP" />
+			<item id="|.VIEWF2|" type="string" value="主机名" />
+			<item id="|.VIEWF3|" type="string" value="时间" />
+			<item id="|.VIEWF4|" type="string" value="发送 (kB)" />
+			<item id="|.VIEWF5|" type="string" value="流媒体观众" /> <!-- window title -->
+			<item id="|.VIEWF6|" type="string" value="开始!" />
+			<item id="|.VIEWF7|" type="string" value="禁止列表..." />
+			<item id="|.VIEWF8|" type="string" value="禁止!" />
+			<item id="|.VIEWF9a|" type="string" value="禁止观众?" />
+			<item id="|.VIEWF9b|" type="string" value="你真想禁止此用户吗?" />
+			<item id="|.VIEWF10|" type="string" value="解除禁止" />
+			<item id="|.VIEWF11a|" type="string" value="添加IP" />
+			<item id="|.VIEWF11b|" type="string" value="输入要禁止的IP:" />
+			<item id="|.VIEWF12|" type="string" value="已被禁止的IP地址:" />
+		</Viewers>
+		<ImgToMov>
+			<item id="|.IMGTM0|" type="string" value="影片使用的图片" /> <!-- title -->
+			<item id="|.IMGTM1|" type="string" value="此对话框将帮助您合并图像到影片中." />
+			<item id="|.IMGTM2|" type="string" value="在下面的列表中的图像将被列入该电影:" />
+			<item id="|.IMGTM3|" type="string" value="相反顺序" />
+			<item id="|.IMGTM4|" type="string" value="加入图片..." />
+			<item id="|.IMGTM5|" type="string" value="帧率:" />
+			<item id="|.IMGTM6|" type="string" value="fps" /> <!-- fps (frames per second) -->
+			<item id="|.IMGTM7|" type="string" value="电影文件:" />
+			<item id="|.IMGTM8|" type="string" value="制作影片" />
+			<item id="|.IMGTM9|" type="string" value="你要在列表中选个项目." />
+			<item id="|.IMGTM10|" type="string" value="你必须往列表中添加图片!" />
+			<item id="|.IMGTM11a|" type="string" value="您必须输入一个整数帧速率." />
+			<item id="|.IMGTM11b|" type="string" value="1 - 90才是有效数字." />
+			<item id="|.IMGTM12|" type="string" value="你必须给影片选一个名字." />
+			<item id="|.IMGTM13|" type="string" value="制作影片..." />
+			<item id="|.IMGTM14|" type="string" value="添加图片..." />
+			<item id="|.IMGTM15|" type="string" value="在这儿你能找到影片:" />
+			<item id="|.IMGTM16|" type="string" value="做完..." />
+			<item id="|.IMGTM17|" type="string" value="写入影片..." />			
+			<item id="|.IMGTM18|" type="string" value="检查图片..." />
+		</ImgToMov>
+		<Popup_Errors>
+			<item id="|.POPER0|" type="string" value="错误信息..." /> <!-- heading for all error popups -->
+			<item id="|.POPER1a|" type="string" value="未知的主机!" />
+			<item id="|.POPER1b|" type="string" value="请在设置中检查Ftp地址." />
+			<item id="|.POPER2a|" type="string" value="连接被拒绝!" />
+			<item id="|.POPER2b|" type="string" value="请检查ftp设置." />
+			<item id="|.POPER3a|" type="string" value="申请被拒绝!" />
+			<item id="|.POPER3b|" type="string" value="请检查您有权限把文件上传到FTP服务器." />
+			<item id="|.POPER4|" type="string" value="不是一个有效的xml文件!" />
+			<item id="|.POPER5|" type="string" value="找不到文件:" />
+			<!-- input errors -->
+			<item id="|.POPER6|" type="string" value="请选择..." />
+			<item id="|.POPER7a|" type="string" value="不是一个有效的区间值!" />
+			<item id="|.POPER7b|" type="string" value="这个字段只能包含一个数字. (例如: 10 or 300)" />
+			<item id="|.POPER8a|" type="string" value="不是有效的端口数!" />
+			<item id="|.POPER8b|" type="string" value="这个字段只能包含数字. (例如: 21)" />
+			<item id="|.POPER9|" type="string" value="这个字段只能包含数字. (例如: 8888)" />
+			<item id="|.POPER10|" type="string" value=" @x 端口已经使用." />
+			<item id="|.POPER11|" type="string" value="请选择另一个端口." />
+			<item id="|.POPER12a|" type="string" value="没有这个目录!" />
+			<item id="|.POPER12b|" type="string" value="请检查在FTP设置中输入的该目录是否确实存在." />
+			<!-- misc -->
+			<item id="|.POPERLANG0|" type="string" value="抱歉..." />
+			<item id="|.POPERLANG1|" type="string" value="这个Yawcam版本没有任何帮助文件." />
+			<item id="|.POPERLANG2|" type="string" value="请到www.yawcam.com检查更新." />
+			<!-- camera errors -->
+			<item id="|.POPERCAM0|" type="string" value="Yawcam无法连接到摄像头." />
+			<item id="|.POPERCAM1|" type="string" value="请检查没有其他应用程序正在使用它，或选择一个不同的." />
+			<item id="|.POPERCAM2|" type="string" value="If the camera list is empty, click @x and then @y in the @z menu." />
+			<!-- File-output errors -->
+			<item id="|.POPERFILE0|" type="string" value="无法保存文件: @x" />
+			<item id="|.POPERFILE1|" type="string" value="检查目录确实存在！ （如果不是，请更正您的设定...)" />
+			<!-- More Ftp-output errors -->
+			<item id="|.POPERFTP0|" type="string" value="无法保存临时文件!" />
+			<item id="|.POPERFTP1|" type="string" value="检查@ x目录是否存在。（如果没有，请创建一个)" />
+			<!-- add password error -->
+			<item id="|.POPERPASADD0|" type="string" value="必须输入用户名!" />
+			<item id="|.POPERPASADD1|" type="string" value="密码输入错误." />
+			<item id="|.POPERPASADD2|" type="string" value="请再试一次!" />
+			<item id="|.POPERPASADD3|" type="string" value="该密码不能为空!" />
+			<!-- stream -->
+			<item id="|.POPERSTRM0|" type="string" value="无法自动检测IP!" />
+			<item id="|.POPERSTRM1|" type="string" value="这些字段只能包含整数." />
+		</Popup_Errors>
+	</GUI>
+	<Console>
+		<item id="|.CNSPR0|" type="string" value="Yawcam开始" />
+		<item id="|.CNSPR1|" type="string" value="设置载入" />
+		<item id="|.CNSPR2|" type="string" value="已存设置" />
+		<item id="|.CNSPR3|" type="string" value="File-输出开始" />
+		<item id="|.CNSPR4|" type="string" value="File-输出停止" />
+		<item id="|.CNSPR5|" type="string" value="Ftp-输出开始" />
+		<item id="|.CNSPR6|" type="string" value="Ftp-输出停止" />
+		<item id="|.CNSPR7|" type="string" value="Http-输出开始" />
+		<item id="|.CNSPR8|" type="string" value="Http-输出停止" />
+		<item id="|.CNSPR9|" type="string" value="图片格式: @x" />
+		<item id="|.CNSPR10|" type="string" value="使用中的设备: @x" />
+		<item id="|.CNSPR11|" type="string" value="语言: @x" />
+		<item id="|.CNSPR12|" type="string" value="Yawcam隐藏" />
+		<item id="|.CNSPR13|" type="string" value="Yawcam显示" />
+		<item id="|.CNSPR14|" type="string" value="搜索网络摄像头..." />
+		<item id="|.CNSPR15|" type="string" value="谢谢!" />
+		<item id="|.CNSPR16|" type="string" value="已保存" />
+		<item id="|.CNSPR17|" type="string" value="Stream-输出开始" />
+		<item id="|.CNSPR18|" type="string" value="Stream-输出停止" />
+		<item id="|.CNSPR19|" type="string" value="帮助文件详见公司网站." />
+		<item id="|.CNSPR20|" type="string" value=" @x 端口已在使用中!" />
+		<item id="|.CNSPR21|" type="string" value="无法连接到ftp服务器!" />
+	</Console>
+</yawcam_lang>

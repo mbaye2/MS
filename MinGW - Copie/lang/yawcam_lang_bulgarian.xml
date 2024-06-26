@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!--  
+*	Language file for yawcam
+*	More language files can be found at: www.yawcam.com	
+*
+*	Translation instructions:	
+*	1)	Letters behind a '@'
+*		( for example @x ) are variables and will be replaced with 
+*		something else in the real program.
+*
+*	2)	The option 'Language' in the help menu must also 
+*		contain the English word "language" in the translation.
+*		So if the translation of "language" is "foo", then
+*		the label in the menu should be: "Foo/Language..."
+*
+*	3)	In the <lang_version> section: 
+*		"LV1" is the version number of yawcam that this 
+*			language file is written for. (Should be something 
+*			like 0.1)
+*		"LV2" is the version letter of the language file. Every new
+*			translation for a new version of yawcam should have the 
+*			version letter 'a'. When updates to the language file are 
+*			made change to the following letter. (a to b, b to c, and so on)
+*
+*	4)	In the <translator> section, please fill in your name and e-mail.
+*       If you are updating a translation, keep the old name and add your name behind a ;
+*       It will look somehting like this: "trans1 (trans1@email.com);trans2 (trans2@email.com)"
+*
+*	5)	An <item id="  " ... > tag must always be on one row! Never insert 
+*		a line break, even if the text is really long.
+*
+*	6)	Translations can be mailed to translations@yawcam.com
+*			
+*	7)	Have fun! And Thanks for contributing! //Magnus Lundvall
+*
+--> 
+
+<yawcam_lang>
+	<misc>
+		<language>
+			<!-- Change to the current language -->
+			<item id="|.L1|" type="string" value="Български" />
+		</language>
+		<translator>
+			<!-- Also include e-mail -->
+			<item id="|.T1|" type="string" value="Атанас Димитров (root@burgas-bg.com)" /> <!-- Replace with your own name and e-mail -->
+		</translator>
+		<lang_version>
+			<!-- The version number should follow the standard described above! -->
+			<item id="|.LV1|" type="string" value="0.2.5" /> <!-- Yawcam version -->	
+			<item id="|.LV2|" type="string" value="a" /> <!-- Language file version -->
+		</lang_version>
+	</misc>
+	<GUI>
+		<Menu>
+			<File>
+				<item id="|.MF0|" type="string" value="Файл" />
+				<item id="|.MF1|" type="string" value="Разреши видео към файл" />
+				<item id="|.MF2|" type="string" value="Разреши видео към Ftp" />
+				<item id="|.MF3|" type="string" value="Разреши видео към уеб сървъра" />
+				<item id="|.MF4|" type="string" value="Разреши видео към сървъра за видео" />
+				<item id="|.MF5|" type="string" value="Изход" />
+			</File>
+			<View>
+				<item id="|.MV0|" type="string" value="Изглед" />
+				<item id="|.MV1|" type="string" value="Контролен панел" />
+				<item id="|.MV2|" type="string" value="Конзола" />
+				<item id="|.MV3|" type="string" value="Скрий при стартирване" />
+				<item id="|.MV4|" type="string" value="Скрий сега" />
+			</View>
+			<Settings>
+				<item id="|.MS0|" type="string" value="Настройки" />
+				<item id="|.MS1|" type="string" value="Търсене на уеб камера..." />
+				<item id="|.MS2|" type="string" value="Промяна на Настройки..." />
+			</Settings>
+			<Window>
+				<item id="|.MW0|" type="string" value="Прозорец" />
+				<item id="|.MW1|" type="string" value="Изглед" />
+				<item id="|.MW2|" type="string" value="Запис" />
+				<item id="|.MW3|" type="string" value="Конзола" />
+				<item id="|.MW4|" type="string" value="Статистики" />
+				<item id="|.MW5|" type="string" value="Зрители" />
+			</Window>
+			<Help>
+				<item id="|.MH0|" type="string" value="Помощ" />
+				<item id="|.MH1|" type="string" value="Съдържание..." />
+				<item id="|.MH2|" type="string" value="Език..." />
+				<item id="|.MH3|" type="string" value="Посетете уеб страницата ни..." />
+				<item id="|.MH4|" type="string" value="За програмата..." />
+			</Help>
+		</Menu>
+		<Main_Window>
+			<item id="|.MAINW0|" type="string" value="Контролен панел" /> <!-- name on the control panel tab -->
+			<item id="|.MAINW1|" type="string" value="Конзола" /> <!-- name on the console tab -->
+			<item id="|.MAINW2|" type="string" value="Файл" /> <!-- File-output label -->
+			<item id="|.MAINW3|" type="string" value="Ftp" /> <!-- Ftp-output label -->
+			<item id="|.MAINW4|" type="string" value="Уеб" /> <!-- Http-output label -->
+			<item id="|.MAINW5|" type="string" value="Видео" /> <!-- Stream-output label -->
+			<item id="|.MAINW6|" type="string" value="разреши" /> <!-- button text -->
+			<item id="|.MAINW7|" type="string" value="забрани" /> <!-- button text -->
+		</Main_Window>
+		<Detect_Dialog>
+			<item id="|.DETD0|" type="string" value="Изчакайте моля..." /> <!-- heading for dialog -->
+			<item id="|.DETD1|" type="string" value="Изчакайте моля докато прозорецът @x се затвори. След което натиснете @y." /> <!-- message -->
+			<item id="|.DETD2|" type="string" value="Да" /> <!-- button label -->
+		</Detect_Dialog>
+		<Preview_Window>
+			<item id="|.PREVW0|" type="string" value="Изглед" /> <!-- heading for window -->
+		</Preview_Window>
+		<Capture_Window>
+			<item id="|.CAPTW0|" type="string" value="Запис" /> <!-- heading for window -->
+			<item id="|.CAPTW1|" type="string" value="Запис!" /> <!-- button label -->
+			<Image_Win>
+				<item id="|.IMGW0|" type="string" value="Снимка" /> <!-- heading for window -->
+				<item id="|.IMGW1|" type="string" value="Запази..." /> <!-- label: save-button -->
+				<item id="|.IMGW2|" type="string" value="Затвори" /> <!-- label: close-button -->
+				<item id="|.IMGW3|" type="string" value="Запази файл..." /> <!-- heading for save-file-dialog -->
+			</Image_Win>
+		</Capture_Window>
+		<Settings>
+			<item id="|.SHEAD0|" type="string" value="Настройки" /> <!-- heading for settings window -->
+			<item id="|.SBTN0|" type="string" value="Да" /> <!-- ok button-label -->
+			<item id="|.SBTN1|" type="string" value="Отмени" /> <!-- cancel button-label -->
+			<item id="|.SCAT0|" type="string" value="Категории:" /> <!-- category-label -->
+			<Language>
+				<item id="|.SLANG0|" type="string" value="Език" /> <!-- name in menu and heading for panel -->
+				<item id="|.SLANG1|" type="string" value="Езикът който ползвате в момента е:" /> 
+				<item id="|.SLANG2|" type="string" value="Промяна..." /> <!-- button label -->
+				<item id="|.SLANG3|" type="string" value="Имайте предвид, че езикът ще остане непроменен докато не натиснете @x" /> <!-- info text -->
+				<item id="|.SLANG4|" type="string" value="Изберете езикова библиотека..." /> <!-- choose file dialog heading -->
+			</Language>
+			<Camera>
+				<item id="|.SCAM0|" type="string" value="Камера" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCAM1|" type="string" value="Избор на камера:" /> 
+				<item id="|.SCAM2|" type="string" value="Избор на видео формат:" /> 
+				<item id="|.SCAM3|" type="string" value="Забележка: Избраният формат ще засегне размерът на снимката за всички формати на изходни потоци." /> 
+			</Camera>
+			<Output>
+				<!-- common text -->
+				<item id="|.SOUT0|" type="string" value="Изход" /> <!-- name in menu -->
+				<item id="|.SOUT1|" type="string" value="Тип:" />
+				<item id="|.SOUT2|" type="string" value="Качество на образа:" />
+				<item id="|.SOUT3|" type="string" value="Интервал:" />
+				<item id="|.SOUT4|" type="string" value="секунди" />
+				<item id="|.SOUT5|" type="string" value="Порт:" />
+				<!-- unique text -->
+				<File>
+					<item id="|.SOFILE0|" type="string" value="Файл" /> <!-- name in menu and heading -->
+					<item id="|.SOFILE1|" type="string" value="Път:" />
+					<item id="|.SOFILE2|" type="string" value="Разглеждам..." /> <!-- button -->
+					<item id="|.SOFILE3|" type="string" value="Запиши като..." />
+				</File>
+				<Ftp>
+					<item id="|.SOFTP0|" type="string" value="Ftp" /> <!-- name in menu and heading -->
+					<item id="|.SOFTP1|" type="string" value="Ftp сървър:" />
+					<item id="|.SOFTP2|" type="string" value="Потребителско име:" />
+					<item id="|.SOFTP3|" type="string" value="Парола:" />
+					<item id="|.SOFTP4|" type="string" value="Директория:" />
+					<item id="|.SOFTP5|" type="string" value="Име на файл:" />
+					<item id="|.SOFTP6|" type="string" value="Интервал на качване (upload):" />
+					<item id="|.SOFTP7|" type="string" value="Забележка: НЕ е препоръчително да запазвазвате вашата парола тук.Вместо това оставете полето за парола празно, и ще бъдете попитан за нея при нужда." />
+				</Ftp>
+				<Http>
+					<item id="|.SOHTTP0|" type="string" value="Уеб сървър" /> <!-- name in menu and heading -->
+					<item id="|.SOHTTP1|" type="string" value="URL ще е:" />
+					<item id="|.SOHTTP2|" type="string" value="или" />
+					<item id="|.SOHTTP3|" type="string" value="Възможно е да редактирате HTML файловете в @x за да промените страниците." />
+				</Http>
+				<Stream>
+					<item id="|.SOSTR0|" type="string" value="Видео сървър" /> <!-- name in menu and heading -->
+					<item id="|.SOSTR1|" type="string" value="Порт за връзка:" />
+					<item id="|.SOSTR2|" type="string" value="Порт за данни:" />
+					<item id="|.SOSTR3|" type="string" value="Описание:" />
+					<item id="|.SOSTR4|" type="string" value="Още" />
+					<item id="|.SOSTR5|" type="string" value="Задай публичен IP адрес:" />
+					<item id="|.SOSTR6|" type="string" value="URL ще е:" />
+				</Stream>
+			</Output>
+			<Text_Overlay>
+				<item id="|.SOVER0|" type="string" value="Облицовка" /> <!-- name in menu and heading -->
+				<item id="|.SOVER1|" type="string" value="Позиция:" />
+				<item id="|.SOVER2|" type="string" value="Цвят:" />
+				<item id="|.SOVER3|" type="string" value="Шрифт:" />
+				<item id="|.SOVER4|" type="string" value="Тип:" />
+				<item id="|.SOVER5|" type="string" value="Размер:" />
+				<item id="|.SOVER6|" type="string" value="Текст" /> <!-- displayed on the tabs -->
+				<item id="|.SOVER7|" type="string" value="Година (4 цифри)" />
+				<item id="|.SOVER8|" type="string" value="Година (2 цифри)" />
+				<item id="|.SOVER9|" type="string" value="месец" />
+				<item id="|.SOVER10|" type="string" value="ден" />
+				<item id="|.SOVER11|" type="string" value="час" />
+				<item id="|.SOVER12|" type="string" value="минути" />
+				<item id="|.SOVER13|" type="string" value="секунди" />
+				<!-- position, vertical -->
+				<item id="|.SOVER14|" type="string" value="Горе" />
+				<item id="|.SOVER15|" type="string" value="В центъра" />
+				<item id="|.SOVER16|" type="string" value="Долу" />
+				<!-- position, horizontal -->
+				<item id="|.SOVER17|" type="string" value="Ляво" />
+				<item id="|.SOVER18|" type="string" value="В центъра" />
+				<item id="|.SOVER19|" type="string" value="Дясно" />
+				<!-- colors -->
+				<item id="|.SOVER20|" type="string" value="Червено" />
+				<item id="|.SOVER21|" type="string" value="Зелено" />
+				<item id="|.SOVER22|" type="string" value="Синьо" />
+				<item id="|.SOVER23|" type="string" value="Жълто" />
+				<item id="|.SOVER24|" type="string" value="Бяло" />
+				<item id="|.SOVER25|" type="string" value="Черно" />
+				<item id="|.SOVER26|" type="string" value="Сиво" />
+				<item id="|.SOVER27|" type="string" value="Циант" />
+				<!-- font type -->
+				<item id="|.SOVER28|" type="string" value="Нормален" />
+				<item id="|.SOVER29|" type="string" value="Наклонен" />
+				<item id="|.SOVER30|" type="string" value="Удебелен" />
+			</Text_Overlay>
+			<Startup>
+				<item id="|.SSTRT0|" type="string" value="Начално стартирване" /> <!-- name in menu and heading -->
+				<item id="|.SSTRT1|" type="string" value="Тук можете да укажете какво да се стартира когато Yawcam се стартира." />
+				<item id="|.SSTRT2|" type="string" value="Стартирай запис в Файл" />
+				<item id="|.SSTRT3|" type="string" value="Стартирай запис към Ftp" />
+				<item id="|.SSTRT4|" type="string" value="Стартирай Уеб сървър" />
+				<item id="|.SSTRT5|" type="string" value="Покажи изглед" />
+				<item id="|.SSTRT6|" type="string" value="Покажи конзола" />
+				<item id="|.SSTRT7|" type="string" value="Покажи статистики" />
+				<item id="|.SSTRT8|" type="string" value="Скрий при стартирване" />
+				<item id="|.SSTRT9|" type="string" value="Покажи новости" />
+				<item id="|.SSTRT10|" type="string" value="Стартирай Видео сървър" />
+				<item id="|.SSTRT11|" type="string" value="Покажи Зрители" />
+			</Startup>
+		</Settings>
+		<About>
+			<item id="|.ABW0|" type="string" value="За Yawcam" /> <!-- heading for window -->
+			<item id="|.ABW1|" type="string" value="Превод:" />
+			<item id="|.ABW2|" type="string" value="Благодарение на:" />
+			<item id="|.ABW3|" type="string" value="Да" /> <!-- button -->
+		</About>
+		<Pass_Prompt>
+			<item id="|.PSSP0|" type="string" value="Вход..." /> <!-- heading for window -->
+			<item id="|.PSSP1|" type="string" value="Yawcam не можа да влезе в това ftp със зададените потребителско име и парола! Моля въведете верни стойности:" />
+			<item id="|.PSSP2|" type="string" value="Потребителско име:" />
+			<item id="|.PSSP3|" type="string" value="Парола:" />
+			<item id="|.PSSP4|" type="string" value="Запази паролата за следващият път. (Не е безопасно!)" />
+		</Pass_Prompt>
+		<Viewers>
+			<item id="|.VIEWF0|" type="string" value="Зрители:" /> <!-- label for number of viewers -->
+			<item id="|.VIEWF1|" type="string" value="IP" />
+			<item id="|.VIEWF2|" type="string" value="Име на хост" />
+			<item id="|.VIEWF3|" type="string" value="Време" />
+			<item id="|.VIEWF4|" type="string" value="Изпратени (kB)" />
+			<item id="|.VIEWF5|" type="string" value="Видео зрители" /> <!-- window title -->
+		</Viewers>
+		<Popup_Errors>
+			<item id="|.POPER0|" type="string" value="Грешка..." /> <!-- heading for all error popups -->
+			<item id="|.POPER1a|" type="string" value="Неизвестен хост!" />
+			<item id="|.POPER1b|" type="string" value="Моля проверете адреса за ftp настройките." />
+			<item id="|.POPER2a|" type="string" value="Връзката отказана!" />
+			<item id="|.POPER2b|" type="string" value="Моля проверете ftp-настройките." />
+			<item id="|.POPER3a|" type="string" value="Отказано е разрешение!" />
+			<item id="|.POPER3b|" type="string" value="Моля проверете дали имате разрешение да качвате файлове на този ftp сървър." />
+			<item id="|.POPER4|" type="string" value="Невалиден xml файл!" />
+			<item id="|.POPER5|" type="string" value="Неможе да бъде намерен файла:" />
+			<!-- input errors -->
+			<item id="|.POPER6|" type="string" value="Моля променете..." />
+			<item id="|.POPER7a|" type="string" value="Невалидна стойност за интервал!" />
+			<item id="|.POPER7b|" type="string" value="Полето може да съдържа само числа. (примерно: 5.5 or 10)" />
+			<item id="|.POPER8a|" type="string" value="Невалиден номер на порт!" />
+			<item id="|.POPER8b|" type="string" value="Полето може да съдържа само числа. (примерно: 21)" />
+			<item id="|.POPER9|" type="string" value="Полето може да съдържа само числа. (примерно: 8888)" />
+			<item id="|.POPER10|" type="string" value="Порт @x вече се използва." />
+			<item id="|.POPER11|" type="string" value="Моля изберете друг порт." />
+			<!-- misc -->
+			<item id="|.POPERLANG0|" type="string" value="Съжалявам..." />
+			<item id="|.POPERLANG1|" type="string" value="Тази версия на Yawcam няма файл за Помощ." />
+			<item id="|.POPERLANG2|" type="string" value="Моля проверете www.yawcam.com за обновления." />
+			<!-- camera errors -->
+			<item id="|.POPERCAM0|" type="string" value="Yawcam не можа да се свърже с камерата." />
+			<item id="|.POPERCAM1|" type="string" value="Моля проверете дали някоя друга програма не я ползва, или изберете друга." />
+			<item id="|.POPERCAM2|" type="string" value="Ако списъка с камери е празен, натисни @x и после @y в @z ." />
+			<!-- File-output errors -->
+			<item id="|.POPERFILE0|" type="string" value="Не можах да запиша файл: @x" />
+			<item id="|.POPERFILE1|" type="string" value="Проверете дали директорията наистина съществува! (Ако не, моля редактирайте вашите настройки...)" />
+			<!-- More Ftp-output errors -->
+			<item id="|.POPERFTP0|" type="string" value="Не можах да запиша временния файл!" />
+			<item id="|.POPERFTP1|" type="string" value="Проверете дали директорията @x съществува. (Ако не, моля създайте я)" />
+		</Popup_Errors>
+	</GUI>
+	<Console>
+		<item id="|.CNSPR0|" type="string" value="Yawcam стартира" />
+		<item id="|.CNSPR1|" type="string" value="Настройките заредени" />
+		<item id="|.CNSPR2|" type="string" value="Настройките запазени" />
+		<item id="|.CNSPR3|" type="string" value="Запис към Файл стартиран" />
+		<item id="|.CNSPR4|" type="string" value="апис към Файл спрян" />
+		<item id="|.CNSPR5|" type="string" value="Ftp стартиран" />
+		<item id="|.CNSPR6|" type="string" value="Ftp спрян" />
+		<item id="|.CNSPR7|" type="string" value="Уеб сървър стартиран" />
+		<item id="|.CNSPR8|" type="string" value="Уеб сървър спрян" />
+		<item id="|.CNSPR9|" type="string" value="Формат на снимката: @x" />
+		<item id="|.CNSPR10|" type="string" value="Ползващо устройство: @x" />
+		<item id="|.CNSPR11|" type="string" value="Език: @x" />
+		<item id="|.CNSPR12|" type="string" value="Yawcam скрита" />
+		<item id="|.CNSPR13|" type="string" value="Yawcam показана" />
+		<item id="|.CNSPR14|" type="string" value="Търся уеб камери..." />
+		<item id="|.CNSPR15|" type="string" value="Благодаря!" />
+		<item id="|.CNSPR16|" type="string" value="Файлът беше запазен" />
+		<item id="|.CNSPR17|" type="string" value="Видео сървър стартиран" />
+		<item id="|.CNSPR18|" type="string" value="Видео сървър спрян" />
+		<item id="|.CNSPR19|" type="string" value="Файлът за помощ се намира на www." />
+		<item id="|.CNSPR20|" type="string" value="Порт @x се ползва вече!" />
+	</Console>
+</yawcam_lang>

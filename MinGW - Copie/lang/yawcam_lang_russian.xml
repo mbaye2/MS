@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!--  
+*	Language file for yawcam
+*	More language files can be found at: www.yawcam.com	
+*
+*	Translation instructions:	
+*	1)	Letters behind a '@'
+*		( for example @x ) are variables and will be replaced with 
+*		something else in the real program.
+*
+*	2)	The option 'Language' in the help menu must also 
+*		contain the English word "language" in the translation.
+*		So if the translation of "language" is "foo", then
+*		the label in the menu should be: "Foo/Language..."
+*
+*	3)	In the <lang_version> section: 
+*		"LV1" is the version number of yawcam that this 
+*			language file is written for. (Should be something 
+*			like 0.1)
+*		"LV2" is the version letter of the language file. Every new
+*			translation for a new version of yawcam should have the 
+*			version letter 'a'. When updates to the language file are 
+*			made change to the following letter. (a to b, b to c, and so on)
+*
+*	4)	In the <translator> section, please fill in your name and e-mail.
+*       If you are updating a translation, keep the old name and add your name behind a ;
+*       It will look somehting like this: "trans1 (trans1@email.com);trans2 (trans2@email.com)"
+*
+*	5)	An <item id="  " ... > tag must always be on one row! Never insert 
+*		a line break, even if the text is really long.
+*
+*	6)	Translations can be mailed to translations@yawcam.com
+*			
+*	7)	Have fun! And Thanks for contributing! //Magnus Lundvall
+*
+--> 
+
+<yawcam_lang>
+	<misc>
+		<language>
+			<!-- Change to the current language -->
+			<item id="|.L1|" type="string" value="Русский" />
+		</language>
+		<translator>
+			<!-- Also include e-mail -->
+			<item id="|.T1|" type="string" value="Худяков Иван (ihudiakov@security.kg)" /> <!-- Replace with your own name and e-mail -->
+		</translator>
+		<lang_version>
+			<!-- The version number should follow the standard described above! -->
+			<item id="|.LV1|" type="string" value="0.3.9" /> <!-- Yawcam version -->	
+			<item id="|.LV2|" type="string" value="a" /> <!-- Language file version -->
+		</lang_version>
+	</misc>
+	<GUI>
+		<Menu>
+			<File>
+				<item id="|.MF0|" type="string" value="Файл" />
+				<item id="|.MF1|" type="string" value="Включить вывод в файл" />
+				<item id="|.MF2|" type="string" value="Включить вывод на сервер FTP" />
+				<item id="|.MF3|" type="string" value="Включить вывод по HTTP" />
+				<item id="|.MF4|" type="string" value="Включить потоковый вывод" />
+				<item id="|.MF5|" type="string" value="Выход" />
+				<item id="|.MF6|" type="string" value="Сконвертировать изображения в фильм..." />
+				<item id="|.MF7|" type="string" value="Включить детектор движения" />
+			</File>
+			<View>
+				<item id="|.MV0|" type="string" value="Вид" />
+				<item id="|.MV1|" type="string" value="Вкладка контрольной панели" />
+				<item id="|.MV2|" type="string" value="Вкладка консоли" />
+				<item id="|.MV3|" type="string" value="Скрывать при запуске" />
+				<item id="|.MV4|" type="string" value="Скрыть" />
+				<item id="|.MV5|" type="string" value="Всегда поверх окон" />
+				<item id="|.MV6|" type="string" value="Скрытный режим" />
+				<item id="|.MV7|" type="string" value="Скрытный режим при запуске" />
+				<item id="|.MV8|" type="string" value="Включить скрытный режим" />
+			</View>
+			<Settings>
+				<item id="|.MS0|" type="string" value="Настройки" />
+				<item id="|.MS1|" type="string" value="Найти вэб-камеру..." />
+				<item id="|.MS2|" type="string" value="Изменить настройки..." />
+				<item id="|.MS3|" type="string" value="Устройства" />
+				<item id="|.MS4|" type="string" value="нет" />
+			</Settings>
+			<Window>
+				<item id="|.MW0|" type="string" value="Окна" />
+				<item id="|.MW1|" type="string" value="Предварительный просмотр" />
+				<item id="|.MW2|" type="string" value="Захват" />
+				<item id="|.MW3|" type="string" value="Консоль" />
+				<item id="|.MW4|" type="string" value="Статистика" />
+				<item id="|.MW5|" type="string" value="Подключенные наблюдатели" />
+				<item id="|.MW6|" type="string" value="Детектор движения" />
+			</Window>
+			<Help>
+				<item id="|.MH0|" type="string" value="Помощь" />
+				<item id="|.MH1|" type="string" value="Содержание..." />
+				<item id="|.MH2|" type="string" value="Русский/Language..." /> <!-- Also add the enlish word language, se instructions above! -->				
+				<item id="|.MH3|" type="string" value="Домашняя страница" />
+				<item id="|.MH4|" type="string" value="О программе..." />
+				<item id="|.MH5|" type="string" value="Пожертвовать $$$ (через Paypal)" />
+				<item id="|.MH6|" type="string" value="Я в сети?" />
+				<item id="|.MH7|" type="string" value="Какой у меня URL?" />
+				<item id="|.MH8|" type="string" value="Настроить роутер?" />
+			</Help>
+		</Menu>
+		<Main_Window>
+			<item id="|.MAINW0|" type="string" value="Контрольная панель" /> <!-- name on the control panel tab -->
+			<item id="|.MAINW1|" type="string" value="Консоль" /> <!-- name on the console tab -->
+			<item id="|.MAINW2|" type="string" value="Файл" /> <!-- File-output label -->
+			<item id="|.MAINW3|" type="string" value="FTP" /> <!-- Ftp-output label -->
+			<item id="|.MAINW4|" type="string" value="HTTP" /> <!-- Http-output label -->
+			<item id="|.MAINW5|" type="string" value="Поток" /> <!-- Stream-output label -->
+			<item id="|.MAINW6|" type="string" value="Включить" /> <!-- button text -->
+			<item id="|.MAINW7|" type="string" value="Выключить" /> <!-- button text -->
+			<item id="|.MAINW8|" type="string" value="Детектор движения" /> <!-- Motion detection label -->
+		</Main_Window>
+		<Detect_Dialog>
+			<item id="|.DETD0|" type="string" value="Подождите..." /> <!-- heading for dialog -->
+			<item id="|.DETD1|" type="string" value="Дождитесь закрытия окна @x, затем нажмите @y." /> <!-- message -->
+			<item id="|.DETD2|" type="string" value="Хорошо" /> <!-- button label -->
+			<item id="|.DETD3|" type="string" value="На поиск вэб-камеры можут потребоваться минуты." />
+			<item id="|.DETD4|" type="string" value="Приступить к поиску сейчас?" />
+		</Detect_Dialog>
+		<Preview_Window>
+			<item id="|.PREVW0|" type="string" value="Предварительный просмотр" /> <!-- heading for window -->
+		</Preview_Window>
+		<Capture_Window>
+			<item id="|.CAPTW0|" type="string" value="Окно захвата" /> <!-- heading for window -->
+			<item id="|.CAPTW1|" type="string" value="Захват!" /> <!-- button label -->
+			<Image_Win>
+				<item id="|.IMGW0|" type="string" value="Изображение" /> <!-- heading for window -->
+				<item id="|.IMGW1|" type="string" value="Сохраниь..." /> <!-- label: save-button -->
+				<item id="|.IMGW2|" type="string" value="Закрыть" /> <!-- label: close-button -->
+				<item id="|.IMGW3|" type="string" value="Сохранить файл..." /> <!-- heading for save-file-dialog -->
+			</Image_Win>
+		</Capture_Window>
+		<Settings>
+			<item id="|.SHEAD0|" type="string" value="Настройки" /> <!-- heading for settings window -->
+			<item id="|.SBTN0|" type="string" value="Хорошо" /> <!-- ok button-label -->
+			<item id="|.SBTN1|" type="string" value="Отмена" /> <!-- cancel button-label -->
+			<item id="|.SBTN2|" type="string" value="Добавить" /> <!-- add button-label -->
+			<item id="|.SBTN3|" type="string" value="Удалить" /> <!-- delete button-label -->
+			<item id="|.SBTN4|" type="string" value="Очистить" /> <!-- clear button-label -->
+			<item id="|.SCAT0|" type="string" value="Категория:" /> <!-- category-label -->
+			<Language>
+				<item id="|.SLANG0|" type="string" value="Язык" /> <!-- name in menu and heading for panel -->
+				<item id="|.SLANG1|" type="string" value="Текущий язык:" /> 
+				<item id="|.SLANG2|" type="string" value="Изменить..." /> <!-- button label -->
+				<item id="|.SLANG3|" type="string" value="Внимание: язык изменится после нажатия кнопки @x" /> <!-- info text -->
+				<item id="|.SLANG4|" type="string" value="Выберите языковой файл..." /> <!-- choose file dialog heading -->
+			</Language>
+			<Camera>
+				<item id="|.SCAM0|" type="string" value="Камера" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCAM1|" type="string" value="Выберите камеру:" /> 
+				<item id="|.SCAM2|" type="string" value="Выберите формат видео:" /> 
+				<item id="|.SCAM3|" type="string" value="Внимание: Формат установленный здесь повлияет на размер изображения для всех типов вывода." /> 
+			</Camera>
+			<Connection>
+				<item id="|.SCON0|" type="string" value="Соединение" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCON1|" type="string" value="Публичный IP-адрес:" />
+				<item id="|.SCON2|" type="string" value="Получить" />
+				<item id="|.SCON3|" type="string" value="Определять при запуске." />
+				<item id="|.SCON4|" type="string" value="Определять каждые" />
+				<item id="|.SCON5|" type="string" value="минут(ы)." />
+				<item id="|.SCON6|" type="string" value="Использовать UPNP для открытия портов на роутере." />				
+			</Connection>
+			<Output>
+				<!-- common text -->
+				<item id="|.SOUT0|" type="string" value="Вывод" /> <!-- name in menu -->
+				<item id="|.SOUT1|" type="string" value="Тип:" />
+				<item id="|.SOUT2|" type="string" value="Качество изображения:" />
+				<item id="|.SOUT3|" type="string" value="Интервал:" />
+				<item id="|.SOUT4|" type="string" value="секунд(ы)" />
+				<item id="|.SOUT5|" type="string" value="Порт:" />
+				<item id="|.SOUT6|" type="string" value="Дополнительные настройки..." />
+				<!-- unique text -->
+				<File>
+					<item id="|.SOFILE0|" type="string" value="Вывод в файл" /> <!-- name in menu and heading -->
+					<item id="|.SOFILE1|" type="string" value="Путь:" />
+					<item id="|.SOFILE2|" type="string" value="Просмотреть..." /> <!-- button -->
+					<item id="|.SOFILE3|" type="string" value="Сохранить как..." />
+					<item id="|.SOFILE4|" type="string" value="Мастер массива изображений" />
+					<item id="|.SOFILE5|" type="string" value="Открыть..." />
+					<!-- wizard-->
+					<item id="|.SOFILEWIZ0|" type="string" value="Мастер поможет заполнить имя файла и путь для создания массива изображений (группы последовательных кадров)." />
+					<item id="|.SOFILEWIZ1|" type="string" value="Выберите вариант:" />
+					<item id="|.SOFILEWIZ2|" type="string" value="Сохранять последние N кадров (например, от pic-0.jpg до pic-X.jpg, более ранние изображения будут иметь больший номер)." />
+					<item id="|.SOFILEWIZ3|" type="string" value="Сохранять кадры без ограничения, с нумерацией по возрастанию (более ранние изображения будут иметь меньший номер)" />
+					<item id="|.SOFILEWIZ4|" type="string" value="Укажите директорию для сохранения изображений." />
+					<item id="|.SOFILEWIZ5|" type="string" value="Выбрана директория:" />
+					<item id="|.SOFILEWIZ6|" type="string" value="Введите маску имени файла:" />
+					<item id="|.SOFILEWIZ7|" type="string" value="Например: при маске 'out', файлы будут именоваться out0.jpg, out1.jpg, out2.jpg и т.д." />
+					<item id="|.SOFILEWIZ8|" type="string" value="Выберите формат изображения:" />
+					<item id="|.SOFILEWIZ9|" type="string" value="Укажите количество сохраняемых изображений:" />
+					<item id="|.SOFILEWIZ10|" type="string" value="Завершено. Указанное Вами имя файла автоматически подставлено в поле 'Путь' окна настроек." />
+					<item id="|.SOFILEWIZ11|" type="string" value="Не забудьте установить интервал сохранения изображений." />
+				</File>
+				<Ftp>
+					<item id="|.SOFTP0|" type="string" value="Вывод на сервер FTP" /> <!-- name in menu and heading -->
+					<item id="|.SOFTP1|" type="string" value="Сервер FTP:" />
+					<item id="|.SOFTP2|" type="string" value="Имя пользователя:" />
+					<item id="|.SOFTP3|" type="string" value="Пароль:" />
+					<item id="|.SOFTP4|" type="string" value="Директория:" />
+					<item id="|.SOFTP5|" type="string" value="Имя файла:" />
+					<item id="|.SOFTP6|" type="string" value="Интервал загрузки на сервер:" />
+					<item id="|.SOFTP7|" type="string" value="Внимание: Не рекомендуется сохранять пароль, оставьте поле пустым - програма запросит пароль по необходимости." />
+					<item id="|.SOFTP8|" type="string" value="При ошибке соединения повторять попытки без уведомления." />
+					<item id="|.SOFTP9|" type="string" value="Мастер массива изображений" />
+					<item id="|.SOFTP10|" type="string" value="При ошибке аутентификации повторять попытки без уведомления." />
+					<item id="|.SOFTP11|" type="string" value="Не разрывать соединение." />
+					<item id="|.SOFTP12|" type="string" value="Не разрывать соединение с сервером FTP после выгрузки изображений" />
+					<item id="|.SOFTP13|" type="string" value="Изменить права на файл (chmod):" />
+					<item id="|.SOFTP14|" type="string" value="Использовать активное соединение (взамен пассивного)." />
+					<item id="|.SOFTP15|" type="string" value="Использовать зашифрованное соединение." />
+					<item id="|.SOFTP16|" type="string" value="FTPS (Ftp поверх скрытого TLS/SSL)" />
+					<item id="|.SOFTP17|" type="string" value="FTPES (Ftp поверх явного TLS/SSL)" />
+					<item id="|.SOFTP18|" type="string" value="Расширенные настройки FTP..." />
+					<item id="|.SOFTP19|" type="string" value="Безопасность" />
+					<item id="|.SOFTP20|" type="string" value="Выгружать с временным именем файла и переименовывать." />
+					<item id="|.SOFTP21|" type="string" value="Настройки FTP" />
+					<item id="|.SOFTP22|" type="string" value="Если интервал загрузки более 60 секунд не рекомендуется использовать опцию 'Не разрывать соединение'." />
+					<item id="|.SOFTP23|" type="string" value="Хотите отключить эту опцию?" />
+				</Ftp>
+				<Http>
+					<item id="|.SOHTTP0|" type="string" value="Вывод по HTTP" /> <!-- name in menu and heading -->
+					<item id="|.SOHTTP1|" type="string" value="URL для доступа будет:" />
+					<item id="|.SOHTTP2|" type="string" value="или" />
+					<item id="|.SOHTTP3|" type="string" value="Вы можете отредактировать HTML-файлы в директории @x для изменения отображения вэб-страниц." />
+				</Http>
+				<Stream>
+					<item id="|.SOSTR0|" type="string" value="Потоковый вывод" /> <!-- name in menu and heading -->
+					<item id="|.SOSTR1|" type="string" value="Порт подключения:" />
+					<item id="|.SOSTR2|" type="string" value="Порт данных:" />
+					<item id="|.SOSTR3|" type="string" value="Заголовок:" />
+					<item id="|.SOSTR4|" type="string" value="Расширенные" />
+					<item id="|.SOSTR5|" type="string" value="Принудительно указать публичный ip:" />
+					<item id="|.SOSTR6|" type="string" value="URL будет установлен:" />
+					<item id="|.SOSTR7|" type="string" value="Внимание: Эти установки не будут работать в Интернет! Проверьте ЧаВо(FAQ)." />
+					<item id="|.SOSTR8|" type="string" value="Размер апплета:" />
+					<item id="|.SOSTR9|" type="string" value="Не изменять размер изображения" />
+					<item id="|.SOSTR10|" type="string" value="Получить!" />
+					<item id="|.SOSTR11|" type="string" value="Максимальное количество соединений:" />
+					<item id="|.SOSTR12|" type="string" value="Ограничение по объему данных:" />
+					<item id="|.SOSTR13|" type="string" value="Ограничение по времени:" />
+					<item id="|.SOSTR14|" type="string" value="Количество изображений в секунду:" />
+					<item id="|.SOSTR15|" type="string" value="(Чем выше количество изображений в секунду, тем выше загрузка ЦПУ.)" />
+					<item id="|.SOSTR16|" type="string" value="Проигрывать звуковое оповещение при подключении наблюдателей." />
+					<item id="|.SOSTR17|" type="string" value="Показывать всплывающую подсказку при подключении наблюдателей." />
+					<item id="|.SOSTR18|" type="string" value="Тип потока:" />
+					<item id="|.SOSTR19|" type="string" value="Сжимать до:" />
+					<Page_Designer>
+						<item id="|.SOSTRPD0|" type="string" value="Дизайнер страниц" />
+						<item id="|.SOSTRPD1|" type="string" value="Титул:" />
+						<item id="|.SOSTRPD2|" type="string" value="Заголовок:" />
+						<item id="|.SOSTRPD3|" type="string" value="Цвет границ:" />
+						<item id="|.SOSTRPD4|" type="string" value="Цвет фона:" />
+						<item id="|.SOSTRPD5|" type="string" value="Изображение фона:" />
+						<item id="|.SOSTRPD6|" type="string" value="Цвет текста:" />
+						<item id="|.SOSTRPD7|" type="string" value="Размер текста:" />
+						<item id="|.SOSTRPD8|" type="string" value="Текст страницы:" />
+						<item id="|.SOSTRPD9|" type="string" value="Цвет ссылки:" />
+						<item id="|.SOSTRPD10|" type="string" value="Цвет посещенной ссылки:" />
+						<item id="|.SOSTRPD11|" type="string" value="Цвет активной ссылки:" />
+						<!-- Dialogs -->
+						<item id="|.SOSTRPDDIA0|" type="string" value="Этот файл находится за пределами пути вэб-сервера." />
+						<item id="|.SOSTRPDDIA1|" type="string" value="Скопировать файл в нужное место?" />
+						<item id="|.SOSTRPDDIA2|" type="string" value="Скопировать файл?" />
+						<item id="|.SOSTRPDDIA3|" type="string" value="Файл назначения уже существует." />
+						<item id="|.SOSTRPDDIA4|" type="string" value="Перезаписать файл?" />
+						<item id="|.SOSTRPDDIA5|" type="string" value="Перезаписать?" />
+						<item id="|.SOSTRPDDIA6|" type="string" value="Не удается скопировать файл!" />
+						<item id="|.SOSTRPDDIA7|" type="string" value="Потоковый вывод должен быть включен для работы предварительного просмотра." />
+						<item id="|.SOSTRPDDIA8|" type="string" value="Включиь его сейчас?" />
+						<item id="|.SOSTRPDDIA9|" type="string" value="Включить потоковый вывод?" />
+					</Page_Designer>	
+				</Stream>
+			</Output>
+			<Text_Overlay>
+				<item id="|.SOVER0|" type="string" value="Водяной знак" /> <!-- name in menu (not used since v.0.2.7) -->
+				<item id="|.SOVER0a|" type="string" value="Водяной знак" /> <!-- name of folder in menu -->
+				<item id="|.SOVER0b|" type="string" value="Текст" /> <!-- name in menu -->
+				<item id="|.SOVER0c|" type="string" value="Текстовый водяной знак" /> <!-- name in settings panel -->
+				<item id="|.SOVER1|" type="string" value="Расположение:" />
+				<item id="|.SOVER2|" type="string" value="Цвет:" />
+				<item id="|.SOVER3|" type="string" value="Шрифт:" />
+				<item id="|.SOVER4|" type="string" value="Тип:" />
+				<item id="|.SOVER5|" type="string" value="Размер:" />
+				<item id="|.SOVER6|" type="string" value="Текст" /> <!-- displayed on the tabs -->
+				<item id="|.SOVER7|" type="string" value="Год (4 цифры)" />
+				<item id="|.SOVER8|" type="string" value="Год (2 цифры)" />
+				<item id="|.SOVER9|" type="string" value="месяц" />
+				<item id="|.SOVER10|" type="string" value="день" />
+				<item id="|.SOVER11|" type="string" value="часы" />
+				<item id="|.SOVER12|" type="string" value="минуты" />
+				<item id="|.SOVER13|" type="string" value="секнды" />
+				<item id="|.SOVER13b|" type="string" value="количество потоковых наблюдателей" />
+				<!-- position, vertical -->
+				<item id="|.SOVER14|" type="string" value="Сверху" />
+				<item id="|.SOVER15|" type="string" value="По центру" />
+				<item id="|.SOVER16|" type="string" value="Снизу" />
+				<!-- position, horizontal -->
+				<item id="|.SOVER17|" type="string" value="Слева" />
+				<item id="|.SOVER18|" type="string" value="По центру" />
+				<item id="|.SOVER19|" type="string" value="Справа" />
+				<!-- colors -->
+				<item id="|.SOVER20|" type="string" value="Красный" />
+				<item id="|.SOVER21|" type="string" value="Зелёный" />
+				<item id="|.SOVER22|" type="string" value="Голубой" />
+				<item id="|.SOVER23|" type="string" value="Жёлтый" />
+				<item id="|.SOVER24|" type="string" value="Белый" />
+				<item id="|.SOVER25|" type="string" value="Чёрный" />
+				<item id="|.SOVER26|" type="string" value="Серый" />
+				<item id="|.SOVER27|" type="string" value="Синий" />
+				<!-- font type -->
+				<item id="|.SOVER28|" type="string" value="Обычный" />
+				<item id="|.SOVER29|" type="string" value="Курсив" />
+				<item id="|.SOVER30|" type="string" value="Жирный" />
+				<item id="|.SOVER31|" type="string" value="Прозрачность:" /> <!-- First letter of the translation of "transparent" -->
+				<item id="|.SOVER32|" type="string" value="Использовать фон:" />
+				<!-- buttons -->
+				<item id="|.SOVER33|" type="string" value="Предварительный просмотр" />
+				<item id="|.SOVER34|" type="string" value="Информация..." />
+				<!-- more stuff -->
+				<item id="|.SOVER40|" type="string" value="часы (12-и часовые)" />
+				<item id="|.SOVER41|" type="string" value="название месяца по-английски" />
+				<item id="|.SOVER42|" type="string" value="название дня недели по-английски" />
+				<item id="|.SOVER43|" type="string" value="В тектовых водяных знаках можно использовать переменные, которые будут автоматически заменены динамическими значениями." />
+				<item id="|.SOVER44|" type="string" value="Доступны следующие переменные:" />
+				<item id="|.SOVER45|" type="string" value="название месяца на текущем языке (@x)" />
+				<item id="|.SOVER46|" type="string" value="название дня недели на текущем языке (@x)" />
+				<!-- local calendar names -->				
+				<item id="|.SOVERDAY1|" type="string" value="Понедельник" />
+				<item id="|.SOVERDAY2|" type="string" value="Вторник" />
+				<item id="|.SOVERDAY3|" type="string" value="Среда" />
+				<item id="|.SOVERDAY4|" type="string" value="Четверг" />
+				<item id="|.SOVERDAY5|" type="string" value="Пятница" />
+				<item id="|.SOVERDAY6|" type="string" value="Суббота" />
+				<item id="|.SOVERDAY7|" type="string" value="Воскресенье" />
+				<item id="|.SOVERMON1|" type="string" value="Январь" />
+				<item id="|.SOVERMON2|" type="string" value="Февраль" />
+				<item id="|.SOVERMON3|" type="string" value="Март" />
+				<item id="|.SOVERMON4|" type="string" value="Апрель" />
+				<item id="|.SOVERMON5|" type="string" value="Май" />
+				<item id="|.SOVERMON6|" type="string" value="Июнь" />
+				<item id="|.SOVERMON7|" type="string" value="Июль" />
+				<item id="|.SOVERMON8|" type="string" value="Август" />
+				<item id="|.SOVERMON9|" type="string" value="Сентябрь" />
+				<item id="|.SOVERMON10|" type="string" value="Октябрь" />
+				<item id="|.SOVERMON11|" type="string" value="Ноябрь" />
+				<item id="|.SOVERMON12|" type="string" value="Декабрь" />
+			</Text_Overlay>
+			<Image_Overlay>
+				<item id="|.SIOVER0a|" type="string" value="Изображение" /> <!-- name in menu -->
+				<item id="|.SIOVER0b|" type="string" value="Графический водяной знак " /> <!-- name in settings panel -->
+				<item id="|.SIOVER1|" type="string" value="Изображение" /> <!-- text on tabs -->
+				<item id="|.SIOVER2|" type="string" value="Изменить..." />
+				<item id="|.SIOVER3|" type="string" value="Удалить" />
+				<item id="|.SIOVER4|" type="string" value="Прозрачность:" />	
+			</Image_Overlay>
+			<Startup>
+				<item id="|.SSTRT0|" type="string" value="Запуск" /> <!-- name in menu and heading -->
+				<item id="|.SSTRT1|" type="string" value="Здесь можно уcтановить что будет включено или выполнено при запуске Yawcam." />
+				<item id="|.SSTRT2|" type="string" value="Включить вывод в файл " />
+				<item id="|.SSTRT3|" type="string" value="Включить вывод на сервер FTP" />
+				<item id="|.SSTRT4|" type="string" value="Включить вывод по HTTP" />
+				<item id="|.SSTRT5|" type="string" value="Показать окно предварительного просмотра" />
+				<item id="|.SSTRT6|" type="string" value="Показать окно консоли" />
+				<item id="|.SSTRT7|" type="string" value="Показать окно статистики" />
+				<item id="|.SSTRT8|" type="string" value="Скрывать при запуске" />
+				<item id="|.SSTRT9|" type="string" value="Показывать информационное окно запуска" />
+				<item id="|.SSTRT10|" type="string" value="Включить потоковый вывод" />
+				<item id="|.SSTRT11|" type="string" value="Показать окно наблюдателей" />
+				<item id="|.SSTRT12|" type="string" value="Проверить наличие новых версий програмы" />
+				<item id="|.SSTRT13|" type="string" value="Сохранять файл журнала" />
+				<item id="|.SSTRT14|" type="string" value="Включить детектор движения" />
+			</Startup>
+			<Offline_Image>
+				<item id="|.SOFFIMG0|" type="string" value="Изображение о недоступности" />
+				<item id="|.SOFFIMG1|" type="string" value="Сохраняйте изображение о недоступности в сети при:" />
+				<item id="|.SOFFIMG2|" type="string" value="Выбрано изображение:" />
+				<item id="|.SOFFIMG3|" type="string" value="Также сохраняйть при выходе из програмы(pадерживает выход)." />
+				<item id="|.SOFFIMG4|" type="string" value="Выберите изображение" />
+			</Offline_Image>
+			<Password>
+				<item id="|.SPASS0|" type="string" value="Пароль" />
+				<item id="|.SPASS1|" type="string" value="Использовать пароль для доступа к потоковому выводу." />
+				<item id="|.SPASS2|" type="string" value="Подтвердить..." />
+				<item id="|.SPASS3|" type="string" value="Внимание! Все пароли будут удалены!" />
+				<item id="|.SPASS4|" type="string" value="Вы уверены, что необходимо продолжить?" />
+				<item id="|.SPASS5|" type="string" value="Пароль для пользователя @x будет удалён!" />
+				<item id="|.SPASS6|" type="string" value="Пользователь не выбран!" />
+				<item id="|.SPASS7|" type="string" value="Выберите пользователя и нажмите кнопку '@x' снова." />
+				<item id="|.SPASS8|" type="string" value="Не могу выполнить..." />
+				<item id="|.SPASS9|" type="string" value="Не корректная попытка входа:" />
+				<item id="|.SPASS10|" type="string" value="Добавьте пользователя/пароль..." />
+				<item id="|.SPASS11|" type="string" value="Пользователь" />
+				<item id="|.SPASS12|" type="string" value="Пароль" />
+				<item id="|.SPASS13|" type="string" value="Подтвердите пароль" />
+				<item id="|.SPASS14|" type="string" value="Вы включили две опции одновременно парольна апплет потокового вывода и уведомление о достуности потокового вывода!" />
+				<item id="|.SPASS15|" type="string" value="Вероятно, это не то что вы хотели ;-)" />
+				<item id="|.SPASS16|" type="string" value="Продолжать в любом случае?" />
+				<item id="|.SPASS17|" type="string" value="Вы уверены?" />
+			</Password>
+			<Announcements>
+				<item id="|.SANN0|" type="string" value="Уведомления" /> <!-- name in menu and heading -->
+				<item id="|.SANN1|" type="string" value="На данной панели Вы можете настроить уведомления, которые будут отправлены, например, вэб-сообществу когда ваша камера станет доступна по сети." />
+				<item id="|.SANN2|" type="string" value="Уведомление о доступности в сети:" />
+				<item id="|.SANN3|" type="string" value="Уведомление при недоступности в сети:" />
+				<item id="|.SANN4|" type="string" value="Отправлять уведомления когда камера доступна/недоступна по:" />
+				<item id="|.SANN5|" type="string" value="Предварительный просмотр" />
+				<item id="|.SANN6|" type="string" value="Информация" />
+				<item id="|.SANN7|" type="string" value="Уведомления:" />
+				<item id="|.SANN8|" type="string" value="Доступен:" />
+				<item id="|.SANN9|" type="string" value="Недоступен:" />
+				<item id="|.SANN10|" type="string" value="Уведомления обычно состоят из http-запросов." />
+				<item id="|.SANN11|" type="string" value="Ваше вэб-сообщество предоставит информацию о том как должна выглядеть строка уведомления." />
+				<item id="|.SANN12|" type="string" value="Вы може использовать следующие переменные в создании строки уведомлений:" />
+				<item id="|.SANN13|" type="string" value="URL встроенного вэб-сервера Yawcam's (HTTP)" />
+				<item id="|.SANN14|" type="string" value="URL потокового вывода Yawcam (Поток)" />
+				<item id="|.SANN15|" type="string" value="Внимание!" />
+				<item id="|.SANN16|" type="string" value="Не могу отправить уведомление о доступности!" />
+				<item id="|.SANN17|" type="string" value="Не могу отправить уведомление о недоступности!" />
+				<item id="|.SANN18|" type="string" value="Пожалуйста, проверьте настройки..." />
+			</Announcements>
+			<Scheduler>
+				<item id="|.SSCHED0|" type="string" value="Планировщик" /> <!-- name in menu and heading -->
+				<item id="|.SSCHED1|" type="string" value="Включить планировщик" />
+				<item id="|.SSCHED2|" type="string" value="Включён" />
+				<item id="|.SSCHED3|" type="string" value="Отключён" />
+			</Scheduler>
+		</Settings>
+		<Motion_Detection>
+		
+		</Motion_Detection>
+		<About>
+			<item id="|.ABW0|" type="string" value="О програме Yawcam" /> <!-- heading for window -->
+			<item id="|.ABW1|" type="string" value="Перевод:" />
+			<item id="|.ABW2|" type="string" value="Спасибо:" />
+			<item id="|.ABW3|" type="string" value="Спасибо" /> <!-- button -->
+		</About>
+		<Pass_Prompt>
+			<item id="|.PSSP0|" type="string" value="Окно авторизации..." /> <!-- heading for window -->
+			<item id="|.PSSP1|" type="string" value="Попытка авторизации Yawcam на сервер FTP с указанным пользователем и паролем не удалась! Проверьте и введите верные значения:" />
+			<item id="|.PSSP2|" type="string" value="Пользователь:" />
+			<item id="|.PSSP3|" type="string" value="Пароль:" />
+			<item id="|.PSSP4|" type="string" value="Сохранить пароль. (Не безопасно!)" />
+		</Pass_Prompt>
+		<TrayIcon_popmenu>
+			<item id="|.TIM0|" type="string" value="Скрыть/Показать" />
+			<item id="|.TIM1|" type="string" value="Всегда поверх других окон" />
+			<item id="|.TIM2|" type="string" value="Включить" />
+			<item id="|.TIM3|" type="string" value="Файл" />
+			<item id="|.TIM4|" type="string" value="FTP" />
+			<item id="|.TIM5|" type="string" value="HTTP" />
+			<item id="|.TIM6|" type="string" value="Поток" />
+			<item id="|.TIM7|" type="string" value="Настройки..." />
+			<item id="|.TIM8|" type="string" value="Помощь..." />
+			<item id="|.TIM9|" type="string" value="Выход" />
+			<item id="|.TIM10|" type="string" value="Детектор движения" />
+			<item id="|.TIM11|" type="string" value="Планировщик" />
+		</TrayIcon_popmenu>
+		<Viewers>
+			<item id="|.VIEWF0|" type="string" value="Наблюдатели:" /> <!-- label for number of viewers -->
+			<item id="|.VIEWF1|" type="string" value="IP" />
+			<item id="|.VIEWF2|" type="string" value="Имя ПК" />
+			<item id="|.VIEWF3|" type="string" value="Время" />
+			<item id="|.VIEWF4|" type="string" value="Отправлено (kB)" />
+			<item id="|.VIEWF5|" type="string" value="Потоковые наблюдатели" /> <!-- window title -->
+			<item id="|.VIEWF6|" type="string" value="Отключить!" />
+			<item id="|.VIEWF7|" type="string" value="Список запрещенных наблюдателей..." />
+			<item id="|.VIEWF8|" type="string" value="Запретить доступ!" />
+			<item id="|.VIEWF9a|" type="string" value="Запретить доступ наблюдателю?" />
+			<item id="|.VIEWF9b|" type="string" value="Вы уверены, что хотите запретить доступ наблюдателю?" />
+			<item id="|.VIEWF10|" type="string" value="Разрешить" />
+			<item id="|.VIEWF11a|" type="string" value="Добавиь IP-адрес" />
+			<item id="|.VIEWF11b|" type="string" value="Введите IP-адрес для запрета доступа:" />
+			<item id="|.VIEWF12|" type="string" value="IP-адреса, которым запрещён доступ:" />
+		</Viewers>
+		<ImgToMov>
+			<item id="|.IMGTM0|" type="string" value="Изображения в фильм" /> <!-- title -->
+			<item id="|.IMGTM1|" type="string" value="Данное диалоговое окно позволит объединить изображения в фильм." />
+			<item id="|.IMGTM2|" type="string" value="Изображения в списке ниже будут включены в фильм:" />
+			<item id="|.IMGTM3|" type="string" value="Обратный порядок" />
+			<item id="|.IMGTM4|" type="string" value="Добавить изображения..." />
+			<item id="|.IMGTM5|" type="string" value="Скорость кадров в секунду:" />
+			<item id="|.IMGTM6|" type="string" value="кадров/сек" /> <!-- fps (frames per second) -->
+			<item id="|.IMGTM7|" type="string" value="Имя файла для фильма:" />
+			<item id="|.IMGTM8|" type="string" value="Создать фильм" />
+			<item id="|.IMGTM9|" type="string" value="Сначала выберите значение из списка!" />
+			<item id="|.IMGTM10|" type="string" value="Добавьте изображения в список!" />
+			<item id="|.IMGTM11a|" type="string" value="Введите целое число в поле 'Скорость кадров в секунду'!" />
+			<item id="|.IMGTM11b|" type="string" value="Корректные значения от 1 до 90." />
+			<item id="|.IMGTM12|" type="string" value="Укажите имя файла для фильма." />
+			<item id="|.IMGTM13|" type="string" value="Создаю фильм..." />
+			<item id="|.IMGTM14|" type="string" value="Добавляю изображения..." />
+			<item id="|.IMGTM15|" type="string" value="Вы можете найти фильм здесь:" />
+			<item id="|.IMGTM16|" type="string" value="Завершено." />
+			<item id="|.IMGTM17|" type="string" value="Записываю фильм..." />			
+			<item id="|.IMGTM18|" type="string" value="Проверяю изображения..." />
+		</ImgToMov>
+		<Popup_Errors>
+			<item id="|.POPER0|" type="string" value="Ошибка..." /> <!-- heading for all error popups -->
+			<item id="|.POPER1a|" type="string" value="Неизвестный хост(ПК)!" />
+			<item id="|.POPER1b|" type="string" value="Проверьте адрес в настройках FTP сервера." />
+			<item id="|.POPER2a|" type="string" value="В соединении отказано!" />
+			<item id="|.POPER2b|" type="string" value="Проверьте настройки FTP сервера." />
+			<item id="|.POPER3a|" type="string" value="Доступ запрещён!" />
+			<item id="|.POPER3b|" type="string" value="Пожалуйста, убедитесь, что у Вас есть разрешение на загрузку на данный сервер FTP." />
+			<item id="|.POPER4|" type="string" value="Неверный файл xml!" />
+			<item id="|.POPER5|" type="string" value="Не могу найти файл:" />
+			<!-- input errors -->
+			<item id="|.POPER6|" type="string" value="Пожалуйста, измените..." />
+			<item id="|.POPER7a|" type="string" value="Некорректные настройки интервала!" />
+			<item id="|.POPER7b|" type="string" value="Это поле должно содержать только цифры. (например: 10 or 300)" />
+			<item id="|.POPER8a|" type="string" value="Неверный номер порта!" />
+			<item id="|.POPER8b|" type="string" value="Это поле должно содержать только цифры. (например: 21)" />
+			<item id="|.POPER9|" type="string" value="Это поле должно содержать только цифры. (например: 8888)" />
+			<item id="|.POPER10|" type="string" value="Порт @x уже используется." />
+			<item id="|.POPER11|" type="string" value="Пожалуйста, укажите другой порт." />
+			<item id="|.POPER12a|" type="string" value="Нет такой директории!" />
+			<item id="|.POPER12b|" type="string" value="Пожалуйста, убедитесь, что директория, указанная в настройка FTP действительно существует на сервере." />
+			<!-- misc -->
+			<item id="|.POPERLANG0|" type="string" value="Извините..." />
+			<item id="|.POPERLANG1|" type="string" value="Эта версия Yawcam не имеет файла помощи." />
+			<item id="|.POPERLANG2|" type="string" value="Проверьте обновления на www.yawcam.com." />
+			<!-- camera errors -->
+			<item id="|.POPERCAM0|" type="string" value="Yawcam не может подключиться к камере." />
+			<item id="|.POPERCAM1|" type="string" value="Проверьте, что камеру не используют другие приложения или выберите другую." />
+			<item id="|.POPERCAM2|" type="string" value="Если список камер пуст, нажмите @x затем @y в меню @z." />
+			<!-- File-output errors -->
+			<item id="|.POPERFILE0|" type="string" value="Не могу сохранить файл: @x" />
+			<item id="|.POPERFILE1|" type="string" value="Проверьте действительно ли существует указанная директоря! (Если нет, измените настройки...)" />
+			<!-- More Ftp-output errors -->
+			<item id="|.POPERFTP0|" type="string" value="Не могу сохранить временный файл!" />
+			<item id="|.POPERFTP1|" type="string" value="Проверьте существует ли  директория @x. (Если нет, создайте)" />
+			<!-- add password error -->
+			<item id="|.POPERPASADD0|" type="string" value="Введите имя пользователя!" />
+			<item id="|.POPERPASADD1|" type="string" value="Пароль не верен." />
+			<item id="|.POPERPASADD2|" type="string" value="Попробуйте снова!" />
+			<item id="|.POPERPASADD3|" type="string" value="Пароль не может быть пустым!" />
+			<!-- stream -->
+			<item id="|.POPERSTRM0|" type="string" value="Не удалось определить IP автоматически!" />
+			<item id="|.POPERSTRM1|" type="string" value="Поле должно содержать только целые числа." />
+		</Popup_Errors>
+	</GUI>
+	<Console>
+		<item id="|.CNSPR0|" type="string" value="Програма Yawcam запущена" />
+		<item id="|.CNSPR1|" type="string" value="Настройки загружены" />
+		<item id="|.CNSPR2|" type="string" value="Настройки сохранены" />
+		<item id="|.CNSPR3|" type="string" value="Вывод в файл запущен" />
+		<item id="|.CNSPR4|" type="string" value="Вывод в файл остановлен" />
+		<item id="|.CNSPR5|" type="string" value="Вывод на сервер FTP запущен" />
+		<item id="|.CNSPR6|" type="string" value="Вывод на сервер FTP остановлен" />
+		<item id="|.CNSPR7|" type="string" value="Вывод по HTTP запущен" />
+		<item id="|.CNSPR8|" type="string" value="Вывод по HTTP остановлен" />
+		<item id="|.CNSPR9|" type="string" value="Формат изображения: @x" />
+		<item id="|.CNSPR10|" type="string" value="Использую устройство: @x" />
+		<item id="|.CNSPR11|" type="string" value="Язык: @x" />
+		<item id="|.CNSPR12|" type="string" value="Yawcam скрыт" />
+		<item id="|.CNSPR13|" type="string" value="Yawcam показан" />
+		<item id="|.CNSPR14|" type="string" value="Ищу вэб-камеры..." />
+		<item id="|.CNSPR15|" type="string" value="Спасибо!" />
+		<item id="|.CNSPR16|" type="string" value="Файл сохранён" />
+		<item id="|.CNSPR17|" type="string" value="Потоковый вывод запущен" />
+		<item id="|.CNSPR18|" type="string" value="Потоковый вывод остановлен" />
+		<item id="|.CNSPR19|" type="string" value="Помощь доступна по адресу http://www.yawcam.com/help/help.php" />
+		<item id="|.CNSPR20|" type="string" value="Порт @x уже используется!" />
+		<item id="|.CNSPR21|" type="string" value="Не могу подключиться к серверу FTP!" />
+		<item id="|.CNSPR22|" type="string" value="FTP: Ваше соединение истекло из-зи неактивности. Рекомендуем не использовать опцию 'Не разрывать соединение'." />
+		<item id="|.CNSPR23|" type="string" value="Изображение будет сейчас выгружено на сервер." />		 
+	</Console>
+</yawcam_lang>

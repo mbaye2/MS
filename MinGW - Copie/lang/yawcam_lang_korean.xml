@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!--  
+*	Language file for yawcam
+*	More language files can be found at: www.yawcam.com	
+*
+*	Translation instructions:	
+*	1)	Letters behind a '@'
+*		( for example @x ) are variables and will be replaced with 
+*		something else in the real program.
+*
+*	2)	The option 'Language' in the help menu must also 
+*		contain the English word "language" in the translation.
+*		So if the translation of "language" is "foo", then
+*		the label in the menu should be: "Foo/Language..."
+*
+*	3)	In the <lang_version> section: 
+*		"LV1" is the version number of yawcam that this 
+*			language file is written for. (Should be something 
+*			like 0.1)
+*		"LV2" is the version letter of the language file. Every new
+*			translation for a new version of yawcam should have the 
+*			version letter 'a'. When updates to the language file are 
+*			made change to the following letter. (a to b, b to c, and so on)
+*
+*	4)	In the <translator> section, please fill in your name and e-mail.
+*       If you are updating a translation, keep the old name and add your name behind a ;
+*       It will look somehting like this: "trans1 (trans1@email.com);trans2 (trans2@email.com)"
+*
+*	5)	An <item id="  " ... > tag must always be on one row! Never insert 
+*		a line break, even if the text is really long.
+*
+*	6)	Translations can be mailed to translations@yawcam.com
+*			
+*	7)	Have fun! And Thanks for contributing! //Magnus Lundvall
+*
+--> 
+
+<yawcam_lang>
+	<misc>
+		<language>
+			<!-- Change to the current language -->
+			<item id="|.L1|" type="string" value="Korean" />
+		</language>
+		<translator>
+			<!-- Also include e-mail -->
+			<item id="|.T1|" type="string" value="Hyunbum Kim (itown@naver.com)" /> <!-- Replace with your own name and e-mail -->
+		</translator>
+		<lang_version>
+			<!-- The version number should follow the standard described above! -->
+			<item id="|.LV1|" type="string" value="0.6.0" /> <!-- Yawcam version -->	
+			<item id="|.LV2|" type="string" value="a" /> <!-- Language file version -->
+		</lang_version>
+	</misc>
+	<GUI>
+		<Menu>
+			<File>
+				<item id="|.MF0|" type="string" value="파일" />
+				<item id="|.MF1|" type="string" value="파일 출력" />
+				<item id="|.MF2|" type="string" value="FTP 출력" />
+				<item id="|.MF3|" type="string" value="Http 출력" />
+				<item id="|.MF4|" type="string" value="스트림 출력" />
+				<item id="|.MF5|" type="string" value="종료" />
+				<item id="|.MF6|" type="string" value="이미지를 동영상으로.." />
+				<item id="|.MF7|" type="string" value="움직임 감지" />
+			</File>
+			<View>
+				<item id="|.MV0|" type="string" value="보기" />
+				<item id="|.MV1|" type="string" value="관리 화면" />
+				<item id="|.MV2|" type="string" value="콘솔" />
+				<item id="|.MV3|" type="string" value="윈도우 시작시 닫기" />
+				<item id="|.MV4|" type="string" value="지금 닫기" />
+				<item id="|.MV5|" type="string" value="항상 위에" />
+				<item id="|.MV6|" type="string" value="숨기기 모드" />
+				<item id="|.MV7|" type="string" value="윈도우 시작시 숨기기" />
+				<item id="|.MV8|" type="string" value="지금 숨기기" />
+			</View>
+			<Settings>
+				<item id="|.MS0|" type="string" value="설정" />
+				<item id="|.MS1|" type="string" value="카메라 찾기..." />
+				<item id="|.MS2|" type="string" value="환경 설정..." />
+				<item id="|.MS3|" type="string" value="카메라" />
+				<item id="|.MS4|" type="string" value="없음" />
+				<item id="|.MS5|" type="string" value="카메라 변경..." />
+				<item id="|.MS6|" type="string" value="변경" />
+				<item id="|.MS7|" type="string" value="DV 포맷 설정..." />
+				<item id="|.MS8|" type="string" value="VFW 소스..." />
+				<item id="|.MS9|" type="string" value="VFW 포맷..." />
+				<item id="|.MS10|" type="string" value="카메라 설정..." />
+				<item id="|.MS11|" type="string" value="포맷 설정..." />
+				<item id="|.MS12|" type="string" value="크로스바 설정..." />
+				<item id="|.MS13|" type="string" value="TV 튜너..." />
+				<item id="|.MS14|" type="string" value="IP 카메라 설정..." />
+				<item id="|.MS15|" type="string" value="가로 뒤집기" />
+				<item id="|.MS16|" type="string" value="세로 뒤집기" />
+			</Settings>
+			<Window>
+				<item id="|.MW0|" type="string" value="윈도우" />
+				<item id="|.MW1|" type="string" value="미리 보기" />
+				<item id="|.MW2|" type="string" value="캡쳐" />
+				<item id="|.MW3|" type="string" value="콘솔" />
+				<item id="|.MW4|" type="string" value="상태" />
+				<item id="|.MW5|" type="string" value="시청자" />
+				<item id="|.MW6|" type="string" value="움직임 감지" />
+			</Window>
+			<Help>
+				<item id="|.MH0|" type="string" value="도움말" />
+				<item id="|.MH1|" type="string" value="목차..." />
+				<item id="|.MH2|" type="string" value="언어/Language..." /> <!-- Also add the enlish word language, se instructions above! -->				
+				<item id="|.MH3|" type="string" value="홈페이지" />
+				<item id="|.MH4|" type="string" value="정보..." />
+				<item id="|.MH5|" type="string" value="기부 $$$" />
+				<item id="|.MH6|" type="string" value="현재 온라인입니까?" />
+				<item id="|.MH7|" type="string" value="내 주소는 무엇입니까?" />
+				<item id="|.MH8|" type="string" value="공유기 설정은?" />
+			</Help>
+		</Menu>
+		<Main_Window>
+			<item id="|.MAINW0|" type="string" value="제어판" /> <!-- name on the control panel tab -->
+			<item id="|.MAINW1|" type="string" value="콘솔" /> <!-- name on the console tab -->
+			<item id="|.MAINW2|" type="string" value="파일" /> <!-- File-output label -->
+			<item id="|.MAINW3|" type="string" value="Ftp" /> <!-- Ftp-output label -->
+			<item id="|.MAINW4|" type="string" value="Http" /> <!-- Http-output label -->
+			<item id="|.MAINW5|" type="string" value="스트림" /> <!-- Stream-output label -->
+			<item id="|.MAINW6|" type="string" value="On" /> <!-- button text -->
+			<item id="|.MAINW7|" type="string" value="Off" /> <!-- button text -->
+			<item id="|.MAINW8|" type="string" value="움직임" /> <!-- Motion detection label -->
+		</Main_Window>
+		<Detect_Dialog>
+			<item id="|.DETD0|" type="string" value="기다려주세요..." /> <!-- heading for dialog -->
+			<item id="|.DETD1|" type="string" value="윈도우즈 @x 종료중.. 이후에 @y 를 눌러주세요." /> <!-- message -->
+			<item id="|.DETD2|" type="string" value="OK" /> <!-- button label -->
+			<item id="|.DETD3|" type="string" value="웹캠을 찾는데 시간이 걸릴 수 있습니다!" />
+			<item id="|.DETD4|" type="string" value="지금 실행하시겠습니까?" />
+			<!-- New dialog -->
+			<item id="|.DETD5|" type="string" value="검색 완료..." /><!-- heading for dialog -->
+			<item id="|.DETD6|" type="string" value="아래 카메라들이 검색되었습니다." />
+			<item id="|.DETD7|" type="string" value="선택하고 OK 를 눌러주세요." />
+		</Detect_Dialog>
+		<Preview_Window>
+			<item id="|.PREVW0|" type="string" value="미리보기" /> <!-- heading for window -->
+			<item id="|.PREVW1|" type="string" value="외곽선 보기" />
+			<item id="|.PREVW2|" type="string" value="비율 유지" />
+			<item id="|.PREVW3|" type="string" value="전체 화면" />
+		</Preview_Window>
+		<Capture_Window>
+			<item id="|.CAPTW0|" type="string" value="캡쳐" /> <!-- heading for window -->
+			<item id="|.CAPTW1|" type="string" value="캡쳐!" /> <!-- button label -->
+			<item id="|.CAPTW10|" type="string" value="설정..." /> <!-- button label -->
+			<item id="|.CAPTW11|" type="string" value="캡쳐 설정" />
+			<item id="|.CAPTW12|" type="string" value="음성 실행" />
+			<item id="|.CAPTW13|" type="string" value="자막 추가" />
+			<item id="|.CAPTW14|" type="string" value="캡쳐 이미지 열기" />
+			<item id="|.CAPTW15|" type="string" value="설정된 경로에 저장:" />
+			<item id="|.CAPTW16|" type="string" value="이미지 품질" />
+			<Image_Win>
+				<item id="|.IMGW0|" type="string" value="이미지" /> <!-- heading for window -->
+				<item id="|.IMGW1|" type="string" value="저장..." /> <!-- label: save-button -->
+				<item id="|.IMGW2|" type="string" value="닫기" /> <!-- label: close-button -->
+				<item id="|.IMGW3|" type="string" value="파일 저장..." /> <!-- heading for save-file-dialog -->
+			</Image_Win>
+		</Capture_Window>
+		<Settings>
+			<item id="|.SHEAD0|" type="string" value="설정" /> <!-- heading for settings window -->
+			<item id="|.SBTN0|" type="string" value="OK" /> <!-- ok button-label -->
+			<item id="|.SBTN1|" type="string" value="취소" /> <!-- cancel button-label -->
+			<item id="|.SBTN2|" type="string" value="추가" /> <!-- add button-label -->
+			<item id="|.SBTN3|" type="string" value="삭제" /> <!-- delete button-label -->
+			<item id="|.SBTN4|" type="string" value="비우기" /> <!-- clear button-label -->
+			<item id="|.SCAT0|" type="string" value="카테고리:" /> <!-- category-label -->
+			<Language>
+				<item id="|.SLANG0|" type="string" value="언어" /> <!-- name in menu and heading for panel -->
+				<item id="|.SLANG1|" type="string" value="현재 언어는:" /> 
+				<item id="|.SLANG2|" type="string" value="변경..." /> <!-- button label -->
+				<item id="|.SLANG3|" type="string" value="@x 를 누르기 전까지는 언어가 변경되지 않습니다." /> <!-- info text -->
+				<item id="|.SLANG4|" type="string" value="언어 파일 선택..." /> <!-- choose file dialog heading -->
+			</Language>
+			<Camera>
+				<item id="|.SCAM0|" type="string" value="카메라" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCAM1|" type="string" value="카메라 선택:" /> 
+				<item id="|.SCAM2|" type="string" value="비디오 포맷 선택:" /> 
+				<item id="|.SCAM3|" type="string" value="참고: 선택하신 포맷은 출력 영상의 이미지 크기에 영향을 미칩니다." /> 
+			</Camera>
+			<Connection>
+				<item id="|.SCON0|" type="string" value="네트워크" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCON1|" type="string" value="공인 IP:" />
+				<item id="|.SCON2|" type="string" value="가져오기" />
+				<item id="|.SCON3|" type="string" value="윈도우 시작시 알아내기." />
+				<item id="|.SCON4|" type="string" value="모두 알아내기" />
+				<item id="|.SCON5|" type="string" value="분." />
+				<item id="|.SCON6|" type="string" value="UPNP 를 사용하여 공유기에서 연결하기." />				
+			</Connection>
+			<Output>
+				<!-- common text -->
+				<item id="|.SOUT0|" type="string" value="출력" /> <!-- name in menu -->
+				<item id="|.SOUT1|" type="string" value="타입:" />
+				<item id="|.SOUT2|" type="string" value="이미지 품질:" />
+				<item id="|.SOUT3|" type="string" value="간격:" />
+				<item id="|.SOUT4|" type="string" value="초" />
+				<item id="|.SOUT5|" type="string" value="포트:" />
+				<item id="|.SOUT6|" type="string" value="추가 설정..." />
+				<!-- unique text -->
+				<File>
+					<item id="|.SOFILE0|" type="string" value="파일" /> <!-- name in menu and heading -->
+					<item id="|.SOFILE1|" type="string" value="경로:" />
+					<item id="|.SOFILE2|" type="string" value="찾기..." /> <!-- button -->
+					<item id="|.SOFILE3|" type="string" value="다른 이름으로 저장..." />
+					<item id="|.SOFILE4|" type="string" value="이미지 배열 마법사" />
+					<item id="|.SOFILE5|" type="string" value="열기..." />
+					<item id="|.SOFILE6|" type="string" value="오류시 재시도." />
+					<!-- wizard-->
+					<item id="|.SOFILEWIZ0|" type="string" value="이 마법사는 이미지 배열을 얻기 위해 경로에서 적절한 파일명을 넣도록 도와줍니다." />
+					<item id="|.SOFILEWIZ1|" type="string" value="옵션 선택:" />
+					<item id="|.SOFILEWIZ2|" type="string" value="최근 X 이미지를 저장합니다. (예: 마지막 이미지가 가장 작은 숫자일 때 pic0.jpg 를 picX.jpg 로)" />
+					<item id="|.SOFILEWIZ3|" type="string" value="I want to save unlimited number of images with an increasing number in the filename. (The latest image has the highest number.)" />
+					<item id="|.SOFILEWIZ4|" type="string" value="Select the directory where you want the images to be saved." />
+					<item id="|.SOFILEWIZ5|" type="string" value="Selected directory:" />
+					<item id="|.SOFILEWIZ6|" type="string" value="Enter the filename that you want all saved files to contain:" />
+					<item id="|.SOFILEWIZ7|" type="string" value="Example: If you write 'out', the files will be named out0.jpg, out1.jpg, out2.jpg etc." />
+					<item id="|.SOFILEWIZ8|" type="string" value="Select the image format you want to use:" />
+					<item id="|.SOFILEWIZ9|" type="string" value="Select the number of images you want to keep:" />
+					<item id="|.SOFILEWIZ10|" type="string" value="Finished! The required filename will automatically be entered in the path in the file settings window." />
+					<item id="|.SOFILEWIZ11|" type="string" value="Don't forget to set the desired interval." />
+					<item id="|.SOFILEWIZ12|" type="string" value="I want to include the date and time in the file name." />
+				</File>
+				<Ftp>
+					<item id="|.SOFTP0|" type="string" value="Ftp" /> <!-- name in menu and heading -->
+					<item id="|.SOFTP1|" type="string" value="Ftp 서버:" />
+					<item id="|.SOFTP2|" type="string" value="사용자:" />
+					<item id="|.SOFTP3|" type="string" value="비밀번호:" />
+					<item id="|.SOFTP4|" type="string" value="디렉토리:" />
+					<item id="|.SOFTP5|" type="string" value="파일명:" />
+					<item id="|.SOFTP6|" type="string" value="업로드 간격:" />
+					<item id="|.SOFTP7|" type="string" value="참고: 비밀번호를 저장하는 것을 추천하지 않습니다. 필요한 경우엔 프로그램이 요청합니다." />
+					<item id="|.SOFTP8|" type="string" value="접속 오류시 재시도." />
+					<item id="|.SOFTP9|" type="string" value="이미지 배열..." />
+					<item id="|.SOFTP10|" type="string" value="권한 오류시 재시도." />
+					<item id="|.SOFTP11|" type="string" value="접속 유지." />
+					<item id="|.SOFTP12|" type="string" value="이미지를 업로드한 뒤에 접속을 끊지 않습니다." />
+					<item id="|.SOFTP13|" type="string" value="chmod 파일:" />
+					<item id="|.SOFTP14|" type="string" value="active ftp 모드 사용(passive 모드 대신)." />
+					<item id="|.SOFTP15|" type="string" value="encrypted 접속 사용." />
+					<item id="|.SOFTP16|" type="string" value="FTPS (TLS/SSL)" />
+					<item id="|.SOFTP17|" type="string" value="FTPES (explicit TLS/SSL)" />
+					<item id="|.SOFTP18|" type="string" value="추가 ftp 설정..." />
+					<item id="|.SOFTP19|" type="string" value="보안" />
+					<item id="|.SOFTP20|" type="string" value="임시 파일명 업로드, 이름 변경." />
+					<item id="|.SOFTP21|" type="string" value="Ftp 설정" />
+					<item id="|.SOFTP22|" type="string" value="간격이 60초 이상 될 때에는 접속 유지 옵션을 선택하지 않는 것이 좋습니다." />
+					<item id="|.SOFTP23|" type="string" value="옵션을 끄시겠습니까?" />
+					<item id="|.SOFTP24|" type="string" value="추가 ftp 설정" />
+				</Ftp>
+				<Http>
+					<item id="|.SOHTTP0|" type="string" value="Http" /> <!-- name in menu and heading -->
+					<item id="|.SOHTTP1|" type="string" value="URL 주소는:" />
+					<item id="|.SOHTTP2|" type="string" value="또는" />
+					<item id="|.SOHTTP3|" type="string" value="페이지 외관을 변경하려면 @x 에서 html 파일을 수정하면 됩니다." />
+				</Http>
+				<Stream>
+					<item id="|.SOSTR0|" type="string" value="스트림" /> <!-- name in menu and heading -->
+					<item id="|.SOSTR1|" type="string" value="접속 포트:" />
+					<item id="|.SOSTR2|" type="string" value="데이터 포트:" />
+					<item id="|.SOSTR3|" type="string" value="헤드:" />
+					<item id="|.SOSTR4|" type="string" value="추가" />
+					<item id="|.SOSTR5|" type="string" value="퍼블릭 ip 사용:" />
+					<item id="|.SOSTR6|" type="string" value="URL 주소는:" />
+					<item id="|.SOSTR7|" type="string" value="참고: 이 설정은 인터넷에서 사용될 수 없습니다. FAQ를 보세요." />
+					<item id="|.SOSTR8|" type="string" value="애플릿 크기:" />
+					<item id="|.SOSTR9|" type="string" value="실제 이미지 크기" />
+					<item id="|.SOSTR10|" type="string" value="가져오기!" />
+					<item id="|.SOSTR11|" type="string" value="최대 접속:" />
+					<item id="|.SOSTR12|" type="string" value="데이터 한도:" />
+					<item id="|.SOSTR13|" type="string" value="시간 한도:" />
+					<item id="|.SOSTR14|" type="string" value="이미지 생성률(ImageProducer rate):" />
+					<item id="|.SOSTR15|" type="string" value="(높은 fps 는 CPU를 많이 사용합니다)" />
+					<item id="|.SOSTR16|" type="string" value="뷰어 접속시 사운드 경고." />
+					<item id="|.SOSTR17|" type="string" value="뷰어 접속시 말풍선 경고." />
+					<item id="|.SOSTR18|" type="string" value="스트림 타입:" />
+					<item id="|.SOSTR19|" type="string" value="크기 변경:" />
+					<Page_Designer>
+						<item id="|.SOSTRPD0|" type="string" value="페이지 디자이너" />
+						<item id="|.SOSTRPD1|" type="string" value="제목:" />
+						<item id="|.SOSTRPD2|" type="string" value="헤드:" />
+						<item id="|.SOSTRPD3|" type="string" value="외곽선 색:" />
+						<item id="|.SOSTRPD4|" type="string" value="배경 색:" />
+						<item id="|.SOSTRPD5|" type="string" value="배경 이미지:" />
+						<item id="|.SOSTRPD6|" type="string" value="글자 색:" />
+						<item id="|.SOSTRPD7|" type="string" value="글자 크기:" />
+						<item id="|.SOSTRPD8|" type="string" value="페이지 글자:" />
+						<item id="|.SOSTRPD9|" type="string" value="링크 색:" />
+						<item id="|.SOSTRPD10|" type="string" value="링크 방문:" />
+						<item id="|.SOSTRPD11|" type="string" value="링크 활성화:" />
+						<!-- Dialogs -->
+						<item id="|.SOSTRPDDIA0|" type="string" value="웹서버 경로에 파일이 없습니다." />
+						<item id="|.SOSTRPDDIA1|" type="string" value="파일을 적합한 위치로 복사하시겠습니까?" />
+						<item id="|.SOSTRPDDIA2|" type="string" value="파일 복사?" />
+						<item id="|.SOSTRPDDIA3|" type="string" value="대상 파일이 존재합니다." />
+						<item id="|.SOSTRPDDIA4|" type="string" value="덮어 쓰겠습니까?" />
+						<item id="|.SOSTRPDDIA5|" type="string" value="덮어쓰기?" />
+						<item id="|.SOSTRPDDIA6|" type="string" value="파일을 복사할 수 없습니다!" />
+						<item id="|.SOSTRPDDIA7|" type="string" value="미리보기를 사용하려면 스트림 출력을 활성화 해야 됩니다." />
+						<item id="|.SOSTRPDDIA8|" type="string" value="지금 활성화 하시겠습니까?" />
+						<item id="|.SOSTRPDDIA9|" type="string" value="스트림 활성화?" />
+					</Page_Designer>	
+				</Stream>
+			</Output>
+			<Text_Overlay>
+				<item id="|.SOVER0|" type="string" value="자막" /> <!-- name in menu (not used since v.0.2.7) -->
+				<item id="|.SOVER0a|" type="string" value="자막" /> <!-- name of folder in menu -->
+				<item id="|.SOVER0b|" type="string" value="글씨" /> <!-- name in menu -->
+				<item id="|.SOVER0c|" type="string" value="자막 글씨" /> <!-- name in settings panel -->
+				<item id="|.SOVER1|" type="string" value="위치:" />
+				<item id="|.SOVER2|" type="string" value="색:" />
+				<item id="|.SOVER3|" type="string" value="글꼴:" />
+				<item id="|.SOVER4|" type="string" value="타입:" />
+				<item id="|.SOVER5|" type="string" value="크기:" />
+				<item id="|.SOVER6|" type="string" value="글씨" /> <!-- displayed on the tabs -->
+				<item id="|.SOVER7|" type="string" value="년 (4자)" />
+				<item id="|.SOVER8|" type="string" value="년 (2자)" />
+				<item id="|.SOVER9|" type="string" value="월" />
+				<item id="|.SOVER10|" type="string" value="일" />
+				<item id="|.SOVER11|" type="string" value="시" />
+				<item id="|.SOVER12|" type="string" value="분" />
+				<item id="|.SOVER13|" type="string" value="초" />
+				<item id="|.SOVER13b|" type="string" value="아니오. 스트림 뷰어" />
+				<!-- position, vertical -->
+				<item id="|.SOVER14|" type="string" value="위" />
+				<item id="|.SOVER15|" type="string" value="중앙" />
+				<item id="|.SOVER16|" type="string" value="아래" />
+				<!-- position, horizontal -->
+				<item id="|.SOVER17|" type="string" value="왼쪽" />
+				<item id="|.SOVER18|" type="string" value="중앙" />
+				<item id="|.SOVER19|" type="string" value="오른쪽" />
+				<!-- colors -->
+				<item id="|.SOVER20|" type="string" value="빨간색" />
+				<item id="|.SOVER21|" type="string" value="초록색" />
+				<item id="|.SOVER22|" type="string" value="파란색" />
+				<item id="|.SOVER23|" type="string" value="노란색" />
+				<item id="|.SOVER24|" type="string" value="하얀색" />
+				<item id="|.SOVER25|" type="string" value="검은색" />
+				<item id="|.SOVER26|" type="string" value="회색" />
+				<item id="|.SOVER27|" type="string" value="바다색" />
+				<!-- font type -->
+				<item id="|.SOVER28|" type="string" value="보통" />
+				<item id="|.SOVER29|" type="string" value="기울임" />
+				<item id="|.SOVER30|" type="string" value="굵은" />
+				<item id="|.SOVER31|" type="string" value="T:" /> <!-- First letter of the translation of "transparent" -->
+				<item id="|.SOVER32|" type="string" value="배경 사용:" />
+				<!-- buttons -->
+				<item id="|.SOVER33|" type="string" value="미리보기" />
+				<item id="|.SOVER34|" type="string" value="정보..." />
+				<!-- more stuff -->
+				<item id="|.SOVER40|" type="string" value="시각 (12h)" />
+				<item id="|.SOVER41|" type="string" value="월은 (english) 로 표기" />
+				<item id="|.SOVER42|" type="string" value="요일은 (english) 로 표기" />
+				<item id="|.SOVER43|" type="string" value="해당 언어로 바뀌는 변수를 사용할 수 있습니다." />
+				<item id="|.SOVER44|" type="string" value="아래 변수들이 가능합니다:" />
+				<item id="|.SOVER45|" type="string" value="해당 언어로 표기된 월 (@x)" />
+				<item id="|.SOVER46|" type="string" value="해당 언어로 표기된 요일 (@x)" />
+				<!-- local calendar names -->				
+				<item id="|.SOVERDAY1|" type="string" value="월요일" />
+				<item id="|.SOVERDAY2|" type="string" value="화요일" />
+				<item id="|.SOVERDAY3|" type="string" value="수요일" />
+				<item id="|.SOVERDAY4|" type="string" value="목요일" />
+				<item id="|.SOVERDAY5|" type="string" value="금요일" />
+				<item id="|.SOVERDAY6|" type="string" value="토요일" />
+				<item id="|.SOVERDAY7|" type="string" value="일요일" />
+				<item id="|.SOVERMON1|" type="string" value="1월" />
+				<item id="|.SOVERMON2|" type="string" value="2월" />
+				<item id="|.SOVERMON3|" type="string" value="3월" />
+				<item id="|.SOVERMON4|" type="string" value="4월" />
+				<item id="|.SOVERMON5|" type="string" value="5월" />
+				<item id="|.SOVERMON6|" type="string" value="6월" />
+				<item id="|.SOVERMON7|" type="string" value="7월" />
+				<item id="|.SOVERMON8|" type="string" value="8월" />
+				<item id="|.SOVERMON9|" type="string" value="9월" />
+				<item id="|.SOVERMON10|" type="string" value="10월" />
+				<item id="|.SOVERMON11|" type="string" value="11월" />
+				<item id="|.SOVERMON12|" type="string" value="12월" />
+			</Text_Overlay>
+			<Image_Overlay>
+				<item id="|.SIOVER0a|" type="string" value="이미지" /> <!-- name in menu -->
+				<item id="|.SIOVER0b|" type="string" value="이미지 오버레이" /> <!-- name in settings panel -->
+				<item id="|.SIOVER1|" type="string" value="이미지" /> <!-- text on tabs -->
+				<item id="|.SIOVER2|" type="string" value="변경..." />
+				<item id="|.SIOVER3|" type="string" value="삭제" />
+				<item id="|.SIOVER4|" type="string" value="투명도:" />	
+			</Image_Overlay>
+			<Startup>
+				<item id="|.SSTRT0|" type="string" value="시작" /> <!-- name in menu and heading -->
+				<item id="|.SSTRT1|" type="string" value="Yawcam 시작시 실행되는 옵션을 변경할 수 있습니다." />
+				<item id="|.SSTRT2|" type="string" value="파일 출력 시작" />
+				<item id="|.SSTRT3|" type="string" value="Ftp 출력 시작" />
+				<item id="|.SSTRT4|" type="string" value="Http 출력 시작" />
+				<item id="|.SSTRT5|" type="string" value="미리보기 표시" />
+				<item id="|.SSTRT6|" type="string" value="콘솔 표시" />
+				<item id="|.SSTRT7|" type="string" value="상태 표시" />
+				<item id="|.SSTRT8|" type="string" value="시작할 때 트레이에 표시" />
+				<item id="|.SSTRT9|" type="string" value="시작화면 표시" />
+				<item id="|.SSTRT10|" type="string" value="스트림 출력 시작" />
+				<item id="|.SSTRT11|" type="string" value="시청자 표시" />
+				<item id="|.SSTRT12|" type="string" value="새 버전 확인" />
+				<item id="|.SSTRT13|" type="string" value="로그 파일 저장" />
+				<item id="|.SSTRT14|" type="string" value="움직임 감지 시작" />
+				<item id="|.SSTRT15|" type="string" value="카메라 오류 모니터" />
+				<item id="|.SSTRT16|" type="string" value="캡쳐 보기" />
+				<item id="|.SSTRT17|" type="string" value="여러 창 실행" />
+			</Startup>
+			<Offline_Image>
+				<item id="|.SOFFIMG0|" type="string" value="오프라인 이미지" />
+				<item id="|.SOFFIMG1|" type="string" value="오프라인일 때 이미지 저장:" />
+				<item id="|.SOFFIMG2|" type="string" value="선택된 이미지:" />
+				<item id="|.SOFFIMG3|" type="string" value="Yawcam 종료시 저장 (저장 시간이 늦어짐)" />
+				<item id="|.SOFFIMG4|" type="string" value="이미지 선택" />
+			</Offline_Image>
+			<Password>
+				<item id="|.SPASS0|" type="string" value="비밀번호" />
+				<item id="|.SPASS1|" type="string" value="스트림 출력시 비밀번호 요구" />
+				<item id="|.SPASS2|" type="string" value="확인..." />
+				<item id="|.SPASS3|" type="string" value="모든 비밀번호가 삭제됩니다!" />
+				<item id="|.SPASS4|" type="string" value="진행하시겠습니까?" />
+				<item id="|.SPASS5|" type="string" value="@x 의 비밀번호가 삭제됩니다!" />
+				<item id="|.SPASS6|" type="string" value="사용자를 선택해주세요!" />
+				<item id="|.SPASS7|" type="string" value="사용자를 선택하고 @x 를 눌러주세요." />
+				<item id="|.SPASS8|" type="string" value="실행불가..." />
+				<item id="|.SPASS9|" type="string" value="잘못된 로그인:" />
+				<item id="|.SPASS10|" type="string" value="사용자/비밀번호 추가..." />
+				<item id="|.SPASS11|" type="string" value="사용자" />
+				<item id="|.SPASS12|" type="string" value="비밀번호" />
+				<item id="|.SPASS13|" type="string" value="비밀번호 확인" />
+				<item id="|.SPASS14|" type="string" value="스트림 출력과 스트림 안내시에 비밀번호를 요구합니다!" />
+				<item id="|.SPASS15|" type="string" value="사용자의 요구가 잘못된 것 같습니다 ;-)" />
+				<item id="|.SPASS16|" type="string" value="진행하시겠습니까?" />
+				<item id="|.SPASS17|" type="string" value="정말입니까?" />
+			</Password>
+			<Announcements>
+				<item id="|.SANN0|" type="string" value="알림" /> <!-- name in menu and heading -->
+				<item id="|.SANN1|" type="string" value="웹캠 커뮤니티 등에 온라인 될 때 사용될 알림메세지를 설정합니다." />
+				<item id="|.SANN2|" type="string" value="온라인 알림:" />
+				<item id="|.SANN3|" type="string" value="오프라인 알림:" />
+				<item id="|.SANN4|" type="string" value="온라인/오프라인 될 때 알림을 보냅니다:" />
+				<item id="|.SANN5|" type="string" value="미리보기" />
+				<item id="|.SANN6|" type="string" value="정보" />
+				<item id="|.SANN7|" type="string" value="알림:" />
+				<item id="|.SANN8|" type="string" value="온라인:" />
+				<item id="|.SANN9|" type="string" value="오프라인:" />
+				<item id="|.SANN10|" type="string" value="알림은 http 요청으로 이루어집니다." />
+				<item id="|.SANN11|" type="string" value="알림을 어떻게 적어야 될지는 각 웹캠 커뮤니티에서 안내할 것입니다." />
+				<item id="|.SANN12|" type="string" value="알림 글에 변수를 사용할 수 있습니다:" />
+				<item id="|.SANN13|" type="string" value="Yawcam 웹서버의 URL 주소 (http)" />
+				<item id="|.SANN14|" type="string" value="Yawcam 스트림 애플릿의 URL 주소 (stream)" />
+				<item id="|.SANN15|" type="string" value="경고!" />
+				<item id="|.SANN16|" type="string" value="온라인 알림을 보낼 수 없습니다!" />
+				<item id="|.SANN17|" type="string" value="오프라인 알림을 보낼 수 없습니다!" />
+				<item id="|.SANN18|" type="string" value="설정을 확인하세요..." />
+			</Announcements>
+			<Scheduler>
+				<item id="|.SSCHED0|" type="string" value="스케쥴러" /> <!-- name in menu and heading -->
+				<item id="|.SSCHED1|" type="string" value="스케쥴러 사용" />
+				<item id="|.SSCHED2|" type="string" value="사용" />
+				<item id="|.SSCHED3|" type="string" value="미사용" />
+			</Scheduler>
+			<Capture_Device_Config>
+				<item id="|.CDC0|" type="string" value="캡쳐 설정" />
+				<item id="|.CDC1|" type="string" value="비디오" />
+				<item id="|.CDC2|" type="string" value="출력 pin" />
+				<item id="|.CDC3|" type="string" value="포맷" />
+			</Capture_Device_Config>
+			<IP_Camera>
+				<item id="|.IPC0|" type="string" value="IP 카메라 설정" />
+				<item id="|.IPC1|" type="string" value="IP 카메라 URL:" />
+				<item id="|.IPC2|" type="string" value="(URL은 MJPEG 스트림에 맞추어있습니다. 예:@x)" />
+				<item id="|.IPC3|" type="string" value="보안" />
+				<item id="|.IPC4|" type="string" value="IP 카메라 접속시 비밀번호 요구." />
+				<item id="|.IPC5|" type="string" value="사용자:" />
+				<item id="|.IPC6|" type="string" value="비밀번호:" />
+			</IP_Camera>
+		</Settings>
+		<Motion_Detection>
+		
+		</Motion_Detection>
+		<About>
+			<item id="|.ABW0|" type="string" value="Yawcam에 대하여" /> <!-- heading for window -->
+			<item id="|.ABW1|" type="string" value="번역:" />
+			<item id="|.ABW2|" type="string" value="감사:" />
+			<item id="|.ABW3|" type="string" value="OK" /> <!-- button -->
+		</About>
+		<Pass_Prompt>
+			<item id="|.PSSP0|" type="string" value="로그인..." /> <!-- heading for window -->
+			<item id="|.PSSP1|" type="string" value="입력하신 사용자 이름과 비밀번호로 FTP에 로그인할 수 없습니다.:" />
+			<item id="|.PSSP2|" type="string" value="사용자:" />
+			<item id="|.PSSP3|" type="string" value="비밀번호:" />
+			<item id="|.PSSP4|" type="string" value="비밀번호 저장 (보안 취약!)" />
+		</Pass_Prompt>
+		<TrayIcon_popmenu>
+			<item id="|.TIM0|" type="string" value="보기/감추기" />
+			<item id="|.TIM1|" type="string" value="항상 위에" />
+			<item id="|.TIM2|" type="string" value="사용" />
+			<item id="|.TIM3|" type="string" value="파일" />
+			<item id="|.TIM4|" type="string" value="Ftp" />
+			<item id="|.TIM5|" type="string" value="Http" />
+			<item id="|.TIM6|" type="string" value="스트림" />
+			<item id="|.TIM7|" type="string" value="설정..." />
+			<item id="|.TIM8|" type="string" value="도움말..." />
+			<item id="|.TIM9|" type="string" value="종료" />
+			<item id="|.TIM10|" type="string" value="움직임 감지" />
+			<item id="|.TIM11|" type="string" value="스케쥴러" />
+		</TrayIcon_popmenu>
+		<Viewers>
+			<item id="|.VIEWF0|" type="string" value="시청자:" /> <!-- label for number of viewers -->
+			<item id="|.VIEWF1|" type="string" value="IP" />
+			<item id="|.VIEWF2|" type="string" value="Hostname" />
+			<item id="|.VIEWF3|" type="string" value="시간" />
+			<item id="|.VIEWF4|" type="string" value="전송 (kB)" />
+			<item id="|.VIEWF5|" type="string" value="스트림 시청자" /> <!-- window title -->
+			<item id="|.VIEWF6|" type="string" value="추방!" />
+			<item id="|.VIEWF7|" type="string" value="차단 리스트..." />
+			<item id="|.VIEWF8|" type="string" value="차단!" />
+			<item id="|.VIEWF9a|" type="string" value="시청자를 차단합니까?" />
+			<item id="|.VIEWF9b|" type="string" value="정말 이 사용자를 차단합니까?" />
+			<item id="|.VIEWF10|" type="string" value="차단 해제" />
+			<item id="|.VIEWF11a|" type="string" value="ip 추가" />
+			<item id="|.VIEWF11b|" type="string" value="차단할 IP를 입력해주세요:" />
+			<item id="|.VIEWF12|" type="string" value="차단된 IP 주소:" />
+		</Viewers>
+		<ImgToMov>
+			<item id="|.IMGTM0|" type="string" value="이미지를 영상으로" /> <!-- title -->
+			<item id="|.IMGTM1|" type="string" value="이미지를 영상으로 조합하도록 도와드립니다." />
+			<item id="|.IMGTM2|" type="string" value="아래 이미지들이 영상에 포함됩니다.:" />
+			<item id="|.IMGTM3|" type="string" value="순서 반전" />
+			<item id="|.IMGTM4|" type="string" value="이미지 추가..." />
+			<item id="|.IMGTM5|" type="string" value="Frame rate:" />
+			<item id="|.IMGTM6|" type="string" value="fps" /> <!-- fps (frames per second) -->
+			<item id="|.IMGTM7|" type="string" value="영상 파일:" />
+			<item id="|.IMGTM8|" type="string" value="영상 제작" />
+			<item id="|.IMGTM9|" type="string" value="아이템을 먼저 선택해주세요." />
+			<item id="|.IMGTM10|" type="string" value="이미지를 추가해주세요!" />
+			<item id="|.IMGTM11a|" type="string" value="Frame rate에 숫자를 입력해주세요." />
+			<item id="|.IMGTM11b|" type="string" value="숫자 1 - 90 만 가능합니다." />
+			<item id="|.IMGTM12|" type="string" value="영상의 제목을 선택해주세요." />
+			<item id="|.IMGTM13|" type="string" value="영상 제작..." />
+			<item id="|.IMGTM14|" type="string" value="이미지 추가..." />
+			<item id="|.IMGTM15|" type="string" value="이 곳에서 영상을 보실 수 있습니다:" />
+			<item id="|.IMGTM16|" type="string" value="완료..." />
+			<item id="|.IMGTM17|" type="string" value="영상 제작중..." />			
+			<item id="|.IMGTM18|" type="string" value="이미지 확인중..." />
+		</ImgToMov>
+		<Popup_Errors>
+			<item id="|.POPER0|" type="string" value="오류..." /> <!-- heading for all error popups -->
+			<item id="|.POPER1a|" type="string" value="알 수 없는 호스트!" />
+			<item id="|.POPER1b|" type="string" value="설정에서 FTP 주소를 확인하세요." />
+			<item id="|.POPER2a|" type="string" value="접속 거부됨!" />
+			<item id="|.POPER2b|" type="string" value="FTP 설정을 확인하세요." />
+			<item id="|.POPER3a|" type="string" value="권한 오류!" />
+			<item id="|.POPER3b|" type="string" value="이 FTP 서버에 업로드 권한이 있는지 확인하세요." />
+			<item id="|.POPER4|" type="string" value="xml 파일이 아닙니다!" />
+			<item id="|.POPER5|" type="string" value="파일을 찾을 수 없습니다:" />
+			<!-- input errors -->
+			<item id="|.POPER6|" type="string" value="변경해주세요..." />
+			<item id="|.POPER7a|" type="string" value="적당한 간격 값이 아닙니다!" />
+			<item id="|.POPER7b|" type="string" value="숫자만 입력할 수 있습니다. (예: 10 또는 300)" />
+			<item id="|.POPER8a|" type="string" value="포트 번호가 틀립니다!" />
+			<item id="|.POPER8b|" type="string" value="숫자만 입력할 수 있습니다. (예: 21)" />
+			<item id="|.POPER9|" type="string" value="숫자만 입력할 수 있습니다. (예: 8888)" />
+			<item id="|.POPER10|" type="string" value="@x 포트는 이미 사용중입니다." />
+			<item id="|.POPER11|" type="string" value="다른 포트를 선택해주세요." />
+			<item id="|.POPER12a|" type="string" value="디렉토리가 없습니다!" />
+			<item id="|.POPER12b|" type="string" value="FTP 서버의 실제 존재하는 디렉토리인지 확인해주세요." />
+			<!-- misc -->
+			<item id="|.POPERLANG0|" type="string" value="죄송합니다..." />
+			<item id="|.POPERLANG1|" type="string" value="해당 Yawcam 버전은 도움말이 없습니다." />
+			<item id="|.POPERLANG2|" type="string" value="www.yawcam.com 에서 업데이트를 확인해주세요." />
+			<!-- camera errors -->
+			<item id="|.POPERCAM0|" type="string" value="Yawcam 이 카메라에 접속할 수 없습니다." />
+			<item id="|.POPERCAM1|" type="string" value="다른 프로그램에서 사용중인지 확인하시거나 다른 카메라를 선택해주세요." />
+			<item id="|.POPERCAM2|" type="string" value="카메라 목록이 비어있다면 @x 를 클릭하시고 @z 메뉴의 @y 를 클릭하세요." />
+			<item id="|.POPERCAM3|" type="string" value="이 설정에서 해당 카메라를 활성화할 수 없습니다!" />
+			<item id="|.POPERCAM4|" type="string" value="카메라에 접속할 수 없습니다!" />
+			<item id="|.POPERCAM5|" type="string" value="대화를 표시할 수 없습니다!" />
+			<!-- File-output errors -->
+			<item id="|.POPERFILE0|" type="string" value="파일을 저장할 수 없습니다: @x" />
+			<item id="|.POPERFILE1|" type="string" value="디렉토리가 존재하는지 확인해주세요! (없다면 환경설정을 확인해주세요...)" />
+			<!-- More Ftp-output errors -->
+			<item id="|.POPERFTP0|" type="string" value="임시 파일을 저장할 수 없습니다!" />
+			<item id="|.POPERFTP1|" type="string" value="디렉토리 @x 가 존재하는지 확인해주세요. (없다면 생성해주세요)" />
+			<!-- add password error -->
+			<item id="|.POPERPASADD0|" type="string" value="사용자 이름을 입력해주세요!" />
+			<item id="|.POPERPASADD1|" type="string" value="비밀번호 두 개가 다릅니다." />
+			<item id="|.POPERPASADD2|" type="string" value="다시 시도해주세요!" />
+			<item id="|.POPERPASADD3|" type="string" value="비밀번호를 입력해주세요!" />
+			<!-- stream -->
+			<item id="|.POPERSTRM0|" type="string" value="공인 IP가 없습니다!" />
+			<item id="|.POPERSTRM1|" type="string" value="숫자만 입력할 수 있습니다." />
+		</Popup_Errors>
+	</GUI>
+	<Console>
+		<item id="|.CNSPR0|" type="string" value="Yawcam 시작" />
+		<item id="|.CNSPR1|" type="string" value="설정 불러오기" />
+		<item id="|.CNSPR2|" type="string" value="설정 저장" />
+		<item id="|.CNSPR3|" type="string" value="파일 출력 시작" />
+		<item id="|.CNSPR4|" type="string" value="파일 출력 종료" />
+		<item id="|.CNSPR5|" type="string" value="FTP 출력 시작" />
+		<item id="|.CNSPR6|" type="string" value="FTP 출력 종료" />
+		<item id="|.CNSPR7|" type="string" value="Http 출력 시작" />
+		<item id="|.CNSPR8|" type="string" value="Http 출력 종료" />
+		<item id="|.CNSPR9|" type="string" value="이미지 포맷: @x" />
+		<item id="|.CNSPR10|" type="string" value="사용중인 카메라: @x" />
+		<item id="|.CNSPR11|" type="string" value="언어: @x" />
+		<item id="|.CNSPR12|" type="string" value="Yawcam 닫기" />
+		<item id="|.CNSPR13|" type="string" value="Yawcam 보이기" />
+		<item id="|.CNSPR14|" type="string" value="웹캠 검색..." />
+		<item id="|.CNSPR15|" type="string" value="감사합니다!" />
+		<item id="|.CNSPR16|" type="string" value="파일 저장 완료" />
+		<item id="|.CNSPR17|" type="string" value="스트림 출력 시작" />
+		<item id="|.CNSPR18|" type="string" value="스트림 출력 종료" />
+		<item id="|.CNSPR19|" type="string" value="웹사이트에 도움말이 있습니다." />
+		<item id="|.CNSPR20|" type="string" value="@x 포트는 이미 사용중입니다!" />
+		<item id="|.CNSPR21|" type="string" value="FTP 서버에 접속할 수 없습니다!" />
+		<item id="|.CNSPR22|" type="string" value="FTP: 전송이 없어 접속이 종료되었습니다. 접속 유지 옵션은 추천하지 않습니다." />
+		<item id="|.CNSPR23|" type="string" value="이미지가 업로드됩니다." />		 
+	</Console>
+</yawcam_lang>

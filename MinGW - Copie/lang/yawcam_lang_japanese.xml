@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!--  
+*	Language file for yawcam
+*	More language files can be found at: www.yawcam.com	
+*
+*	Translation instructions:	
+*	1)	Letters behind a '@'
+*		( for example @x ) are variables and will be replaced with 
+*		something else in the real program.
+*
+*	2)	The option 'Language' in the help menu must also 
+*		contain the English word "language" in the translation.
+*		So if the translation of "language" is "foo", then
+*		the label in the menu should be: "Foo/Language..."
+*
+*	3)	In the <lang_version> section: 
+*		"LV1" is the version number of yawcam that this 
+*			language file is written for. (Should be something 
+*			like 0.1)
+*		"LV2" is the version letter of the language file. Every new
+*			translation for a new version of yawcam should have the 
+*			version letter 'a'. When updates to the language file are 
+*			made change to the following letter. (a to b, b to c, and so on)
+*
+*	4)	In the <translator> section, please fill in your name and e-mail.
+*       If you are updating a translation, keep the old name and add your name behind a ;
+*       It will look somehting like this: "trans1 (trans1@email.com);trans2 (trans2@email.com)"
+*
+*	5)	An <item id="  " ... > tag must always be on one row! Never insert 
+*		a line break, even if the text is really long.
+*
+*	6)	Translations can be mailed to translations@yawcam.com
+*			
+*	7)	Have fun! And Thanks for contributing! //Magnus Lundvall
+*
+--> 
+
+<yawcam_lang>
+	<misc>
+		<language>
+			<!-- Change to the current language -->
+			<item id="|.L1|" type="string" value="Japanese" />
+		</language>
+		<translator>
+			<!-- Also include e-mail -->
+			<item id="|.T1|" type="string" value="Magnus Lundvall (malun@yawcam.com)" /> <!-- Replace with your own name and e-mail -->
+		</translator>
+		<lang_version>
+			<!-- The version number should follow the standard described above! -->
+			<item id="|.LV1|" type="string" value="0.3.0" /> <!-- Yawcam version -->	
+			<item id="|.LV2|" type="string" value="a" /> <!-- Language file version -->
+		</lang_version>
+	</misc>
+	<GUI>
+		<Menu>
+			<File>
+				<item id="|.MF0|" type="string" value="ファイル" />
+				<item id="|.MF1|" type="string" value="File 出力" />
+				<item id="|.MF2|" type="string" value="FTP 出力" />
+				<item id="|.MF3|" type="string" value="HTTP 出力" />
+				<item id="|.MF4|" type="string" value="Stream 出力" />
+				<item id="|.MF5|" type="string" value="終了" />
+				<item id="|.MF6|" type="string" value="イメージ動画..." />
+				<item id="|.MF7|" type="string" value="Motion 出力" />
+			</File>
+			<View>
+				<item id="|.MV0|" type="string" value="表示" />
+				<item id="|.MV1|" type="string" value="コントロールパネル" />
+				<item id="|.MV2|" type="string" value="コンソール" />
+				<item id="|.MV3|" type="string" value="起動後、非表示" />
+				<item id="|.MV4|" type="string" value="非表示" />
+				<item id="|.MV5|" type="string" value="常に前面表示" />
+				<item id="|.MV6|" type="string" value="ステルスモード" />
+				<item id="|.MV7|" type="string" value="起動後、ステルスモード" />
+				<item id="|.MV8|" type="string" value="ステルス" />
+			</View>
+			<Settings>
+				<item id="|.MS0|" type="string" value="設定" />
+				<item id="|.MS1|" type="string" value="WebCamera検出..." />
+				<item id="|.MS2|" type="string" value="設定編集..." />
+				<item id="|.MS3|" type="string" value="デバイス" />
+				<item id="|.MS4|" type="string" value="なし" />
+			</Settings>
+			<Window>
+				<item id="|.MW0|" type="string" value="ウィンドウ" />
+				<item id="|.MW1|" type="string" value="プレビュー" />
+				<item id="|.MW2|" type="string" value="キャプチャー" />
+				<item id="|.MW3|" type="string" value="コンソール" />
+				<item id="|.MW4|" type="string" value="統計" />
+				<item id="|.MW5|" type="string" value="表示" />
+				<item id="|.MW6|" type="string" value="Motin 出力" />
+			</Window>
+			<Help>
+				<item id="|.MH0|" type="string" value="ヘルプ" />
+				<item id="|.MH1|" type="string" value="コンテンツ..." />
+				<item id="|.MH2|" type="string" value="言語/Language..." /> <!-- Also add the enlish word language, se instructions above! -->				
+				<item id="|.MH3|" type="string" value="Webサイト表示" />
+				<item id="|.MH4|" type="string" value="このソフトについて..." />
+				<item id="|.MH5|" type="string" value="寄付 $$$" />
+				<item id="|.MH6|" type="string" value="オンラインチェック?" />
+				<item id="|.MH7|" type="string" value="自分のURL確認" />
+				<item id="|.MH8|" type="string" value="ルーター設定" />
+			</Help>
+		</Menu>
+		<Main_Window>
+			<item id="|.MAINW0|" type="string" value="コントロールパネル" /> <!-- name on the control panel tab -->
+			<item id="|.MAINW1|" type="string" value="コンソール" /> <!-- name on the console tab -->
+			<item id="|.MAINW2|" type="string" value="File" /> <!-- File-output label -->
+			<item id="|.MAINW3|" type="string" value="Ftp" /> <!-- Ftp-output label -->
+			<item id="|.MAINW4|" type="string" value="Http" /> <!-- Http-output label -->
+			<item id="|.MAINW5|" type="string" value="Stream" /> <!-- Stream-output label -->
+			<item id="|.MAINW6|" type="string" value="実行" /> <!-- button text -->
+			<item id="|.MAINW7|" type="string" value="停止" /> <!-- button text -->
+			<item id="|.MAINW8|" type="string" value="Motion" /> <!-- Motion detection label -->
+		</Main_Window>
+		<Detect_Dialog>
+			<item id="|.DETD0|" type="string" value="待ち..." /> <!-- heading for dialog -->
+			<item id="|.DETD1|" type="string" value="@xでウィンドウ閉じる。処理実行は、@y." /> <!-- message -->
+			<item id="|.DETD2|" type="string" value="OK" /> <!-- button label -->
+			<item id="|.DETD3|" type="string" value="WebCam検出まで暫く待つ" />
+			<item id="|.DETD4|" type="string" value="直ぐに実行しますか?" />
+		</Detect_Dialog>
+		<Preview_Window>
+			<item id="|.PREVW0|" type="string" value="プレビュー" /> <!-- heading for window -->
+		</Preview_Window>
+		<Capture_Window>
+			<item id="|.CAPTW0|" type="string" value="キャプチャー" /> <!-- heading for window -->
+			<item id="|.CAPTW1|" type="string" value="Capture!" /> <!-- button label -->
+			<Image_Win>
+				<item id="|.IMGW0|" type="string" value="イメージ" /> <!-- heading for window -->
+				<item id="|.IMGW1|" type="string" value="保存..." /> <!-- label: save-button -->
+				<item id="|.IMGW2|" type="string" value="閉じる" /> <!-- label: close-button -->
+				<item id="|.IMGW3|" type="string" value="ファイル保存..." /> <!-- heading for save-file-dialog -->
+			</Image_Win>
+		</Capture_Window>
+		<Settings>
+			<item id="|.SHEAD0|" type="string" value="設定" /> <!-- heading for settings window -->
+			<item id="|.SBTN0|" type="string" value="OK" /> <!-- ok button-label -->
+			<item id="|.SBTN1|" type="string" value="キャンセル" /> <!-- cancel button-label -->
+			<item id="|.SBTN2|" type="string" value="追加" /> <!-- add button-label -->
+			<item id="|.SBTN3|" type="string" value="削除" /> <!-- delete button-label -->
+			<item id="|.SBTN4|" type="string" value="クリア" /> <!-- clear button-label -->
+			<item id="|.SCAT0|" type="string" value="カテゴリー:" /> <!-- category-label -->
+			<Language>
+				<item id="|.SLANG0|" type="string" value="言語" /> <!-- name in menu and heading for panel -->
+				<item id="|.SLANG1|" type="string" value="現在の言語:" /> 
+				<item id="|.SLANG2|" type="string" value="Change" /> <!-- button label -->
+				<item id="|.SLANG3|" type="string" value="@xをクリックするまで言語は、変更されません。" /> <!-- info text -->
+				<item id="|.SLANG4|" type="string" value="言語ファイルを選択..." /> <!-- choose file dialog heading -->
+			</Language>
+			<Camera>
+				<item id="|.SCAM0|" type="string" value="カメラ" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCAM1|" type="string" value="カメラ選択:" /> 
+				<item id="|.SCAM2|" type="string" value="ビデオフォーマット選択:" /> 
+				<item id="|.SCAM3|" type="string" value="補足: ここで選択されたフォーマットは、全ての出力ファイルに影響します。" /> 
+			</Camera>
+			<Connection>
+				<item id="|.SCON0|" type="string" value="接続" />  <!-- name in menu and heading for panel -->
+				<item id="|.SCON1|" type="string" value="パブリックIP:" />
+				<item id="|.SCON2|" type="string" value="Get" />
+				<item id="|.SCON3|" type="string" value="起動時に検出" />
+				<item id="|.SCON4|" type="string" value="毎回検出" />
+				<item id="|.SCON5|" type="string" value="分" />
+				<item id="|.SCON6|" type="string" value="UPNPを利用する。" />				
+			</Connection>
+			<Output>
+				<!-- common text -->
+				<item id="|.SOUT0|" type="string" value="出力" /> <!-- name in menu -->
+				<item id="|.SOUT1|" type="string" value="タイプ:" />
+				<item id="|.SOUT2|" type="string" value="イメージ品質:" />
+				<item id="|.SOUT3|" type="string" value="インターバル:" />
+				<item id="|.SOUT4|" type="string" value="秒" />
+				<item id="|.SOUT5|" type="string" value="ポート:" />
+				<item id="|.SOUT6|" type="string" value="追加設定..." />
+				<!-- unique text -->
+				<File>
+					<item id="|.SOFILE0|" type="string" value="ファイル" /> <!-- name in menu and heading -->
+					<item id="|.SOFILE1|" type="string" value="パス:" />
+					<item id="|.SOFILE2|" type="string" value="参照..." /> <!-- button -->
+					<item id="|.SOFILE3|" type="string" value="保存..." />
+					<item id="|.SOFILE4|" type="string" value="配列イメージウィザード" />
+					<item id="|.SOFILE5|" type="string" value="開く..." />
+					<!-- wizard-->
+					<item id="|.SOFILEWIZ0|" type="string" value="このウィザードは、正しいファイル名を取得する為に、役立つます。" />
+					<item id="|.SOFILEWIZ1|" type="string" value="一つのオプションを選択:" />
+					<item id="|.SOFILEWIZ2|" type="string" value="Xに最後のイメージを保存します。(例　pic0.jpg にする場合、picX.jpgを指定し、最後の番号を入力する。)" />
+					<item id="|.SOFILEWIZ3|" type="string" value="無制限のファイル名を作成します。（最後の最大数を指定します。)" />
+					<item id="|.SOFILEWIZ4|" type="string" value="イメージを保存するディレクトリーを指定します。" />
+					<item id="|.SOFILEWIZ5|" type="string" value="ディレクトリーを選択:" />
+					<item id="|.SOFILEWIZ6|" type="string" value="保存するファイルを含んだファイル名を入力:" />
+					<item id="|.SOFILEWIZ7|" type="string" value="例:'out'を指定した場合のファイル名は、out0.jpg,out1.jpgのようになります。" />
+					<item id="|.SOFILEWIZ8|" type="string" value="保存するフォーマットを選択:" />
+					<item id="|.SOFILEWIZ9|" type="string" value="保存するイメージの番号を選択:" />
+					<item id="|.SOFILEWIZ10|" type="string" value="終了！ファイル名は、ウィンドウ設定で入力されたパスに自動的に保存されます。" />
+					<item id="|.SOFILEWIZ11|" type="string" value="必要なインターバル設定を忘れないで下さい。" />
+				</File>
+				<Ftp>
+					<item id="|.SOFTP0|" type="string" value="Ftp" /> <!-- name in menu and heading -->
+					<item id="|.SOFTP1|" type="string" value="Ftp サーバー:" />
+					<item id="|.SOFTP2|" type="string" value="ユーザー名:" />
+					<item id="|.SOFTP3|" type="string" value="パスワード:" />
+					<item id="|.SOFTP4|" type="string" value="ディレクトリー:" />
+					<item id="|.SOFTP5|" type="string" value="ファイル名:" />
+					<item id="|.SOFTP6|" type="string" value="アップデートインターバル:" />
+					<item id="|.SOFTP7|" type="string" value="補足:ここにパスワードを設定することは、お勧めできません。未入力の場合、実行時パスワード入力を行うことができます。" />
+					<item id="|.SOFTP8|" type="string" value="自動接続エラー" />
+					<item id="|.SOFTP9|" type="string" value="イメージ配列..." />
+				</Ftp>
+				<Http>
+					<item id="|.SOHTTP0|" type="string" value="Http" /> <!-- name in menu and heading -->
+					<item id="|.SOHTTP1|" type="string" value="URLを入力:" />
+					<item id="|.SOHTTP2|" type="string" value="又は" />
+					<item id="|.SOHTTP3|" type="string" value="ページの概観を変更するには、@x を選択して下さい。" />
+				</Http>
+				<Stream>
+					<item id="|.SOSTR0|" type="string" value="ストリーム" /> <!-- name in menu and heading -->
+					<item id="|.SOSTR1|" type="string" value="接続ポート:" />
+					<item id="|.SOSTR2|" type="string" value="データポート:" />
+					<item id="|.SOSTR3|" type="string" value="ヘッダー:" />
+					<item id="|.SOSTR4|" type="string" value="拡張" />
+					<item id="|.SOSTR5|" type="string" value="パブリックIP参照:" />
+					<item id="|.SOSTR6|" type="string" value="URLを入力:" />
+					<item id="|.SOSTR7|" type="string" value="補足: これらの設定は、正常に動作することができません。" />
+					<item id="|.SOSTR8|" type="string" value="アプレットサイズ:" />
+					<item id="|.SOSTR9|" type="string" value="実際のイメージサイズ" />
+					<item id="|.SOSTR10|" type="string" value="取得!" />
+					<item id="|.SOSTR11|" type="string" value="最大接続数:" />
+					<item id="|.SOSTR12|" type="string" value="最大データ数:" />
+					<item id="|.SOSTR13|" type="string" value="接続時間:" />
+					<item id="|.SOSTR14|" type="string" value="イメージ転送レート:" />
+					<item id="|.SOSTR15|" type="string" value="(fpsが高い場合、CPU消費を上げます)" />
+					<item id="|.SOSTR16|" type="string" value="接続要求時、音で知らせます。" />
+					<item id="|.SOSTR17|" type="string" value="接続要求時、メッセージを表示します。" />
+					<item id="|.SOSTR18|" type="string" value="ストリームタイプ:" />
+					<item id="|.SOSTR19|" type="string" value="スケールを設定:" />
+					<Page_Designer>
+						<item id="|.SOSTRPD0|" type="string" value="ページデザイン" />
+						<item id="|.SOSTRPD1|" type="string" value="タイトル:" />
+						<item id="|.SOSTRPD2|" type="string" value="ヘッダー:" />
+						<item id="|.SOSTRPD3|" type="string" value="枠色:" />
+						<item id="|.SOSTRPD4|" type="string" value="BG カラー:" />
+						<item id="|.SOSTRPD5|" type="string" value="BG イメージ:" />
+						<item id="|.SOSTRPD6|" type="string" value="Text カラー:" />
+						<item id="|.SOSTRPD7|" type="string" value="Text サイズ:" />
+						<item id="|.SOSTRPD8|" type="string" value="Page テキスト:" />
+						<item id="|.SOSTRPD9|" type="string" value="Link カラー:" />
+						<item id="|.SOSTRPD10|" type="string" value="Link visite:" />
+						<item id="|.SOSTRPD11|" type="string" value="Link active:" />
+						<!-- Dialogs -->
+						<item id="|.SOSTRPDDIA0|" type="string" value="このファイルは、サーバー上に保存できません。" />
+						<item id="|.SOSTRPDDIA1|" type="string" value="正しい場所に保存しますか?" />
+						<item id="|.SOSTRPDDIA2|" type="string" value="ファイルをコピーしますか?" />
+						<item id="|.SOSTRPDDIA3|" type="string" value="保存するファイルは、既に存在しています。" />
+						<item id="|.SOSTRPDDIA4|" type="string" value="上書きしても宜しいでしょうか?" />
+						<item id="|.SOSTRPDDIA5|" type="string" value="上書きしますか?" />
+						<item id="|.SOSTRPDDIA6|" type="string" value="ファイルコピーできません!" />
+						<item id="|.SOSTRPDDIA7|" type="string" value="ストリーム出力は、プレビュー前に実行される必要があります。" />
+						<item id="|.SOSTRPDDIA8|" type="string" value="今実行可能にしますか?" />
+						<item id="|.SOSTRPDDIA9|" type="string" value="ストリームを実行可能にしますか?" />
+					</Page_Designer>	
+				</Stream>
+			</Output>
+			<Text_Overlay>
+				<item id="|.SOVER0|" type="string" value="オーバレイ" /> <!-- name in menu (not used since v.0.2.7) -->
+				<item id="|.SOVER0a|" type="string" value="オーバレイ" /> <!-- name of folder in menu -->
+				<item id="|.SOVER0b|" type="string" value="テキスト" /> <!-- name in menu -->
+				<item id="|.SOVER0c|" type="string" value="テキストオーバレイ" /> <!-- name in settings panel -->
+				<item id="|.SOVER1|" type="string" value="配置:" />
+				<item id="|.SOVER2|" type="string" value="色:" />
+				<item id="|.SOVER3|" type="string" value="フォント:" />
+				<item id="|.SOVER4|" type="string" value="タイプ:" />
+				<item id="|.SOVER5|" type="string" value="サイズ:" />
+				<item id="|.SOVER6|" type="string" value="テキスト" /> <!-- displayed on the tabs -->
+				<item id="|.SOVER7|" type="string" value="年 (４桁)" />
+				<item id="|.SOVER8|" type="string" value="年 (２桁)" />
+				<item id="|.SOVER9|" type="string" value="月" />
+				<item id="|.SOVER10|" type="string" value="日" />
+				<item id="|.SOVER11|" type="string" value="時間" />
+				<item id="|.SOVER12|" type="string" value="分" />
+				<item id="|.SOVER13|" type="string" value="秒" />
+				<item id="|.SOVER13b|" type="string" value="ストリームビュー番号" />
+				<!-- position, vertical -->
+				<item id="|.SOVER14|" type="string" value="トップ" />
+				<item id="|.SOVER15|" type="string" value="センター" />
+				<item id="|.SOVER16|" type="string" value="ボトム" />
+				<!-- position, horizontal -->
+				<item id="|.SOVER17|" type="string" value="レフト" />
+				<item id="|.SOVER18|" type="string" value="センター" />
+				<item id="|.SOVER19|" type="string" value="ライト" />
+				<!-- colors -->
+				<item id="|.SOVER20|" type="string" value="赤" />
+				<item id="|.SOVER21|" type="string" value="緑" />
+				<item id="|.SOVER22|" type="string" value="青" />
+				<item id="|.SOVER23|" type="string" value="黄" />
+				<item id="|.SOVER24|" type="string" value="白" />
+				<item id="|.SOVER25|" type="string" value="黒" />
+				<item id="|.SOVER26|" type="string" value="灰" />
+				<item id="|.SOVER27|" type="string" value="シアン" />
+				<!-- font type -->
+				<item id="|.SOVER28|" type="string" value="通常" />
+				<item id="|.SOVER29|" type="string" value="イタリック" />
+				<item id="|.SOVER30|" type="string" value="ボールド" />
+				<item id="|.SOVER31|" type="string" value="T:" /> <!-- First letter of the translation of "transparent" -->
+				<item id="|.SOVER32|" type="string" value="背景を利用:" />
+				<!-- buttons -->
+				<item id="|.SOVER33|" type="string" value="プレビュー" />
+				<item id="|.SOVER34|" type="string" value="情報..." />
+				<!-- more stuff -->
+				<item id="|.SOVER40|" type="string" value="時間 (12時間表記)" />
+				<item id="|.SOVER41|" type="string" value="テキストに書かれた月" />
+				<item id="|.SOVER42|" type="string" value="テキストに書かれた日" />
+				<item id="|.SOVER43|" type="string" value="動的に変更できる値を利用することができます。" />
+				<item id="|.SOVER44|" type="string" value="以下の変数は、利用可能:" />
+				<item id="|.SOVER45|" type="string" value="動的な言語で書かれた月(@x)" />
+				<item id="|.SOVER46|" type="string" value="動的な言語で書かれた日(@x)" />
+				<!-- local calendar names -->				
+				<item id="|.SOVERDAY1|" type="string" value="月曜日" />
+				<item id="|.SOVERDAY2|" type="string" value="火曜日" />
+				<item id="|.SOVERDAY3|" type="string" value="水曜日" />
+				<item id="|.SOVERDAY4|" type="string" value="木曜日" />
+				<item id="|.SOVERDAY5|" type="string" value="金曜日" />
+				<item id="|.SOVERDAY6|" type="string" value="土曜日" />
+				<item id="|.SOVERDAY7|" type="string" value="日曜日" />
+				<item id="|.SOVERMON1|" type="string" value="1月" />
+				<item id="|.SOVERMON2|" type="string" value="2月" />
+				<item id="|.SOVERMON3|" type="string" value="3月" />
+				<item id="|.SOVERMON4|" type="string" value="4月" />
+				<item id="|.SOVERMON5|" type="string" value="5月" />
+				<item id="|.SOVERMON6|" type="string" value="6月" />
+				<item id="|.SOVERMON7|" type="string" value="7月" />
+				<item id="|.SOVERMON8|" type="string" value="8月" />
+				<item id="|.SOVERMON9|" type="string" value="9月" />
+				<item id="|.SOVERMON10|" type="string" value="10月" />
+				<item id="|.SOVERMON11|" type="string" value="11月" />
+				<item id="|.SOVERMON12|" type="string" value="12月" />
+			</Text_Overlay>
+			<Image_Overlay>
+				<item id="|.SIOVER0a|" type="string" value="イメージ" /> <!-- name in menu -->
+				<item id="|.SIOVER0b|" type="string" value="イメージオーバレイ" /> <!-- name in settings panel -->
+				<item id="|.SIOVER1|" type="string" value="イメージ" /> <!-- text on tabs -->
+				<item id="|.SIOVER2|" type="string" value="変更..." />
+				<item id="|.SIOVER3|" type="string" value="削除" />
+				<item id="|.SIOVER4|" type="string" value="透明:" />	
+			</Image_Overlay>
+			<Startup>
+				<item id="|.SSTRT0|" type="string" value="起動" /> <!-- name in menu and heading -->
+				<item id="|.SSTRT1|" type="string" value="ここで、Yawcam起動時の設定を変更することができます。" />
+				<item id="|.SSTRT2|" type="string" value="ファイル出力を開始" />
+				<item id="|.SSTRT3|" type="string" value="FTP出力を開始" />
+				<item id="|.SSTRT4|" type="string" value="Http出力を開始" />
+				<item id="|.SSTRT5|" type="string" value="プレビューを表示" />
+				<item id="|.SSTRT6|" type="string" value="コンソールを表示" />
+				<item id="|.SSTRT7|" type="string" value="統計を表示" />
+				<item id="|.SSTRT8|" type="string" value="起動時にトレイバーに隠す" />
+				<item id="|.SSTRT9|" type="string" value="スプラッシュスクリーンを表示" />
+				<item id="|.SSTRT10|" type="string" value="ストリーム出力を開始" />
+				<item id="|.SSTRT11|" type="string" value="ビューワーを表示" />
+				<item id="|.SSTRT12|" type="string" value="新しいバージョンチェック" />
+				<item id="|.SSTRT13|" type="string" value="ログファイルを保存" />
+				<item id="|.SSTRT14|" type="string" value="Motion出力を開始" />
+			</Startup>
+			<Offline_Image>
+				<item id="|.SOFFIMG0|" type="string" value="オフラインイメージ" />
+				<item id="|.SOFFIMG1|" type="string" value="オフライン移動時に、オフラインイメージを保存:" />
+				<item id="|.SOFFIMG2|" type="string" value="イメージを保存:" />
+				<item id="|.SOFFIMG3|" type="string" value="Yawcam終了時に保存" />
+				<item id="|.SOFFIMG4|" type="string" value="イメージを選択" />
+			</Offline_Image>
+			<Password>
+				<item id="|.SPASS0|" type="string" value="パスワード" />
+				<item id="|.SPASS1|" type="string" value="ストリーム出力時パスワードを利用" />
+				<item id="|.SPASS2|" type="string" value="確認..." />
+				<item id="|.SPASS3|" type="string" value="ワーニング! 全てのパスワードは、削除されました!" />
+				<item id="|.SPASS4|" type="string" value="処理を継続しますか?" />
+				<item id="|.SPASS5|" type="string" value="@xでパスワードは、削除されます!" />
+				<item id="|.SPASS6|" type="string" value="選択されていません!" />
+				<item id="|.SPASS7|" type="string" value="ユーザーを選択してください。再度 @xをクリックして下さい。" />
+				<item id="|.SPASS8|" type="string" value="それを実行できません..." />
+				<item id="|.SPASS9|" type="string" value="正しくないログイン処理:" />
+				<item id="|.SPASS10|" type="string" value="ユーザー／パスワードの追加..." />
+				<item id="|.SPASS11|" type="string" value="ユーザー名" />
+				<item id="|.SPASS12|" type="string" value="パスワード" />
+				<item id="|.SPASS13|" type="string" value="パスワード再入力" />
+				<item id="|.SPASS14|" type="string" value="ストリームアプレットとストリームアナウンスのパスワードを可能にします。" />
+				<item id="|.SPASS15|" type="string" value="これは、あなたの要求するものではありません ;-)" />
+				<item id="|.SPASS16|" type="string" value="継続処理を実行しますか?" />
+				<item id="|.SPASS17|" type="string" value="宜しいですか?" />
+			</Password>
+			<Announcements>
+				<item id="|.SANN0|" type="string" value="アナウンス" /> <!-- name in menu and heading -->
+				<item id="|.SANN1|" type="string" value="このパネルは、オンライン時のWebカメラコミュニティに案内する構成を行います。" />
+				<item id="|.SANN2|" type="string" value="オンラインアナウンス:" />
+				<item id="|.SANN3|" type="string" value="オフラインアナウンス:" />
+				<item id="|.SANN4|" type="string" value="私がオンライン・オフライン時に案内を送信:" />
+				<item id="|.SANN5|" type="string" value="プレビュー" />
+				<item id="|.SANN6|" type="string" value="案内" />
+				<item id="|.SANN7|" type="string" value="アナウンス:" />
+				<item id="|.SANN8|" type="string" value="オンライン:" />
+				<item id="|.SANN9|" type="string" value="オフライン:" />
+				<item id="|.SANN10|" type="string" value="アナウンスは、http-request で行われます。" />
+				<item id="|.SANN11|" type="string" value="Webカメラコミュニティが、アナウンスを取得する方法についての情報を提供する" />
+				<item id="|.SANN12|" type="string" value="アナウンス文字列を作成する時に、以下の変数を利用:" />
+				<item id="|.SANN13|" type="string" value="YawcamのビルトインウェブサーバのURL(http)" />
+				<item id="|.SANN14|" type="string" value="YawcamのストリーミングアプレットのURL(stream)" />
+				<item id="|.SANN15|" type="string" value="ワーニング!" />
+				<item id="|.SANN16|" type="string" value="オンラインアナウンスを送信できません!" />
+				<item id="|.SANN17|" type="string" value="オフラインアナウンスを送信できません!" />
+				<item id="|.SANN18|" type="string" value="設定を確認して下さい..." />
+			</Announcements>
+			<Scheduler>
+				<item id="|.SSCHED0|" type="string" value="スケジューラー" /> <!-- name in menu and heading -->
+				<item id="|.SSCHED1|" type="string" value="スケジューラーを可能にする" />
+				<item id="|.SSCHED2|" type="string" value="実行" />
+				<item id="|.SSCHED3|" type="string" value="停止" />
+			</Scheduler>
+		</Settings>
+		<Motion_Detection>
+		
+		</Motion_Detection>
+		<About>
+			<item id="|.ABW0|" type="string" value="Yawcamについて" /> <!-- heading for window -->
+			<item id="|.ABW1|" type="string" value="翻訳:" />
+			<item id="|.ABW2|" type="string" value="お礼:" />
+			<item id="|.ABW3|" type="string" value="OK" /> <!-- button -->
+		</About>
+		<Pass_Prompt>
+			<item id="|.PSSP0|" type="string" value="ログイン..." /> <!-- heading for window -->
+			<item id="|.PSSP1|" type="string" value="Yawcamは、入力されたユーザー名・パスワードで Ftpサーバーに接続できませんでした。正しい情報を入力して下さい。:" />
+			<item id="|.PSSP2|" type="string" value="ユーザー名:" />
+			<item id="|.PSSP3|" type="string" value="パスワード:" />
+			<item id="|.PSSP4|" type="string" value="次のパスワードを保存して下さい。 (推奨されません!)" />
+		</Pass_Prompt>
+		<TrayIcon_popmenu>
+			<item id="|.TIM0|" type="string" value="非表示/表示" />
+			<item id="|.TIM1|" type="string" value="常にトップに表示" />
+			<item id="|.TIM2|" type="string" value="可能" />
+			<item id="|.TIM3|" type="string" value="File" />
+			<item id="|.TIM4|" type="string" value="Ftp" />
+			<item id="|.TIM5|" type="string" value="Http" />
+			<item id="|.TIM6|" type="string" value="Stream" />
+			<item id="|.TIM7|" type="string" value="設定..." />
+			<item id="|.TIM8|" type="string" value="ヘルプ..." />
+			<item id="|.TIM9|" type="string" value="終了" />
+			<item id="|.TIM10|" type="string" value="Motion出力" />
+			<item id="|.TIM11|" type="string" value="スケジューラー" />
+		</TrayIcon_popmenu>
+		<Viewers>
+			<item id="|.VIEWF0|" type="string" value="ビューワー:" /> <!-- label for number of viewers -->
+			<item id="|.VIEWF1|" type="string" value="IP" />
+			<item id="|.VIEWF2|" type="string" value="ホスト名" />
+			<item id="|.VIEWF3|" type="string" value="時間" />
+			<item id="|.VIEWF4|" type="string" value="送信 (kB)" />
+			<item id="|.VIEWF5|" type="string" value="ストリームビューワー" /> <!-- window title -->
+			<item id="|.VIEWF6|" type="string" value="実行!" />
+			<item id="|.VIEWF7|" type="string" value="禁止リスト..." />
+			<item id="|.VIEWF8|" type="string" value="禁止!" />
+			<item id="|.VIEWF9a|" type="string" value="禁止ビューワー?" />
+			<item id="|.VIEWF9b|" type="string" value="このユーザーを禁止にしますか?" />
+			<item id="|.VIEWF10|" type="string" value="禁止解除" />
+			<item id="|.VIEWF11a|" type="string" value="IP追加" />
+			<item id="|.VIEWF11b|" type="string" value="入力IPを禁止:" />
+			<item id="|.VIEWF12|" type="string" value="IP-アドレスを禁止:" />
+		</Viewers>
+		<ImgToMov>
+			<item id="|.IMGTM0|" type="string" value="イメージを動画" /> <!-- title -->
+			<item id="|.IMGTM1|" type="string" value="このダイアログは、イメージファイルを動画に変換します。" />
+			<item id="|.IMGTM2|" type="string" value="リストのイメージを動画:" />
+			<item id="|.IMGTM3|" type="string" value="逆順" />
+			<item id="|.IMGTM4|" type="string" value="イメージを追加..." />
+			<item id="|.IMGTM5|" type="string" value="フレームレート:" />
+			<item id="|.IMGTM6|" type="string" value="fps" /> <!-- fps (frames per second) -->
+			<item id="|.IMGTM7|" type="string" value="動画ファイル:" />
+			<item id="|.IMGTM8|" type="string" value="動画作成" />
+			<item id="|.IMGTM9|" type="string" value="リスト内の項目を選択して下さい。" />
+			<item id="|.IMGTM10|" type="string" value="リストにイメージファイルを追加して下さい!" />
+			<item id="|.IMGTM11a|" type="string" value="フレームレートは、整数でなければなりません!" />
+			<item id="|.IMGTM11b|" type="string" value="1 - 90は、有効な数字です。" />
+			<item id="|.IMGTM12|" type="string" value="動画名を選択して下さい。" />
+			<item id="|.IMGTM13|" type="string" value="動画作成中..." />
+			<item id="|.IMGTM14|" type="string" value="イメージ追加中..." />
+			<item id="|.IMGTM15|" type="string" value="動画ファイルが見つかりました:" />
+			<item id="|.IMGTM16|" type="string" value="終了..." />
+			<item id="|.IMGTM17|" type="string" value="動画を書き込み中..." />			
+			<item id="|.IMGTM18|" type="string" value="イメージを確認中..." />
+		</ImgToMov>
+		<Popup_Errors>
+			<item id="|.POPER0|" type="string" value="エラー..." /> <!-- heading for all error popups -->
+			<item id="|.POPER1a|" type="string" value="ホストが見つかりません!" />
+			<item id="|.POPER1b|" type="string" value="設定したFtp サーバアドレスを確認して下さい。" />
+			<item id="|.POPER2a|" type="string" value="接続は、拒否されました!" />
+			<item id="|.POPER2b|" type="string" value="ftp設定を確認して下さい。" />
+			<item id="|.POPER3a|" type="string" value="権限がありません!" />
+			<item id="|.POPER3b|" type="string" value="ftpサーバーにファイル登録する権限を確認してください。" />
+			<item id="|.POPER4|" type="string" value="xmlファイルが有効ではありません!" />
+			<item id="|.POPER5|" type="string" value="ファイルを見つけられませんでした:" />
+			<!-- input errors -->
+			<item id="|.POPER6|" type="string" value="変更..." />
+			<item id="|.POPER7a|" type="string" value="インターバルの値が有効ではありません!" />
+			<item id="|.POPER7b|" type="string" value="数字のみ入力可能(例: 10 or 300)" />
+			<item id="|.POPER8a|" type="string" value="ポート番号が有効ではありません!" />
+			<item id="|.POPER8b|" type="string" value="数字のみ入力可能(例: 21)" />
+			<item id="|.POPER9|" type="string" value="数字のみ入力可能(例: 8888)" />
+			<item id="|.POPER10|" type="string" value="ポート @x は、既に利用されています。" />
+			<item id="|.POPER11|" type="string" value="他のポート番号を選択して下さい。" />
+			<item id="|.POPER12a|" type="string" value="ディレクトリーが存在しません!" />
+			<item id="|.POPER12b|" type="string" value="Ftpに設定されたディレクトリーが存在するか確認してください。" />
+			<!-- misc -->
+			<item id="|.POPERLANG0|" type="string" value="不具合..." />
+			<item id="|.POPERLANG1|" type="string" value="このバージョンには、ヘルプファイルがありません。" />
+			<item id="|.POPERLANG2|" type="string" value="更新の為に、www.yawcam.comを確認してください。" />
+			<!-- camera errors -->
+			<item id="|.POPERCAM0|" type="string" value="Webカメラに接続できません。" />
+			<item id="|.POPERCAM1|" type="string" value="他のアプリケーションが、利用しているか確認するか、別のものを利用してください。" />
+			<item id="|.POPERCAM2|" type="string" value="カメラリストが空の場合、@zメニューのpyより@xをクリックして下さい。" />
+			<!-- File-output errors -->
+			<item id="|.POPERFILE0|" type="string" value="ファイル @x を保存できませんでした。" />
+			<item id="|.POPERFILE1|" type="string" value="ディレクトリーが本当に存在するか確認してください。" />
+			<!-- More Ftp-output errors -->
+			<item id="|.POPERFTP0|" type="string" value="一時ファイルを保存できません!" />
+			<item id="|.POPERFTP1|" type="string" value="ディレクトリー @xが存在しているか確認してください。" />
+			<!-- add password error -->
+			<item id="|.POPERPASADD0|" type="string" value="ユーザー名を入力してください!" />
+			<item id="|.POPERPASADD1|" type="string" value="パスワードが違います。" />
+			<item id="|.POPERPASADD2|" type="string" value="再度入力してください!" />
+			<item id="|.POPERPASADD3|" type="string" value="パスワードが入力されていません!" />
+			<!-- stream -->
+			<item id="|.POPERSTRM0|" type="string" value="IPが自動で検出できません!" />
+			<item id="|.POPERSTRM1|" type="string" value="数字以外は、入力できません。" />
+		</Popup_Errors>
+	</GUI>
+	<Console>
+		<item id="|.CNSPR0|" type="string" value="Yawcam 起動" />
+		<item id="|.CNSPR1|" type="string" value="設定情報読み込み" />
+		<item id="|.CNSPR2|" type="string" value="設定情報保存" />
+		<item id="|.CNSPR3|" type="string" value="File出力開始" />
+		<item id="|.CNSPR4|" type="string" value="File出力停止" />
+		<item id="|.CNSPR5|" type="string" value="FTP出力開始" />
+		<item id="|.CNSPR6|" type="string" value="FTP出力停止" />
+		<item id="|.CNSPR7|" type="string" value="HTTP出力開始" />
+		<item id="|.CNSPR8|" type="string" value="HTTP出力停止" />
+		<item id="|.CNSPR9|" type="string" value="イメージフォーマット: @x" />
+		<item id="|.CNSPR10|" type="string" value="利用デバイス: @x" />
+		<item id="|.CNSPR11|" type="string" value="言語: @x" />
+		<item id="|.CNSPR12|" type="string" value="Yawcam 非表示" />
+		<item id="|.CNSPR13|" type="string" value="Yawcam 表示" />
+		<item id="|.CNSPR14|" type="string" value="Webカメラ検索中..." />
+		<item id="|.CNSPR15|" type="string" value="ありがとう!" />
+		<item id="|.CNSPR16|" type="string" value="ファイル保存" />
+		<item id="|.CNSPR17|" type="string" value="ストリーム出力開始" />
+		<item id="|.CNSPR18|" type="string" value="ストリーム出力停止" />
+		<item id="|.CNSPR19|" type="string" value="ヘルプファイルは、ウェブ上に配置されています。" />
+		<item id="|.CNSPR20|" type="string" value="ポート @x は、既に利用されています!" />
+		<item id="|.CNSPR21|" type="string" value="ftpサーバーに接続できません!" />
+	</Console>
+</yawcam_lang>
