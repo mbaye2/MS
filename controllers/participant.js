@@ -1,18 +1,28 @@
 const Event = require('../models/event');
 const Registration = require('../models/registration');
 const Notification = require('../models/notification');
-const { capitalize } = require('../utils/utils')
+const Evaluation = require('../models/evaluation');
+const { capitalize, tagEvent } = require('../utils/utils')
 
 module.exports.home = async (req, res) => {
     const userConnected = req.user;
-    const events = await Event.find({})
+    const allEvents = await Event.find({})
+    const mappedEvents = allEvents.map(tagEvent);
+    const events = mappedEvents.filter(event => event.tag === "Demain" || event.tag === "");
     res.render("participant/home", { userConnected, capitalize, events })
 }
 
 module.exports.evenement = async(req, res) => {
-    const event = await Event.findById(req.params.id).populate("organizerId")
+    const event = await Event.find({ _id: req.params.id }).populate("organizerId")
+    const finalEvent = event.map(tagEvent);
+    let isRate = false
+    let rating = []
+    if(finalEvent[0].tag === "Dépassé") {
+        isRate = true
+        rating = await Evaluation.find({ participantId: req.user.id, eventId: req.params.id })
+    }
     let registration = await Registration.find({ eventId: req.params.id, participantId: req.user._id })
-    res.render("participant/evenement", { event, capitalize, registration })
+    res.render("participant/evenement", { event: finalEvent, capitalize, registration, isRate, rating })
 }
 
 module.exports.registration = async(req, res) => {
@@ -40,8 +50,7 @@ module.exports.programme = async(req, res) => {
             allRegistrations.push(registrations[i])
         }
     }
-    console.log(allRegistrations)
-    res.render("participant/programme", { allRegistrations })
+    res.render("participant/programme", { allRegistrations, capitalize })
 }
 
 module.exports.notifications = async(req, res) => {
@@ -60,5 +69,18 @@ module.exports.notifications = async(req, res) => {
             events.push("Evénement supprimé")
         }
     }
-    res.render("participant/notifications", { allNotifications, events, numberNotif: allNotifications.length })
+    res.render("participant/notifications", { allNotifications, events, numberNotif: allNotifications.length, capitalize })
+}
+
+module.exports.evaluation = async(req, res) => {
+    const evaluation = new Evaluation({
+        Rating: req.body.rating,
+        Comment: req.body.comment,
+        ratingDate: new Date(),
+        participantId: req.user._id,
+        eventId: req.params.id
+    });
+    await evaluation.save();
+    req.flash("success", "Merci d'avoir évalué")
+    res.redirect(`/participant/evenement/${req.params.id}`)
 }

@@ -31,3 +31,22 @@ module.exports.generateRandomString = (length) => {
     }
     return randomString;
 }
+
+module.exports.tagEvent = (event) => {
+    const currentDate = new Date();
+    const eventDate = new Date(event.date);
+    const currentDateString = currentDate.toDateString();
+    const eventDateString = eventDate.toDateString();
+    const diffInTime = eventDate.setHours(0, 0, 0, 0) - currentDate.setHours(0, 0, 0, 0);
+    const diffInDays = Math.ceil(diffInTime / (1000 * 3600 * 24));
+
+    if (eventDate < currentDate) {
+        return { ...event, tag: "Dépassé" };
+    } else if (diffInDays === 1) {
+        return { ...event, tag: "Demain" };
+    } else if (eventDateString === currentDateString) {
+        return { ...event, tag: "Aujourd'hui" };
+    } else {
+        return { ...event, tag: "" };
+    }
+};

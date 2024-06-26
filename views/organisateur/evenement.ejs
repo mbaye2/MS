@@ -7,22 +7,24 @@
   <div class="container my-5 d-flex justify-content-between event-container">
     <div style="width: 100%;">
       <h1 class="text-center" style="border-bottom: rgba(94, 160, 73, 255) 3px solid; border-radius: 5px;">
-        <%= capitalize(event.title) %>
+        <%= capitalize(event[0]._doc.title) %>
       </h1>
-      <h2 style="color: rgba(94, 160, 73, 255);">
-        <span class="fs-6" style="color: black;">aura lieu le <b class="date-event"></b></span>
+      <h4>
+        créé par <span class="fs-1"><%= capitalize(event[0]._doc.organizerId.prenom) %> <%= capitalize(event[0]._doc.organizerId.nom) %></span>
+      </h4>
+      <h2>
+        <span class="fs-4" style="color: black;">Le <b class="date-event fs-2 mx-2"></b></span>
+        <span> à <b class="ms-2"><%= capitalize(event[0]._doc.place) %></b></span>
+        <% if (event[0].tag == "Demain") { %>
+            <span class="badge bg-warning me-2 fs-5">Demain</span>
+        <% } else if (event[0].tag == "Dépassé") {  %>
+            <span class="badge bg-danger me-2 fs-5">Dépassé</span>
+        <% } %>
       </h2>
-      <p class="p-3 me-2" style="border: rgba(94, 160, 73, 255) 2px solid;">
-        <span class="fs-6">Description</span>
-        <br>
-        <span class="fs-3">
-          <%= capitalize(event.description) %>
-        </span>
-      </p>
       <div class="d-flex justify-content-between">
         <div class="d-flex">
           <div class="me-2">
-            <a href="/organisateur/evenement/<%= event._id %>/edit"
+            <a href="/organisateur/evenement/<%= event[0]._doc._id %>/edit"
               class="btn btn-primary theme-color-button">Modifier</a>
           </div>
           <button type="button" class="btn btn-primary theme-color-button" data-bs-toggle="modal"
@@ -37,7 +39,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form action="/organisateur/notif/<%= event._id %>" method="post" id="send-notif-form">
+                  <form action="/organisateur/notif/<%= event[0]._doc._id %>" method="post" id="send-notif-form">
                     <div class="mb-3">
                       <select class="form-select" aria-label="Notification Type" name="type" id="type" required>
                         <option value="" disabled selected>Type de notification</option>
@@ -47,14 +49,14 @@
                     </div>
                     <div class="mb-3">
                       <label for="message" class="col-form-label">Message:</label>
-                      <textarea class="form-control" id="message" name="message"></textarea>
+                      <textarea class="form-control" id="message" name="message" required></textarea>
                     </div>
-                  </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                   <button type="submit" class="btn btn-primary send-notif theme-color-button">Envoyer</button>
                 </div>
+              </form>
               </div>
             </div>
           </div>
@@ -73,7 +75,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non</button>
-                <form action="/organisateur/evenement/<%= event._id %>/?_method=DELETE" method="post">
+                <form action="/organisateur/evenement/<%= event[0]._doc._id %>/?_method=DELETE" method="post">
                   <button type="submit" class="btn btn-danger">Oui</button>
                 </form>
               </div>
@@ -90,7 +92,6 @@
     <div class="container my-5">
       <h2>Inscriptions:</h2>
     </div>
-
     <div class="container historique-table">
       <table class="table table-warning">
         <thead>
@@ -98,23 +99,33 @@
             <th scope="col">Prénom et Nom</th>
             <th scope="col">Adresse Email</th>
             <th scope="col">Inscrit(e) le</th>
+            <th scope="col">Note</th>
+            <th scope="col">Commentaire</th>
           </tr>
         </thead>
         <tbody>
-          <% registrations.forEach(registration=> { %>
+          <% for (let i = 0; i < registrations.length; i++) { %>
             <tr>
               <td>
-                <%= registration.participantId.prenom %>
-                  <%= registration.participantId.nom %>
+                <%= registrations[i].participantId.prenom %>
+                  <%= registrations[i].participantId.nom %>
               </td>
               <td>
-                <%= registration.participantId.email %>
+                <%= registrations[i].participantId.email %>
               </td>
               <td class="inscrit-le">
 
               </td>
+              <% if (ratings.length !== 0 && ratings[i]) { %>
+                <td>
+                  <%= ratings[i].Rating %>
+                </td>
+                <td>
+                  <%= ratings[i].Comment %>
+                </td>
+              <% } %>
             </tr>
-            <% }) %>
+            <% } %>
         </tbody>
       </table>
     </div>
@@ -128,14 +139,16 @@
           function beautifiedDeadline(date) {
             return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear();
           }
-
+          function beautifiedDeadlineHour(date) {
+            return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear() + " à " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+          }
           const inscritLe = document.querySelectorAll('.inscrit-le');
           const dateEvent = document.querySelector('.date-event');
           const registrations = <%- JSON.stringify(registrations) %>;
           const event = <%- JSON.stringify(event) %>;
 
           for (let i = 0; i < registrations.length; i++) {
-            inscritLe[i].innerHTML = beautifiedDeadline(new Date(registrations[i].dateRegister))
+            inscritLe[i].innerHTML = beautifiedDeadlineHour(new Date(registrations[i].dateRegister))
           }
-          dateEvent.innerHTML = beautifiedDeadline(new Date(event.date))
+          dateEvent.innerHTML = beautifiedDeadline(new Date(event[0]._doc.date))
         </script>

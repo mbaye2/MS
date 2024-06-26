@@ -1,12 +1,14 @@
 const Event = require('../models/event');
 const Registration = require('../models/registration');
 const Notification = require('../models/notification');
-const { capitalize } = require('../utils/utils')
+const Evaluation = require('../models/evaluation');
+const { capitalize, tagEvent } = require('../utils/utils')
 
 module.exports.home = async (req, res) => {
     const userConnected = req.user;
     const events = await Event.find({ organizerId: userConnected._id })
-    res.render("organisateur/home", { userConnected, capitalize, events })
+    const allEvents = events.map(tagEvent);
+    res.render("organisateur/home", { userConnected, capitalize, events: allEvents })
 }
 
 module.exports.nouvelEvenement = (req, res) => {
@@ -30,14 +32,32 @@ module.exports.creationEvenement = async(req, res) => {
 }
 
 module.exports.evenement = async(req, res) => {
-    const event = await Event.findById(req.params.id)
+    const event = await Event.find({ _id: req.params.id })
+    const finalEvent = event.map(tagEvent);
     const registrations = await Registration.find({ eventId: req.params.id }).populate("participantId")
-    res.render("organisateur/evenement", { event, capitalize, registrations })
+    let ratings = []
+    for (let i = 0; i < registrations.length; i++) {
+        const rating = await Evaluation.findOne({ participantId: registrations[i].participantId._id, eventId: req.params.id })
+        if (rating) {
+            ratings.push(rating)
+        } else {
+            ratings.push({})
+        }
+    }
+    res.render("organisateur/evenement", { event: finalEvent, capitalize, registrations, ratings })
 }
 
 module.exports.sendNotif = async(req, res) => {
-    console.log(req.body)
-    res.send('ok')
+    const notif = new Notification({
+        type: req.body.type,
+        sentDate: new Date(),
+        message: req.body.message,
+        eventId: req.params.id
+    });
+    await notif.save();
+    req.flash("success", "Notification envoyée aux participants!")
+    res.redirect(`/organisateur/evenement/${req.params.id}`)
+
 }
 
 module.exports.displayEdit = async(req, res) => {
@@ -52,12 +72,12 @@ module.exports.delete = async(req, res) => {
     const notif = new Notification({
         type: "Urgent",
         sentDate: new Date(),
-        message: `L'événement ${capitalize(event.title)} a été supprimé!`,
+        message: `L'événement <b>${capitalize(event.title)}</b> a été supprimé!`,
         eventId: req.params.id
     })
     await notif.save();
 
-    req.flash('success', `L'événement ${capitalize(event.title)} a été supprimé!`)
+    req.flash('success', `L'événement <b>${capitalize(event.title)}</b> a été supprimé!`)
     res.redirect("/organisateur/home")
 }
 

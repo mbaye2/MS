@@ -1,29 +1,29 @@
 const express = require("express");
 const router = express.Router();
-const { isLoggedIn } = require('../utils/middleware');
+const { isLoggedIn, isOrganisateur } = require('../utils/middleware');
 const organisateur = require("../controllers/organisateur");
 
 router
     .route("/home")
-    .get(isLoggedIn, organisateur.home)
+    .get(isLoggedIn, isOrganisateur, organisateur.home)
 
 router
     .route("/nouvelEvenement")
-    .get(isLoggedIn, organisateur.nouvelEvenement)
-    .post(isLoggedIn, organisateur.creationEvenement)
+    .get(isLoggedIn, isOrganisateur, organisateur.nouvelEvenement)
+    .post(isLoggedIn, isOrganisateur, organisateur.creationEvenement)
 
 router
     .route("/evenement/:id")
-    .get(isLoggedIn, organisateur.evenement)
-    .delete(isLoggedIn, organisateur.delete)
+    .get(isLoggedIn, isOrganisateur, organisateur.evenement)
+    .delete(isLoggedIn, isOrganisateur, organisateur.delete)
 
 router
     .route("/evenement/:id/edit")
-    .get(isLoggedIn, organisateur.displayEdit)
-    .put(isLoggedIn, organisateur.editEvent)
+    .get(isLoggedIn, isOrganisateur, organisateur.displayEdit)
+    .put(isLoggedIn, isOrganisateur, organisateur.editEvent)
 
 router
     .route("/notif/:id")
-    .post(isLoggedIn, organisateur.sendNotif)
+    .post(isLoggedIn, isOrganisateur, organisateur.sendNotif)
     
 module.exports = router;

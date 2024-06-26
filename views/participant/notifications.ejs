@@ -25,13 +25,13 @@
           <% for (let i = 0; i < allNotifications.length; i++) { %>
             <tr>
               <td class="text-center <% if (allNotifications[i].type === "Urgent") { %> text-danger <% } %>">
-                <%= allNotifications[i].type %>
+                <%= capitalize(allNotifications[i].type) %>
               </td>
               <td class="text-center">
                 <% if (events[i] === "Evénement supprimé") { %>
                     <%= events[i] %>
                 <% } else { %>
-                    <a href="/participant/evenement/<%= events[i]._id %>" class="btn btn-danger"><%= events[i].title %></a>
+                    <a href="/participant/evenement/<%= events[i]._id %>" class="btn btn-primary theme-color-button"><%= capitalize(events[i].title) %></a>
                 <% } %>
               </td>
               <td class="text-center">
@@ -55,10 +55,10 @@
         function beautifiedDeadline(date) {
             return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear() + " à " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
         }
-        const dateSent = document.querySelector('.envoye-le')
+        const dateSent = document.querySelectorAll('.envoye-le')
 
         const allNotifications = <%- JSON.stringify(allNotifications) %>;
         for (let i = 0; i < allNotifications.length; i++) {
-            dateSent.innerHTML = beautifiedDeadline(new Date(allNotifications[i].sentDate))
+            dateSent[i].innerHTML = beautifiedDeadline(new Date(allNotifications[i].sentDate))
         }
     </script>

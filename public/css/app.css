@@ -10,6 +10,30 @@ body {
     background-color: beige;
 }
 
+.star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 7rem;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: #f5c518;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f5c518;
+}
+
 .slogan, .login-sign-up, .login{
     font-family: "Sanchez", serif;
     font-weight: 400;

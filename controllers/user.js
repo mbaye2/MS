@@ -7,7 +7,9 @@ module.exports.login = (req, res) => {
 module.exports.authentication = async(req, res) => {
     const profil = req.user.profil
     req.flash('success', "Bienvenue !");
-    res.redirect(`/${profil}/home`)
+    const redirectUrl = req.session.returnTo || `/${profil}/home`;
+    delete req.session.returnTo;
+    res.redirect(redirectUrl);
 };
 
 module.exports.logout = (req, res) => {
