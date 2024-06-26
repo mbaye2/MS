@@ -1,0 +1,74 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="back-buttons btn-group mt-5" role="group">
+    <a href="/participant/home" class="btn btn-outline-success btn-lg" type="button">Retour à l'accueil</a>
+</div>
+    <div class="container my-5 d-flex justify-content-between event-container">
+        <div style="width: 100%;">
+            <h1 class="text-center" style="border-bottom: rgba(94, 160, 73, 255) 3px solid; border-radius: 5px;">
+                <%= capitalize(event.title) %>
+            </h1>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h4>
+                        créé par <%= capitalize(event.organizerId.prenom) %> <%= capitalize(event.organizerId.nom) %>
+                    </h4>
+                    <h2 style="color: rgba(94, 160, 73, 255);">
+                        <span class="fs-6" style="color: black;">aura lieu le <b class="date-event fs-3"></b></span>
+                    </h2>
+                </div>
+                <div class="d-flex justify-content-end align-items-center" style="width: 50%;">
+                    <% if (registration.length !== 0) { %>
+                        <span class="badge bg-secondary">Vous vous êtes inscrit à cet événement le <span class="date-insc"></span></span>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#unregister">
+                            Se désinscrire
+                        </button>
+                        <div class="modal fade" id="unregister" tabindex="-1" aria-labelledby="unregisterModal" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                    Voulez-vous vraiment vous désinscrire de cet événement ?
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non</button>
+                                    <form action="/participant/unregister/<%= event._id %>/<%= registration[0]._id %>?_method=DELETE" method="post">
+                                        <button type="submit" class="btn btn-danger">Oui</button>
+                                    </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    <% } else { %>
+                        <form action="/participant/register/<%= event._id %>" method="post" class="container">
+                            <div class="container d-flex align-items-center justify-content-center">
+                                <button type="submit" class="btn btn-primary theme-color-button fs-3">S'inscrire</button>
+                            </div>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            <div>
+                <p class="p-3 me-2" style="border: rgba(94, 160, 73, 255) 2px solid;">
+                    <span class="fs-6">Description</span>
+                    <br>
+                    <span class="fs-3">
+                        <%= capitalize(event.description) %>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function beautifiedDeadline(date) {
+            return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear() + " à " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+        }
+        const dateEvent = document.querySelector('.date-event')
+        const dateInsc = document.querySelector('.date-insc')
+
+        const registration = <%- JSON.stringify(registration) %>;
+        const event = <%- JSON.stringify(event) %>;
+
+        dateEvent.innerHTML = beautifiedDeadline(new Date(event.date))
+        dateInsc.innerHTML = beautifiedDeadline(new Date(registration[0].dateRegister))
+    </script>

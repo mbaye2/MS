@@ -1,0 +1,80 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="back-buttons btn-group mt-5" role="group">
+    <a href="/participant/home" class="btn btn-outline-success btn-lg" type="button">Retour à l'accueil</a>
+</div>
+
+<% if (allRegistrations.length !==0) { %>
+
+    <div class="container my-5">
+      <h2>Evénements auxquels vous êtes inscrit</h2>
+    </div>
+
+    <div class="container historique-table">
+      <table class="table table-warning  align-middle">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">Titre</th>
+            <th scope="col" class="text-center">Date</th>
+            <th scope="col" class="text-center">Lieu</th>
+            <th scope="col" class="text-center">Inscrit(e) le</th>
+            <th scope="col" class="text-center"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% allRegistrations.forEach(registration=> { %>
+            <tr>
+              <td class="text-center">
+                <%= registration.eventId.title %>
+              </td>
+              <td class="event-date text-center">
+              </td>
+              <td class="text-center">
+                <%= registration.eventId.place %>
+              </td>
+              <td class="inscrit-le text-center">
+                
+              </td>
+              <td class="text-center">
+                <a href="/participant/evenement/<%= registration.eventId._id %>" class="btn btn-primary theme-color-button">Voir</a>
+                <a href="/participant/evenement/<%= registration.eventId._id %>"  data-bs-toggle="modal" data-bs-target="#unregister" class="btn btn-danger">Se désinscrire</a>
+                <div class="modal fade" id="unregister" tabindex="-1" aria-labelledby="unregisterModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                            Voulez-vous vraiment vous désinscrire de cet événement ?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non</button>
+                            <form action="/participant/unregister/<%= registration.eventId._id %>/<%= registration._id %>?_method=DELETE" method="post">
+                                <button type="submit" class="btn btn-danger">Oui</button>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+      <div class="container mt-5 d-flex flex-column align-items-center border border-success border-4 py-5 mb-5">
+        <h3>Vous ne vous êtes inscrit à aucun événement</h3>
+      </div>
+      <% } %>
+
+      <script>
+        function beautifiedDeadline(date) {
+            return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear() + " à " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+        }
+        const dateEvent = document.querySelector('.event-date')
+        const dateInsc = document.querySelector('.inscrit-le')
+
+        const allRegistrations = <%- JSON.stringify(allRegistrations) %>;
+        for (let i = 0; i < allRegistrations.length; i++) {
+            dateEvent.innerHTML = beautifiedDeadline(new Date(allRegistrations[i].eventId.date))
+            dateInsc.innerHTML = beautifiedDeadline(new Date(allRegistrations[i].dateRegister))
+        }
+    </script>

@@ -1,0 +1,31 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <% if(currentUser) { %>
+          <a class="navbar-brand" href="/<%= currentUser.profil.trim() %>/home">MagEvents</a>
+        <!-- <a href="/<%= currentUser.profil.trim() %>/home"><img src="/images/logo-no-background.png" alt="" style="width: 10%;"></a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <% if (currentUser.profil.trim() === "participant") { %>
+                <li class="nav-item d-flex align-items-center mx-3">
+                  <a class="nav-link" href="/<%= currentUser.profil.trim() %>/notifications/<%= currentUser._id %>">Notifications</a>
+                </li>
+                <li class="nav-item d-flex align-items-center mx-3">
+                  <a class="nav-link" href="/<%= currentUser.profil.trim() %>/programme/<%= currentUser._id %>">Programme</a>
+                </li>
+                <% } else { %>
+                  <li class="nav-item d-flex align-items-center mx-3">
+                    <!-- <a class="nav-link" href="/<%= currentUser.profil.trim() %>/reservations">Réservations</a> -->
+                    <a href="/<%= currentUser.profil.trim() %>/nouvelEvenement" class="btn btn-primary theme-color-button">Créer un événement</a>
+                  </li>
+                  <% } %>
+              <li class="nav-item btn btn-danger">
+                <a class="nav-link" href="/logout">Déconnexion</a>
+              </li>
+            </ul>
+          </div>
+          <% } %>
+    </div>
+</nav>

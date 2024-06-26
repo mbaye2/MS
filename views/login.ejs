@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagEvents - Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/css/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/app.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body class="p-0 m-0 vh-100">
+    <main class="vh-100 d-flex">
+        <div class="vh-100 d-flex flex-column justify-content-evenly align-items-center" style="width: 50%;background-color: black; color: white;">
+            <img src="/images/logo-no-background.png" alt="" width="100%">
+            <p class="fs-4 text-center slogan px-3">MagEvents: votre portail d'événements, simple et efficace !</p>
+        </div>
+        <div class="container d-flex flex-column justify-content-center align-items-center login p-0 m-0" style="width: 50%;">   
+            <%- include('./partials/flash')%>
+            <div class="container my-5">
+                <p class="fs-1 text-center">Connectez-Vous</p>
+            </div>
+            <form class="container my-5" method="post" action="/login">
+                <div class="form-floating mb-5">
+                    <input type="email" class="form-control" name="username" id="floatingInput" placeholder="name@example.com" required style="height: 6rem; font-size: 1.5rem;">
+                    <label for="floatingInput">Adresse Email</label>
+                  </div>
+                  <div class="form-floating mb-5">
+                    <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required style="height: 6rem; font-size: 1.5rem;">
+                    <label for="floatingPassword">Mot De Passe</label>
+                  </div>
+                  <div class="container d-flex align-items-center justify-content-center">
+                    <button type="submit" class="btn btn-primary theme-color-button">Connexion</button>
+                  </div>
+            </form>
+            <p class="text-center">Pas encore de compte? <a href="/signup" class="signup-login">Inscrivez-vous</a></p>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container-fluid my-3 p-2">
+    <h1>
+        Salut 
+        <%= capitalize(userConnected.prenom) %>
+            <%= capitalize(userConnected.nom) %>
+        !
+    </h1>
+</div>
+<% if (events.length !==0) { %>
+    <div class="container-fluid my-3 p-2">
+        <h1>
+            Evénements disponibles
+        </h1>
+    </div>
+    <div class="container d-flex flex-wrap mb-5 justify-content-start">
+        <% events.forEach(event => { %>
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title"><b><%= event.title %></b></h5>
+                <p class="card-text date-event">
+                    
+                </p>
+                <a href="/participant/evenement/<%= event._id %>" class="btn btn-primary theme-color-button">Voir</a>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <% } else { %>
+      <div class="container mt-5 d-flex flex-column align-items-center border border-success border-4 py-5 mb-5">
+        <h3>Aucun événement disponible !</h3>
+      </div>
+          <% } %>
+
+</div>
+<script>
+    const dateEvent = document.querySelectorAll('.date-event');
+    const events = <%- JSON.stringify(events) %>;
+    for (let i = 0; i < events.length; i++) {
+      console.log(events[i].date)
+      const d = new Date(events[i].date)
+      const beautifiedDeadline = ("0" + d.getDate()).slice(-2) + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + d.getFullYear() + " à " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+      dateEvent[i].innerHTML = beautifiedDeadline
+    }
+  </script>

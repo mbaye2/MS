@@ -1,0 +1,141 @@
+<% layout('layouts/boilerplate')%>
+
+  <div class="back-buttons btn-group mt-5" role="group">
+    <a href="/organisateur/home" class="btn btn-outline-success btn-lg" type="button">Retour à l'accueil</a>
+  </div>
+
+  <div class="container my-5 d-flex justify-content-between event-container">
+    <div style="width: 100%;">
+      <h1 class="text-center" style="border-bottom: rgba(94, 160, 73, 255) 3px solid; border-radius: 5px;">
+        <%= capitalize(event.title) %>
+      </h1>
+      <h2 style="color: rgba(94, 160, 73, 255);">
+        <span class="fs-6" style="color: black;">aura lieu le <b class="date-event"></b></span>
+      </h2>
+      <p class="p-3 me-2" style="border: rgba(94, 160, 73, 255) 2px solid;">
+        <span class="fs-6">Description</span>
+        <br>
+        <span class="fs-3">
+          <%= capitalize(event.description) %>
+        </span>
+      </p>
+      <div class="d-flex justify-content-between">
+        <div class="d-flex">
+          <div class="me-2">
+            <a href="/organisateur/evenement/<%= event._id %>/edit"
+              class="btn btn-primary theme-color-button">Modifier</a>
+          </div>
+          <button type="button" class="btn btn-primary theme-color-button" data-bs-toggle="modal"
+            data-bs-target="#sendNotif">
+            Envoyer une notification aux participants
+          </button>
+          <div class="modal fade" id="sendNotif" tabindex="-1" aria-labelledby="notifModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Nouvelle notification</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="/organisateur/notif/<%= event._id %>" method="post" id="send-notif-form">
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="Notification Type" name="type" id="type" required>
+                        <option value="" disabled selected>Type de notification</option>
+                        <option value="info">Information</option>
+                        <option value="urgent">Urgent</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message" name="message"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                  <button type="submit" class="btn btn-primary send-notif theme-color-button">Envoyer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+          data-bs-target="#deleteEvent">
+          Supprimer
+        </button>
+        <div class="modal fade" id="deleteEvent" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                Voulez-vous vraiment vous supprimer cet événement ?
+                <br>
+                <span>Les inscrits recevront une notification</span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non</button>
+                <form action="/organisateur/evenement/<%= event._id %>/?_method=DELETE" method="post">
+                  <button type="submit" class="btn btn-danger">Oui</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <% if (registrations.length !==0) { %>
+
+    <div class="container my-5">
+      <h2>Inscriptions:</h2>
+    </div>
+
+    <div class="container historique-table">
+      <table class="table table-warning">
+        <thead>
+          <tr>
+            <th scope="col">Prénom et Nom</th>
+            <th scope="col">Adresse Email</th>
+            <th scope="col">Inscrit(e) le</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% registrations.forEach(registration=> { %>
+            <tr>
+              <td>
+                <%= registration.participantId.prenom %>
+                  <%= registration.participantId.nom %>
+              </td>
+              <td>
+                <%= registration.participantId.email %>
+              </td>
+              <td class="inscrit-le">
+
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+      <div class="container mt-5 d-flex flex-column align-items-center border border-success border-4 py-5 mb-5">
+        <h3>Pas encore d'inscription pour cet événement!</h3>
+      </div>
+      <% } %>
+
+        <script>
+          function beautifiedDeadline(date) {
+            return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear();
+          }
+
+          const inscritLe = document.querySelectorAll('.inscrit-le');
+          const dateEvent = document.querySelector('.date-event');
+          const registrations = <%- JSON.stringify(registrations) %>;
+          const event = <%- JSON.stringify(event) %>;
+
+          for (let i = 0; i < registrations.length; i++) {
+            inscritLe[i].innerHTML = beautifiedDeadline(new Date(registrations[i].dateRegister))
+          }
+          dateEvent.innerHTML = beautifiedDeadline(new Date(event.date))
+        </script>

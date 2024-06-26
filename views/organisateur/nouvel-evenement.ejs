@@ -1,0 +1,54 @@
+<% layout('layouts/boilerplate')%>
+<div class="back-buttons btn-group mt-5" role="group">
+    <a href="/organisateur/home" class="btn btn-outline-success btn-lg" type="button">Retour à l'accueil</a>
+    <a href="/organisateur/mesSalles" class="btn btn-outline-success btn-lg" type="button">Vos salles</a>
+</div>
+<div class="nouvelle-salle p-0 m-0">
+    <div class="container nouveau">
+        <div class="container my-5">
+            <p class="fs-1 text-start ms-4">Créer un événement</p>
+        </div>
+        <form action="/organisateur/nouvelEvenement" method="post" class="container my-3">
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-5">
+                        <input type="text" class="form-control pb-0" id="title" name="title" placeholder="Titre"
+                            required  style="height: 6rem; font-size: 1.5rem;">
+                        <label for="title">Titre de l'événement</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating">
+                        <textarea class="form-control pb-0 pt-5" placeholder="description" id="description" name="description" style="height: 100px; background-color: inherit;border-bottom: rgba(94, 160, 73, 255) 3px solid; font-size: 1.5rem;"></textarea>
+                        <label for="description">Description</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="date" class="form-control pb-0" id="date" name="date" placeholder="date" required style="height: 6rem; font-size: 1.5rem;">
+                        <label for="date">Date</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control pb-0" id="lieu" name="lieu" placeholder="lieu" required style="height: 6rem; font-size: 1.5rem;">
+                        <label for="lieu">Lieu</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="number" class="form-control pb-0" id="capacite" name="capacite" placeholder="capacite" required style="height: 6rem; font-size: 1.5rem;">
+                        <label for="capacite">Capacité</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4 mb-5 d-flex align-items-center justify-content-center">
+                <button type="submit" class="btn btn-primary theme-color-button fs-3">Créer</button>
+            </div>
+        </form>
+    </div>
+</div>
