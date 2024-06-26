@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container-fluid my-3 p-2">
+    <h1>
+        Salut 
+        <%= capitalize(userConnected.prenom) %>
+            <%= capitalize(userConnected.nom) %>
+        !
+    </h1>
+</div>
+<% if (events.length !==0) { %>
+    <div class="container-fluid my-3 p-2">
+        <h1>
+            Evénements disponibles
+        </h1>
+    </div>
+    <div class="container d-flex flex-wrap mb-5 justify-content-start">
+        <% events.forEach(event => { %>
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <h2 class="card-title text-center"><b><%= capitalize(event._doc.title) %></b></h2>
+                <% if (event.tag === "Demain") { %>
+                    <span class="badge bg-warning fs-5">Demain</span>
+                <% } else { %>
+                    <span class="badge fs-5">&nbsp;</span>
+                <% } %>
+                <p class="card-text fs-5">
+                    <span class=" date-event"></span>
+                    <br>
+                    <span>Lieu: <strong><%= capitalize(event._doc.place) %></strong></span>
+                </p>
+                <a href="/participant/evenement/<%= event._doc._id %>" class="btn btn-primary theme-color-button">Voir</a>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <% } else { %>
+      <div class="container mt-5 d-flex flex-column align-items-center border border-success border-4 py-5 mb-5">
+        <h3>Aucun événement disponible !</h3>
+      </div>
+          <% } %>
+
+</div>
+<script>
+    const dateEvent = document.querySelectorAll('.date-event');
+    const events = <%- JSON.stringify(events) %>;
+    for (let i = 0; i < events.length; i++) {
+      const d = new Date(events[i]._doc.date)
+      const beautifiedDeadline = ("0" + d.getDate()).slice(-2) + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + d.getFullYear();
+      dateEvent[i].innerHTML = `Le: <b>${beautifiedDeadline}</b>`
+    }
+  </script>

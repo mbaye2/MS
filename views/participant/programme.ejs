@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="back-buttons btn-group mt-5" role="group">
+    <a href="/participant/home" class="btn btn-outline-success btn-lg" type="button">Retour à l'accueil</a>
+</div>
+
+<% if (allRegistrations.length !==0) { %>
+
+    <div class="container my-5">
+      <h2>Evénements auxquels vous vous êtes inscrit</h2>
+    </div>
+
+    <div class="container historique-table">
+      <table class="table table-warning  align-middle">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">Titre</th>
+            <th scope="col" class="text-center">Date</th>
+            <th scope="col" class="text-center">Lieu</th>
+            <th scope="col" class="text-center">Inscrit(e) le</th>
+            <th scope="col" class="text-center"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% allRegistrations.forEach(registration=> { %>
+            <tr>
+              <td class="text-center">
+                <%= capitalize(registration.eventId.title) %>
+              </td>
+              <td class="event-date text-center">
+              </td>
+              <td class="text-center">
+                <%= capitalize(registration.eventId.place) %>
+              </td>
+              <td class="inscrit-le text-center">
+                
+              </td>
+              <td class="text-center">
+                <a href="/participant/evenement/<%= registration.eventId._id %>" class="btn btn-primary theme-color-button">Voir</a>
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+      <div class="container mt-5 d-flex flex-column align-items-center border border-success border-4 py-5 mb-5">
+        <h3>Vous ne vous êtes inscrit à aucun événement</h3>
+      </div>
+      <% } %>
+
+      <script>
+        function beautifiedDeadline(date) {
+            return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear();
+        }
+        function beautifiedDeadlineHour(date) {
+            return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear() + " à " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+        }
+        const dateEvent = document.querySelectorAll('.event-date')
+        const dateInsc = document.querySelectorAll('.inscrit-le')
+
+        const allRegistrations = <%- JSON.stringify(allRegistrations) %>;
+        for (let i = 0; i < allRegistrations.length; i++) {
+            dateEvent[i].innerHTML = beautifiedDeadline(new Date(allRegistrations[i].eventId.date))
+            dateInsc[i].innerHTML = beautifiedDeadlineHour(new Date(allRegistrations[i].dateRegister))
+        }
+    </script>

@@ -1,0 +1,64 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="back-buttons btn-group mt-5" role="group">
+    <a href="/participant/home" class="btn btn-outline-success btn-lg" type="button">Retour à l'accueil</a>
+</div>
+
+
+<div class="container my-5">
+    <h2>Notifications (<%= numberNotif %>)</h2>
+  </div>
+
+<% if (allNotifications.length !==0) { %>
+
+    <div class="container historique-table">
+      <table class="table table-warning  align-middle">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">Type</th>
+            <th scope="col" class="text-center">Evénement</th>
+            <th scope="col" class="text-center">Message</th>
+            <th scope="col" class="text-center">Envoyée le</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let i = 0; i < allNotifications.length; i++) { %>
+            <tr>
+              <td class="text-center <% if (allNotifications[i].type === "Urgent") { %> text-danger <% } %>">
+                <%= capitalize(allNotifications[i].type) %>
+              </td>
+              <td class="text-center">
+                <% if (events[i] === "Evénement supprimé") { %>
+                    <%= events[i] %>
+                <% } else { %>
+                    <a href="/participant/evenement/<%= events[i]._id %>" class="btn btn-primary theme-color-button"><%= capitalize(events[i].title) %></a>
+                <% } %>
+              </td>
+              <td class="text-center">
+                <%= allNotifications[i].message %>
+              </td>
+              <td class="envoye-le text-center">
+                
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+      <div class="container mt-5 d-flex flex-column align-items-center border border-success border-4 py-5 mb-5">
+        <h3>Aucune notification pour le moment</h3>
+      </div>
+      <% } %>
+
+      <script>
+        function beautifiedDeadline(date) {
+            return ("0" + date.getDate()).slice(-2) + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + date.getFullYear() + " à " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+        }
+        const dateSent = document.querySelectorAll('.envoye-le')
+
+        const allNotifications = <%- JSON.stringify(allNotifications) %>;
+        for (let i = 0; i < allNotifications.length; i++) {
+            dateSent[i].innerHTML = beautifiedDeadline(new Date(allNotifications[i].sentDate))
+        }
+    </script>
