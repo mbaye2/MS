@@ -7,7 +7,9 @@ body {
 }
 
 .login-sign-up, .login, .sign-up{
-    background-color: rgb(24, 144, 180);
+
+    background-color: beige(24, 144, 180);
+
 }
 
 .star-rating {
